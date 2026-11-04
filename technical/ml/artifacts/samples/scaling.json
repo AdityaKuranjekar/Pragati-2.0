@@ -1,7 +1,0 @@
-{
-  "schema": "scaling/1", "origin": "assumption",
-  "stages": ["Pilot", "Seed", "Scale"],
-  "cost_per_student": [{"students": 1000, "inr": 3.6, "lines": {"compute": 1.0, "whatsapp": 1.4, "storage": 0.2, "ai_reports": 0.6, "support": 0.4}}],
-  "failure_modes": ["no internet", "bad scan", "wrong answer key", "too little data", "LLM down"],
-  "note": "placeholder"
-}

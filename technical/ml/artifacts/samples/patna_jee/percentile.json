@@ -1,7 +1,0 @@
-{
-  "schema": "percentile/1", "model_version": "v0.0.0-sample", "generated_at": "2026-10-24T00:00:00Z", "generator_seed": 42, "institute_id": "patna_jee", "origin": "assumption",
-  "coverage_target": 0.8,
-  "students": [{"student_id": "s1", "exam": "jee_main", "low": 82.0, "mid": 88.5, "high": 93.0, "mapping_table_id": "nta_assumed_v1", "assumption": true}],
-  "mapping_table": [{"marks": 100, "percentile": 90.0}, {"marks": 60, "percentile": 75.0}],
-  "calibration": {"empirical_coverage": 0.79, "mean_width": 11.0}
-}

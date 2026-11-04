@@ -1,36 +1,27 @@
+# Python
 __pycache__/
 *.pyc
 .venv/
+.pytest_cache/
+
+# Node
 node_modules/
 .next/
+
+# Local data, databases and caches: regenerate or download, never commit
+# (student records, licensed or raw public datasets)
 data/
-*.parquet
-.env
-.pytest_cache/
-*.log
-.DS_Store
-
-# Office lock files, local backups, organiser documents
-~$*
-_archive/
-1792441177680_Case_B_The_Data_Moat.pdf
-datamoat/
-institute-intelligence-platform/
-
-# Agent worktrees and local tool state
-.claude/
-
-# Large video/audio working files (keep only the HTML pages and docs in presentation/video)
-presentation/video/brag-output/
-presentation/video/voice-samples/
-presentation/video/ref/
-*.mp4
-*.wav
-
-# Local TTS/video tooling
-presentation/video/.tts-venv/
-presentation/video/**/work/
-presentation/video/**/node_modules/
 .pgdata/
 .pgdata_test/
 .ingest_cache/
+*.parquet
+
+# Secrets and logs
+.env
+*.log
+.DS_Store
+~$*
+
+# Local backups and agent worktree state
+_archive/
+.claude/

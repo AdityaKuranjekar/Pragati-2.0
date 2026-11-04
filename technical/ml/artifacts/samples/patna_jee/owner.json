@@ -1,7 +1,0 @@
-{
-  "schema": "owner/1", "model_version": "v0.0.0-sample", "generated_at": "2026-10-24T00:00:00Z", "generator_seed": 42, "institute_id": "patna_jee", "origin": "synthetic",
-  "batch_compare": [{"batch_id": "b1", "metric": "mean_mastery_gain", "value": 0.31, "ci_low": 0.12, "ci_high": 0.50, "n": 48, "enough_data": true}],
-  "faculty_compare": [{"faculty_id": "f1", "display": "Faculty A", "topic": "Kinematics", "effect": 0.2, "ci_low": -0.1, "ci_high": 0.5, "n": 9, "enough_data": false}],
-  "retention": {"monthly": [{"month": "2026-08", "enrolled": 600, "dropped": 14}], "by_reason": {"academic_gap": 0.35, "financial": 0.2}},
-  "roi": {"fees_protected_inr": 900000, "staff_hours": 120, "cost_inr": 216000, "ratio_low": 0.35, "ratio_base": 0.55, "ratio_high": 1.7, "origin": "assumption"}
-}

@@ -1,9 +1,0 @@
-{
-  "schema": "datacard/1", "model_version": "v0.0.0-sample", "generated_at": "2026-10-24T00:00:00Z", "generator_seed": 42, "institute_id": "patna_jee", "origin": "synthetic",
-  "story_steps": [{"id": 1, "title": "Institute and batch settings", "text": "Tier, size, exam mix."}],
-  "attributes": [{"name": "attendance_pct", "entity": "attendance", "real_world_source": "Excel register", "decision": "early support list", "model": "risk", "privacy_class": "administrative"}],
-  "checklist": [{"parameter": "annual dropout rate", "our_value": 0.18, "source": "R4 range 15-25%", "confidence": "medium"}],
-  "figures": [{"path": "figures/dropout_by_month.png", "caption": "Dropout peaks in months 4 to 5", "origin": "synthetic"}],
-  "cleaning": {"rate": 0.96, "examples": [{"raw": "Aarva Kumar", "clean": "Aarav Kumar"}]},
-  "limits": ["Proves the pipeline recovers planted truth; does not prove real institutes behave this way."]
-}

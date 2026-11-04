@@ -1,9 +1,0 @@
-{
-  "schema": "moat/1", "model_version": "v0.0.0-sample", "origin": "synthetic",
-  "points": [
-    {"n_institutes": 1, "calibration_error": 0.12, "ci_low": 0.10, "ci_high": 0.14},
-    {"n_institutes": 5, "calibration_error": 0.07, "ci_low": 0.06, "ci_high": 0.08},
-    {"n_institutes": 20, "calibration_error": 0.04, "ci_low": 0.03, "ci_high": 0.05}
-  ],
-  "note": "placeholder"
-}

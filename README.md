@@ -1,38 +1,57 @@
-# Pragati: The Data Moat (Case B, Nextute × Finance Club IIT Patna)
+# Pragati 2.0
 
-**Team AlphaQ.** An AI platform that turns a coaching institute's messy data (OMR sheets, Excel, WhatsApp) into a topic-by-topic view of every student, a short weekly support list for mentors with plain reasons, an honest percentile range, and checked Hindi and English parent reports. Built to win the case (70 % technology, 30 % business) and to be sold afterwards. Everything is free to run, local first, and uses synthetic student data validated on public datasets.
+Adaptive learning-path platform for JEE aspirants (Classes 11 and 12; Physics, Chemistry, Mathematics). It estimates what each learner knows, explains what to learn next, delivers practice, and measures whether the learner improved.
 
-```
-FC_Case_Dhruvi/
-  technical/      the product: contracts, data generator, models, report generator, tests, plan
-  financial/      the financial model (v1.1), audit, guides and research
-  presentation/   the Round 1 deck in four versions, its build tooling and design docs
-  CLAUDE.md       hand-off for an AI assistant or a teammate (read first)
-  _archive/       local backups of superseded copies (not in git; safe to delete)
-```
+Current target: **DataNova Global Data-thon 2026**, problem statement "Adaptive Learning Path Recommendation" (personalised next-module recommendations with rationale). Submission needs code, documentation, an evaluation and a presentation.
 
-## Where we are (22 Oct 2026)
-| Area | Progress | Next |
+The repository began as Pragati 1.0 (Case B, "The Data Moat", coaching-institute intelligence). Its working code is kept as the base for 2.0; the Case B business and pitch material has been removed (see [docs/CLEANUP_LOG.md](docs/CLEANUP_LOG.md)).
+
+## Start here
+
+| Read | Why |
+|---|---|
+| [docs/pragati-2.0/README.md](docs/pragati-2.0/README.md) | Phase plan, target architecture, product north star, dataset strategy |
+| [docs/pragati-2.0/phases/](docs/pragati-2.0/phases/) | Phases 0 to 6, in order (audit first; no schema or model change before the audit) |
+| [CLAUDE.md](CLAUDE.md) | Working rules for AI assistants and teammates |
+| [docs/README.md](docs/README.md) | Index of every document in `docs/` |
+
+## Folder map
+
+| Folder | What it holds | Status |
 |---|---|---|
-| **Technical** | Contracts frozen (31 tables, 23 endpoints, 380 topics). Synthetic data generator, public-data validation (OULAD AUC 0.706, ASSISTments 0.763), parent-report pipeline with 8 checks. 116 tests pass | Fix cohort sizes and verifier gaps (`R1_A2`, `R1_E2`); then IRT, risk and tagging agents (B, C, F); backend, frontend, OMR reader |
-| **Financial** | Model v1.1 after a CFO audit: 0 formula errors, independent rebuild matches. Base: LTV÷CAC 3.6x, payback 5.7 months, owner return 1.7x (0.55x on fees and staff time), year-3 revenue ₹65 L, funding ₹45 L | Owner interviews and price survey (willingness to pay is the weakest input); Round 2 sheets |
-| **Presentation** | Round 1 deck v4 (22 slides: title, 12 content, appendix, AI-use slide); v1 to v3 kept | Fill the PENDING gates from agent results, add logo, export PDF, practise the pitch |
+| `backend/` | FastAPI app, PostgreSQL access with row-level security, ingestion, ML runtime, OMR reader, report pipeline | Working from 1.0; to be extended for 2.0 modules (curriculum, attempts, adaptive engine) |
+| `frontend/` | Next.js 14 (TypeScript, Tailwind, ECharts) console and student views | Working from 1.0; needs a learner path and practice screens |
+| `ml/` | Model build scripts, saved models (`artifacts/models/`), public-data validation (OULAD, ASSISTments) | Models were trained on synthetic Case B data; retrain for 2.0 |
+| `datagen/` | Seeded synthetic data generator with ground truth | Case B institutes; adapt or replace for learner-interaction data |
+| `contracts/` | Schema (`schema.sql`), OpenAPI, enums, topics, routing policy, metric bars | 1.0 contracts; the 2.0 data model is a Phase 0 decision |
+| `scripts/` | Public-data download, contract and GenAI test runners | Keep |
+| `notebooks/` | Public-validation notebook (ASSISTments and OULAD) | Keep |
+| `docs/pragati-2.0/` | The 2.0 phase blueprint | Source of the current plan |
+| `docs/legacy-case-b/` | 1.0 technical plan, feasibility checks, model tables, backend and OMR notes, Case B handoff | Reference only |
 
-## How the pieces connect
-`technical` produces measured numbers (`metrics.json`) → `presentation` quotes them with an origin label (public, synthetic, model, mock-up). `financial` produces the business numbers → `presentation` quotes them as model output. Nothing on a slide is typed from memory.
+## What was removed and where it is
 
-## Quick commands
+Removed from the working tree in the 2026-11 cleanup: the financial model, all Round 1 and Round 2 decks, deck build tooling, Round 1 and Round 2 plans, agent prompts and logs, feasibility simulations, and generated outputs for the Case B synthetic institutes. Each item is in git history at commit `512380d` on `main`. [docs/CLEANUP_LOG.md](docs/CLEANUP_LOG.md) lists them.
+
+## Quick commands (Windows, offline; run from the repository root)
+
 ```
-cd technical && python -m pytest tests -q                    # 68 document, deck and number tests
-cd presentation/source/build && python build_all.py v4       # rebuild a deck and its previews
-cd financial/model && python verify_model.py --all           # recalculate the workbook without Excel (about 3 minutes)
+python -m pytest contracts/tests -q            # contracts (needs PostgreSQL via pgserver)
+make test-datagen                              # synthetic data generator
+make test-public                               # OULAD and ASSISTments validation (uses data/ downloads)
+make test-genai                                # report generator and verifier
+make demo-native                               # database, models, seed and API on http://127.0.0.1:8000
+cd frontend && npm install && npm run dev      # front end on http://localhost:3000
 ```
 
-## Tracking progress
-- **Decks:** `presentation/VERSIONS.md` lists every version, what changed and why. Open `presentation/decks/AlphaQ_CaseB_Round1_CURRENT_v5.pptx`; earlier decks sit beside it (earlier-1, earlier-2, earlier-3).
-- **Finance:** `financial/VERSIONS.md` (v1.0 and CURRENT v1.1), `financial/docs/MODEL_AUDIT.md` and `DECK_NUMBER_UPDATES.md` record each change to the numbers.
-- **Technical:** `technical/docs/agent_logs/` and `contract_change_requests.md` record what each agent did and every contract change.
-- **Git history** is the audit trail; commit per version.
+Known gaps after the cleanup:
+- `ml/artifacts/` no longer contains the per-institute JSON that the front-end mock reads. Regenerate after `datagen`: `python ml/build_artifacts.py`.
+- Backend and front-end tests that compare against those outputs will fail until regenerated.
+- `data/` (generated and downloaded datasets) is git-ignored; nothing in it is committed.
 
 ## Ground rules
-Never guess an external fact (write a research prompt instead); label every number by origin; state limitations before the judges do; no paid services; no Streamlit or Gradio.
+
+- Free and local first: no paid service in the prototype; hosting per Phase 0 (Vercel, Render, Neon or Supabase, all free tier).
+- No real student data. Public datasets are used under their own terms; JEE questions come from rights-cleared sources only (Phase 1).
+- Every recommendation carries a reason a learner or teacher can read. The product must work without an LLM.
+- Report every number with its origin (synthetic, public dataset, pilot) and state limitations before the judges do.

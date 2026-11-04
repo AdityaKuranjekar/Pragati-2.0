@@ -1,1 +1,0 @@
-    funnel(s, fx + 0.12, 1.62, fw - 0.24, 0.86, [{ t: "Retro-pilot", sub: "Last year's Excel: who left, would we have caught them?" }, { t: "Paid pilot", sub: "One month, agreed measures; about 30 % convert" }, { t: "Onboarded", sub: "About ₹8,000 each, after conversion" }], { size: 12.5, start: 1 });

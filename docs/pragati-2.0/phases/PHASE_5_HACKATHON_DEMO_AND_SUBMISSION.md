@@ -1,5 +1,13 @@
 # Phase 5 — Hackathon Demo, Storytelling & Submission
 
+> **Update 2026-11-04 (orchestrator pass).**
+> - **Demo chain (D1):** in-graph JEE chain: `jee.math.complex_numbers.algebra_complex_argand` → `jee.math.quadratic_equations.roots_nature` (complex roots when the discriminant is negative) → `jee.math.quadratic_equations.equation_formation`. These edges do not exist yet and need teacher review (B14).
+> - **Rubric unknown (B8, R4):** the presentation structure below is a default. Rewrite it against the official criteria before building slides.
+> - **Pitch and claims:** `PITCH.md` (defining user, claim table, judge questions). A claim without a re-run (E1, E3) or a pilot (E8) is not used on a slide.
+> - **Hosting (R7):** free-tier limits must be checked before the cold-start plan is final.
+> - **Honesty slide:** slide 7 must show which evaluation sets missed their bars.
+> - **Submission checklist:** see `BLOCKERS.md` (B8) and `orchestration/ORCHESTRATOR.md` §3 (G5).
+
 ## 1. Purpose
 
 Package the working product and its evidence into a memorable demonstration. The goal is not to show the largest feature count; it is to make judges understand the problem, see the adaptive intelligence work and trust the results.

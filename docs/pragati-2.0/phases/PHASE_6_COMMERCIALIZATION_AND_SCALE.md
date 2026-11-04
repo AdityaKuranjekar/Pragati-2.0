@@ -1,5 +1,11 @@
 # Phase 6 — Commercialization, Multi-Tenancy & Scale
 
+> **Update 2026-11-04 (orchestrator pass).**
+> - **Exam expansion as configuration (ADR-004):** JEE Main and Advanced first; state CETs one state at a time, after rights review per state; Olympiad deferred (R10).
+> - **Sales gate:** no sale to an institute whose learners are minors until B1 (DPDP s.9(3)) has counsel's answer. This extends the gate already in this phase.
+> - **Pilot success measure:** teacher time saved and intervention adoption, as already listed, plus E8 learning gain with its pre-registered design.
+> - **Pricing:** still no claim; the discovery questions in §8 come first.
+
 ## 1. Purpose
 
 Evolve the hackathon MVP into a configurable product that can be sold to institutions and integrated into online coaching platforms—without creating separate products or duplicating the intelligence engine.

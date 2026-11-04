@@ -1,5 +1,13 @@
 # Phase 4 — Evaluation, Experiments, Privacy & Reliability
 
+> **Update 2026-11-04 (orchestrator pass).**
+> - The full evaluation plan is in `evaluation/EVAL_PLAN.md`: sets E0 to E14, origin and task tags, splits, baselines, proposed pass bars, sample sizes, and a re-map of every existing number.
+> - **Pre-registration:** bars are proposals until written in `ml/evaluation/PREREGISTRATION.md` before a run.
+> - **Re-mapped numbers:** 0.763 (ASSISTments) is from a hierarchical Rasch model; the served runtime is 1PL. OULAD 0.706 misses the 0.794 anchor, and the repo marks it as passed against its own bar. Disclose both.
+> - **Sample size for a pilot (computed):** d = 0.3, α = 0.05, power 0.80 → 175 per arm if individually randomised, 428 per arm if randomised by class of 30 at ICC 0.05 (assumed; R8 to check).
+> - **Benchmarks added:** a collaborative-filtering baseline and a graph-score ablation (Phase 2 update).
+> - **Privacy:** E12 subgroup analysis is blocked for minors; E13 tenant tests apply to every new route.
+
 ## 1. Purpose
 
 Demonstrate that Pragati 2.0 is technically sound and that its adaptive decisions are better than a reasonable non-adaptive baseline. A hackathon-winning claim must be supported by transparent evidence.

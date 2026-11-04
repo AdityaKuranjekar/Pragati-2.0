@@ -1,5 +1,14 @@
 # Phase 1 — Data, Curriculum & Content Foundation
 
+> **Update 2026-11-04 (orchestrator pass).**
+> - **Demo chain (decision D1, owner to confirm):** in-graph JEE chain: `jee.math.complex_numbers.algebra_complex_argand` → `jee.math.quadratic_equations.roots_nature` (complex roots when the discriminant is negative) → `jee.math.quadratic_equations.equation_formation`. These edges do not exist yet and need teacher review (B14). The taxonomy has no Class 10 nodes, so a Class 10 foundation is optional and needs a schema change (B5).
+> - **Exam scope (D2, owner to confirm):** JEE Main and JEE Advanced first. State CET after the engine passes E0 to E7. Olympiad deferred (R10).
+> - **Verification gap (B13) and sparse graph (B14):** `contracts/topics.yaml` has 380 nodes and 33 prerequisite edges (acyclic, no dangling references); none is `verified: true`. Each demo topic needs an official-source reference before it is marked verified.
+> - **Item bank (B3, B4):** 100 to 300 reviewed items, each with a rights record (R2). Question text needs a store (ADR-003 / content table). ASSISTments stays server-side.
+> - **Hindi (B12):** `name_hi_reviewed` is false for every topic; demo topics need a native-speaker check before public display.
+> - **Tagging evaluation:** E5 (150 items, two annotators, κ ≥ 0.7) in `evaluation/EVAL_PLAN.md`.
+> - **Duplicate check:** before adding concepts, check the 380 topic nodes for concept/topic duplicates; the audit (P1) produces the list.
+
 ## 1. Purpose
 
 Create a reliable representation of what is taught, how concepts depend on one another, what learning resources exist and how questions measure learning objectives.

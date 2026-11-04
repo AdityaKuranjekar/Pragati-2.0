@@ -1,5 +1,13 @@
 # Phase 2 — Adaptive Intelligence Engine
 
+> **Update 2026-11-04 (orchestrator pass).**
+> - **Collaborative filtering added (B7).** The problem brief names it and the earlier plan omitted it. Use (a) item-item similarity or matrix factorisation on learner × item correctness as a benchmark in E1 and as a cold-start fallback for items with few responses; (b) peer evidence for "learners who fixed this concept also practised X" only after E1 shows it helps. CF uses ASSISTments only for benchmarking; the JEE product needs its own data first.
+> - **Graph algorithms added (B7).** (a) Topological ordering and traversal of `topic_prereqs` for learning paths; (b) a personalised-PageRank-style bottleneck score over the prerequisite DAG, used on the teacher panel to show concepts that block many downstream objectives. Both are deterministic and testable (E7).
+> - **Reuse:** the 4-parameter BKT EM in `ml/public_validation/assistments.py` is the first baseline; the runtime 1PL Rasch (`backend/app/ml/irt.py`) is the second. Do not write a third estimator before E1 is re-run.
+> - **Minors (D3):** only correctness-based evidence until counsel answers R1. No response-time or hint features in any model or UI for under-18s.
+> - **Event model:** learner state is a fold over `attempt_events` ordered by server time and id (ADR-003). Idempotency keys are required.
+> - **Gate before Phase 3:** E0, E3, E4, E7 and E10 pass (`evaluation/EVAL_PLAN.md`); E4 uses teacher-labelled cases.
+
 ## 1. Purpose
 
 Build the decision-making core that estimates what a learner knows, diagnoses what is blocking progress and selects the next best learning activity.

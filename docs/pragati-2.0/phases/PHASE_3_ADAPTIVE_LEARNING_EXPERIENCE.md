@@ -1,5 +1,12 @@
 # Phase 3 — Adaptive Learning Experience (Student, Teacher & Admin)
 
+> **Update 2026-11-04 (orchestrator pass).**
+> - **Defining user (see `PITCH.md` §2):** the academic head of a JEE coaching centre. Build the teacher journey first; the student practice loop follows once B1 (minors) and B2/B3 (events and question text) are resolved.
+> - **Existing screens:** the current console (`frontend/app/students`, `weak-topics`, `support`, `results`, `parents`, `add-data`) is institute-facing. Extend `weak-topics` and `students` into the cohort heatmap and the bottleneck panel rather than starting a new app.
+> - **Exam picker:** exam is configuration (JEE Main, JEE Advanced; CET later), not a separate engine.
+> - **Labels on screen:** every demo number shows `[DEMO FIXTURE]`, every model number shows its origin, and every recommendation shows its reason and policy version.
+> - **Gate G2 before polish:** no screenshot work until a learner's new attempt changes the next step.
+
 ## 1. Purpose
 
 Turn the intelligence engine into a coherent product. The interface must make the next action obvious, explain the reason and close the learning feedback loop.

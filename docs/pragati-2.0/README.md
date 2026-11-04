@@ -38,6 +38,19 @@ One shared intelligence engine should support multiple education contexts throug
 | 5 | `phases/PHASE_5_HACKATHON_DEMO_AND_SUBMISSION.md` | Polished demo, technical narrative and submission package |
 | 6 | `phases/PHASE_6_COMMERCIALIZATION_AND_SCALE.md` | Multi-tenant SaaS and partner/API expansion plan |
 
+## Planning documents added 2026-11-04
+
+| Document | What it is |
+|---|---|
+| [orchestration/ORCHESTRATOR.md](orchestration/ORCHESTRATOR.md) | Work packages, cloud vs on-computer routing, gates G0 to G5, decision log. Start here to run the project |
+| [orchestration/AGENT_PROMPTS.md](orchestration/AGENT_PROMPTS.md) | Self-contained prompts for the audit, legal and licence research, public-data re-run, engine ADRs, simulator |
+| [research/RESEARCH_PROMPTS.md](research/RESEARCH_PROMPTS.md) | Ten research prompts (legal, licences, exam scope, hackathon rules, prior art, market, hosting, evaluation priors, Hindi, olympiads) with a findings register |
+| [evaluation/EVAL_PLAN.md](evaluation/EVAL_PLAN.md) | Evaluation sets E0 to E14 with origin tags, splits, baselines, proposed pass bars, sample sizes, and a re-map of every existing number |
+| [BLOCKERS.md](BLOCKERS.md) | Fourteen blockers (B1 to B14), risks, assumptions, and the decisions the owner must make |
+| [PITCH.md](PITCH.md) | Defining user, claims and their evidence status, judge questions, slide outline |
+
+Each phase file now starts with a dated "Update 2026-11-04" block. The original plan text below it is unchanged.
+
 ## Suggested target repository structure
 
 This is a **logical target structure**. Do not mechanically move the current repository into it. First map existing folders and preserve working code. Adapt names to the current repo conventions.

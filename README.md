@@ -12,6 +12,8 @@ The repository began as Pragati 1.0 (Case B, "The Data Moat", coaching-institute
 |---|---|
 | [docs/pragati-2.0/README.md](docs/pragati-2.0/README.md) | Phase plan, target architecture, product north star, dataset strategy |
 | [docs/pragati-2.0/phases/](docs/pragati-2.0/phases/) | Phases 0 to 6, in order (audit first; no schema or model change before the audit) |
+| [docs/pragati-2.0/orchestration/ORCHESTRATOR.md](docs/pragati-2.0/orchestration/ORCHESTRATOR.md) | Work packages, sessions and gates (how the project is run) |
+| [docs/pragati-2.0/BLOCKERS.md](docs/pragati-2.0/BLOCKERS.md) | Blockers and owner decisions |
 | [CLAUDE.md](CLAUDE.md) | Working rules for AI assistants and teammates |
 | [docs/README.md](docs/README.md) | Index of every document in `docs/` |
 

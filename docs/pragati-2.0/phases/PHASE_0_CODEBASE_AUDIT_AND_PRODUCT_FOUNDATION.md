@@ -1,5 +1,15 @@
 # Phase 0 — Codebase Audit & Product Foundation
 
+> **Update 2026-11-04 (orchestrator pass).** Checked against the repo at `fe89cb4`:
+> - 31 tables confirmed in `contracts/schema.sql`. No learner-facing attempt or event route exists in `openapi.yaml`.
+> - **Blocker B2:** `responses` has primary key (test, student, question) and **no timestamp**. There is no ordered event log to replay, so knowledge tracing cannot be built on it. Add ADR-003 (append-only `attempt_events`) before Phase 1's gate.
+> - **Blocker B3:** `questions` stores `text_hash` only; the product cannot show a question to a learner.
+> - **Blocker B5:** `topics.exam` allows only `jee_main` and `neet_ug`. ADR-004 covers exam scope.
+> - **Blocker B1:** `contracts/routing_policy.yaml` gates ML risk for minors; response-time and hint features (Phase 2) need counsel's answer on DPDP s.9(3) first (research R1).
+> - Existing BKT (4-parameter EM) and a 1PL Rasch runtime exist; the 0.763 figure comes from a hierarchical model not served by the runtime (B9).
+> - Phase 0 deliverables are now assigned: `docs/audit/*` (prompt P1), ADR-003, ADR-004 (prompt P4). See `orchestration/ORCHESTRATOR.md` and `orchestration/AGENT_PROMPTS.md`.
+> - Gates G0 and G1 in `orchestration/ORCHESTRATOR.md` §3 define when Phase 0 is complete.
+
 ## 1. Purpose
 
 Establish a verified understanding of the existing Pragati product and define the smallest high-impact Pragati 2.0 scope. This phase prevents a rewrite, duplicate database tables, and last-minute integration failures.

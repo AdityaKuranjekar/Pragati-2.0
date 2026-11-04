@@ -3,6 +3,12 @@
 ## Pragati 2.0 (current)
 | Document | What it is |
 |---|---|
+| [pragati-2.0/orchestration/ORCHESTRATOR.md](pragati-2.0/orchestration/ORCHESTRATOR.md) | Orchestrator plan: work packages, sessions, gates, decisions |
+| [pragati-2.0/orchestration/AGENT_PROMPTS.md](pragati-2.0/orchestration/AGENT_PROMPTS.md) | Paste-ready agent prompts |
+| [pragati-2.0/research/RESEARCH_PROMPTS.md](pragati-2.0/research/RESEARCH_PROMPTS.md) | Research prompts and findings register |
+| [pragati-2.0/evaluation/EVAL_PLAN.md](pragati-2.0/evaluation/EVAL_PLAN.md) | Evaluation sets, pass bars (proposed), existing numbers re-mapped |
+| [pragati-2.0/BLOCKERS.md](pragati-2.0/BLOCKERS.md) | Blockers, risks and owner decisions |
+| [pragati-2.0/PITCH.md](pragati-2.0/PITCH.md) | Defining user and pitch with claim status |
 | [pragati-2.0/README.md](pragati-2.0/README.md) | Phase plan, product north star, target repository structure, public datasets, winning-product checklist |
 | [pragati-2.0/phases/PHASE_0_CODEBASE_AUDIT_AND_PRODUCT_FOUNDATION.md](pragati-2.0/phases/PHASE_0_CODEBASE_AUDIT_AND_PRODUCT_FOUNDATION.md) | Audit workstreams, MVP scope, exit criteria. Do this first |
 | [pragati-2.0/phases/PHASE_1_DATA_CURRICULUM_AND_CONTENT_FOUNDATION.md](pragati-2.0/phases/PHASE_1_DATA_CURRICULUM_AND_CONTENT_FOUNDATION.md) | Curriculum model, concept graph, question bank, licensing |

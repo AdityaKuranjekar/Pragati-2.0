@@ -508,3 +508,27 @@ Implemented on `claude/serene-sagan-8za1vh`. Differences from sections 1 to 5:
 | Shell passthrough | Added to `components/shell.tsx` (2 lines); console pages unchanged | Owner decision 1 |
 
 Checked in a browser (Chromium, light and dark, 1280px and 390px): no horizontal page scroll at phone width; a full practice run on Learner A moves the next step from the Argand diagram to nature of roots after seven correct answers; the review form stays disabled without a reason and records a decision. Not done: Playwright spec against the hosted URL, a colour-vision simulator pass in a browser, a screen-reader pass.
+
+## 9. Design change after review (2026-11-05)
+
+The first build followed the brief's teal tokens and also followed the system light/dark setting. On review the owner found it much worse than the earlier console and asked for the console look. Decision: match the Pragati 1.0 console, light only.
+
+| Item | Before | Now |
+|---|---|---|
+| Palette | Brief tokens: teal accent, `#F6F7F9` page | Console palette: page `#FAF8F5`, text `#1F2430`, muted text `#4B5367`, border `#E8E3DB`, accent `#3B5BDB`, accent hover `#2B44A8`, accent tint `#EDF2FF`, amber `#8A5200` on `#FFF4E0` |
+| Dark mode | Followed the system setting | Removed. Light only |
+| Shape | 8px radius, hairlines only | 14px cards, 12px controls, pill tags, one very light card shadow (`0 1px 2px` at 5% opacity). No gradients |
+| Mastery scale | Five teal steps | Five indigo steps: `#EDF2FF`, `#BAC8FF`, `#748FFC`, `#3B5BDB`, `#1E2F7A`; number printed in every cell |
+
+This replaces the colour values in sections 4.1 to 4.3 and the brief's section 3. Computed checks for the new values (same method as section 4):
+
+| Pair | Ratio | Requirement |
+|---|---|---|
+| Text on page / on card | 14.64 / 15.52 | 4.5 |
+| Muted text on card / on page | 7.69 / 7.25 | 4.5 |
+| Accent on card; white on accent | 5.67; 5.67 | 4.5 |
+| Amber text on its tint | 5.86 | 4.5 |
+| Cell text, m1 to m5 | 13.85, 9.45, 5.23, 5.67, 12.05 | 4.5 |
+| Step to step (normal / deuteranopia / protanopia / tritanopia) | m1-m2 1.47 / 1.49 / 1.43 / 1.45; m2-m3 1.81 / 1.87 / 1.71 / 1.77; m3-m4 1.91 / 1.83 / 1.78 / 1.72; m4-m5 2.13 / 2.11 / 2.26 / 2.25 | none; luminance order is preserved in all three simulations |
+
+The grey `#6B7389` used for captions in the console is 4.46:1 on the page colour, below 4.5, so the prototype uses `#4B5367` for all small text. Adjacent steps are still close in lightness, so the printed number remains the primary cue. These are computed values, not a browser simulator pass.

@@ -48,6 +48,8 @@ One shared intelligence engine should support multiple education contexts throug
 | [evaluation/EVAL_PLAN.md](evaluation/EVAL_PLAN.md) | Evaluation sets E0 to E14 with origin tags, splits, baselines, proposed pass bars, sample sizes, and a re-map of every existing number |
 | [BLOCKERS.md](BLOCKERS.md) | Fourteen blockers (B1 to B14), risks, assumptions, and the decisions the owner must make |
 | [PITCH.md](PITCH.md) | Defining user, claims and their evidence status, judge questions, slide outline |
+| [PROTOTYPE_PLAN.md](PROTOTYPE_PLAN.md) | Hosted prototype: scope, architecture, stage gates, what the owner must connect |
+| [data/DATASET_PIPELINE.md](data/DATASET_PIPELINE.md) | Rights-controlled JEE dataset pipeline and source tiers |
 
 Each phase file now starts with a dated "Update 2026-11-04" block. The original plan text below it is unchanged.
 

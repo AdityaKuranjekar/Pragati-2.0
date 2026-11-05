@@ -1,0 +1,85 @@
+# Source register for JEE content and interaction data.
+# Every source used by the pipeline must appear here. The loader in rights.py refuses any
+# (source, purpose) pair that this file does not allow. Edit a status only after a written
+# rights check is on file (record the check in `rights_evidence`).
+#
+# Statuses
+#   original_reviewed  Authored or generated in-house, verified and human-reviewed (see items policy)
+#   cleared            Written permission or a licence that allows the stated purpose (none yet)
+#   reference_only     May guide a human author; no text, figures or answers copied into items
+#   research_only      Offline research or benchmarking; never student-facing; no item text in product
+#   pending            Rights not yet checked; nothing may be used
+#   blocked            Licence excludes the purpose; do not use
+#
+# Purposes
+#   student_facing_item  Item text or solutions shown to a learner
+#   benchmark_eval       Offline evaluation of models (no output shown to learners)
+#   server_side_model    Training or fitting models whose outputs are shown to learners (no text)
+#   reference            Human authors read it to write original items
+
+version: 1
+updated: "2026-11-05"
+
+sources:
+  - id: original_reviewed
+    name: Pragati-authored and generated items (human reviewed)
+    status: original_reviewed
+    allowed_purposes: [student_facing_item, benchmark_eval, server_side_model, reference]
+    rights_evidence: "In-house authorship. Generation-tool terms to be recorded per run in the run manifest."
+    notes: "Main scalable source. Requires the item policy in DATASET_PIPELINE.md §5."
+
+  - id: ncert_textbooks
+    name: NCERT Class 11 and 12 textbooks
+    status: reference_only
+    allowed_purposes: [reference]
+    rights_evidence: "pending: confirm NCERT copyright notice and reuse terms (R11)"
+    notes: "Human authors may read the text to design original questions. Do not copy text, figures or examples."
+
+  - id: ncert_exemplar
+    name: NCERT Exemplar problems
+    status: reference_only
+    allowed_purposes: [reference]
+    rights_evidence: "pending: confirm reuse terms (R11)"
+    notes: "Use as a difficulty reference for original items. Verbatim use waits for a written permission."
+
+  - id: jeebench
+    name: JEEBench (dair-iitd)
+    status: research_only
+    allowed_purposes: [benchmark_eval]
+    rights_evidence: "Repository licence recorded as MIT (from the repo, not re-checked). Underlying exam question rights NOT established (R11)."
+    notes: "Benchmark only. Never student-facing. Keep the copy outside the product repo."
+
+  - id: nta_jee_main_archive
+    name: NTA JEE Main previous-year papers
+    status: pending
+    allowed_purposes: []
+    rights_evidence: "pending: written permission or confirmed reuse terms (R11)"
+    notes: "Blocked until the rights check is on file."
+
+  - id: jee_advanced_archive
+    name: JEE Advanced past papers
+    status: pending
+    allowed_purposes: []
+    rights_evidence: "pending: written permission or confirmed reuse terms (R11)"
+    notes: "Blocked until the rights check is on file."
+
+  - id: openstax
+    name: OpenStax textbooks
+    status: blocked
+    allowed_purposes: [reference]
+    rights_evidence: "Checked 2026-11-05 on the OpenStax licensing page: CC BY-NC-SA. Commercial use needs permission."
+    notes: "Reading only for authors, and only if the product is non-commercial. No copied text or figures."
+
+  - id: assistments_2009
+    name: ASSISTments 2009-2010 Skill Builder
+    status: research_only
+    allowed_purposes: [benchmark_eval, server_side_model]
+    rights_evidence: "No explicit licence found (R2). Not redistributed."
+    notes: "US school maths interaction logs. Never a source of JEE item text. Use for KT mechanics and evaluation only."
+
+  - id: edneT
+    name: EdNet (riiid)
+    status: research_only
+    allowed_purposes: [benchmark_eval]
+    rights_evidence: "CC BY-NC 4.0 for research (paper, checked)."
+    notes: "Excluded from any commercial path."

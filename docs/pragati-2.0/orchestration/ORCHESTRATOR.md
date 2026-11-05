@@ -42,6 +42,8 @@
 | WP10 | Expert labels and teacher ratings (E4, E5, E6) | Human + on computer for logs | No | WP7, WP8 | `ml/evaluation/expert/` |
 | WP11 | Full evaluation run, error analysis, honest report | **On computer** | Yes | WP5, WP8, WP10 | `docs/pragati-2.0/evaluation/RESULTS.md` |
 | WP12 | Pitch, deck, demo script, backup recording | Cloud, then human | No | WP11 | `docs/pitch/` |
+| WP-D | Rights-controlled dataset pipeline: source register, rights gate (done: 16 tests passing), authoring and review workflow, duplicate check | Cloud for code and docs; reviewers human | No | none | `ml/dataset_pipeline/`, `docs/pragati-2.0/data/DATASET_PIPELINE.md` |
+| WP-H | Hosted prototype: Vercel project, Neon database, API host, cold-start handling, Playwright on the hosted URL | Cloud (needs owner accounts) | No | WP-D (S1), WP4 | `docs/pragati-2.0/PROTOTYPE_PLAN.md` stages S0 to S6 |
 
 ## 3. Gates
 

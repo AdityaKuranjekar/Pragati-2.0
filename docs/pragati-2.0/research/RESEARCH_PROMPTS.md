@@ -148,6 +148,18 @@
 
 ---
 
+## Findings register## R11: Item-text rights for JEE content (added 2026-11-05)
+
+**Question.** For each source, is reuse of item text possible, and by what route?
+1. JEEBench (`github.com/dair-iitd/jeebench`): the repository licence is recorded as MIT. Do the rights in the underlying exam questions (from the exam bodies) allow reuse beyond benchmarking? Read the licence file, the data notes and any statement from the authors.
+2. NCERT textbooks and Exemplar (`ncert.nic.in/textbook.php`, `ncert.nic.in/exemplar-problems.php`): copyright notice and reuse terms for quoting, adapting and figures.
+3. NTA JEE Main archive (`jeemain.nta.nic.in/previous-year-question-paper/`) and JEE Advanced archive (`jeeadv.ac.in/past_papers.php`): reuse terms; the written-permission route and who grants it.
+4. OpenStax: confirm the NC-SA position on the licensing page for each book used.
+
+**Output.** One row per source with: quoted licence wording, reuse permitted (yes/no/unclear), route if permission is needed, and what `ml/dataset_pipeline/sources.yaml` should say. Do not send any permission request; list the drafted request for owner approval.
+
+---
+
 ## Findings register
 
 Filed 2026-11-05 in `findings/REPORT_2026-11-05.md`, which carries the verification status of every claim.

@@ -8,6 +8,8 @@
 > - **Hindi (B12):** `name_hi_reviewed` is false for every topic; demo topics need a native-speaker check before public display.
 > - **Tagging evaluation:** E5 (150 items, two annotators, κ ≥ 0.7) in `evaluation/EVAL_PLAN.md`.
 > - **Duplicate check:** before adding concepts, check the 380 topic nodes for concept/topic duplicates; the audit (P1) produces the list.
+> - **Item sourcing (2026-11-05):** core is original and reviewed items; NCERT and Exemplar are reference only; JEEBench is benchmark only; NTA and JEE Advanced archives wait for written permission; OpenStax is non-commercial; ASSISTments never supplies item text. See `data/DATASET_PIPELINE.md` and the register `ml/dataset_pipeline/sources.yaml`.
+> - **Amounts:** demo 300 items (60 on the first hosted chain), pilot about 1,000 across about 40 topics, 150 held out for E5.
 
 ## 1. Purpose
 

@@ -79,3 +79,10 @@ Nothing here licenses the sentence "the adaptive path improves learning".
 The harness was run once before this file was committed, on 20 learners at seed 1, only to check it executes.
 Its numbers were not used to choose any value above. One change was made after it: the budget given to the policy
 is now the remaining slots (idle slots pass time) instead of items already served. That corrects what the input means; it was not tuned on results.
+
+## Addendum 1 (2026-11-05, written after run 1)
+Run 1 followed this file exactly (`ml/evaluation/results/e9_sim_v1_registered.*`, commit 5407be2). It exposed a planner
+defect (a lapsed concept's recheck could be deferred under a short budget, so the lapse never cleared). The defect was fixed
+with a regression test and the same suite was re-run as **run 2, post-hoc and not pre-registered**
+(`e9_sim_v1_1_posthoc.*`). Same parameters, same seed, same N. Both runs are reported in `docs/pragati-2.0/orchestration/S2_FULL_LOG.md`.
+The decision rule and the primary metric above were not changed. No engine parameter was changed.

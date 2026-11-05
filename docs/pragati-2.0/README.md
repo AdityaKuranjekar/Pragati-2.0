@@ -33,11 +33,11 @@ Pragati's differentiator is an adaptive learning path, not a dashboard. The engi
 |---|---|---|---|
 | 1 | Chooses the next concept from the prerequisite chain, and explains why | Built (S2, `backend/app/intelligence/policy.py`); E7 passes | E7 (no violations); E4 root-cause agreement with experts |
 | 2 | Keeps a learner's state from the evidence, with uncertainty and a guard against lucky guesses | Built as fixed-parameter BKT (S2); not fitted | E3 recovery on an independent simulator; E1 on held-out learners |
-| 3 | Chooses the next **item** by difficulty: guided entry for a weak learner, then a deliberate step up toward the target difficulty; no easy-only paths | **Not built** | E9 simulated comparison with a fixed path; E6 teacher ratings |
-| 4 | Raises challenge only when evidence supports it, and does not keep raising it after one lucky correct answer | **Not built** | E10 contradictory and guessed runs; E9 |
-| 5 | Schedules revision as memory fades (time since last success, errors, prerequisite role) | **Not built** | Retention on a held-out delay; labelled as simulation until a pilot |
-| 6 | Uses time, goal and pace to decide what fits the deadline | **Not built** | E9 items-to-mastery under a fixed budget |
-| 7 | Shows a benefit over a fixed path, with the comparison pre-registered | **Not run** | E9 (simulation, labelled) then E8 (pilot, randomised) |
+| 3 | Chooses the next **item** by difficulty: guided entry for a weak learner, then a deliberate step up toward the target difficulty; no easy-only paths | Built and tested (`selection.py`, 21 tests). No approved items exist yet; simulated only | E9 simulated comparison with a fixed path; E6 teacher ratings |
+| 4 | Raises challenge only when evidence supports it, and does not keep raising it after one lucky correct answer | Built and tested (`challenge.py`, 11 tests). Simulation shows no measurable benefit | E10 contradictory and guessed runs; E9 |
+| 5 | Schedules revision as memory fades (time since last success, errors, prerequisite role) | Built and tested (`revision.py`, 17 tests); time and errors only, prerequisite role not built. Simulation shows no measurable benefit | Retention on a held-out delay; labelled as simulation until a pilot |
+| 6 | Uses time, goal and pace to decide what fits the deadline | Built and tested (`recommend_with_budget`). Simulation: helps under a short budget, mixed elsewhere | E9 items-to-mastery under a fixed budget |
+| 7 | Shows a benefit over a fixed path, with the comparison pre-registered | Pre-registered and run in simulation only. Adaptive leaves more concepts mastered and fewer prerequisite violations; it reaches the goal concept less often. See `orchestration/S2_FULL_LOG.md` | E9 (simulation, labelled) then E8 (pilot, randomised) |
 
 **Rule for claims:** until rows 3 to 7 have results, the product may say it chooses the concept adaptively and explains why. It may not say the learning path is adaptive by difficulty or revision, and it may not say adaptation improves learning.
 

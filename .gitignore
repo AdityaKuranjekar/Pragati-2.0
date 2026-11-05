@@ -25,3 +25,4 @@ data/
 # Local backups and agent worktree state
 _archive/
 .claude/
+ml/evaluation/review/keys/

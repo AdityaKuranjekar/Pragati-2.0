@@ -9,7 +9,7 @@ import pytest
 
 SIM_DIR = Path(__file__).resolve().parents[1] / "sim"
 ROOT = Path(__file__).resolve().parents[3]
-HARNESS = {"compare.py"}      # the only file allowed to import the engine
+HARNESS = {"compare.py", "recovery_run.py"}      # the only files allowed to import the engine (E9 and E3 harnesses)
 
 
 def _imports(path: Path) -> set[str]:

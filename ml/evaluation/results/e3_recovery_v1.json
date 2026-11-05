@@ -1,0 +1,4687 @@
+{
+  "C10_D1_g0.25_k10": {
+    "config": {
+      "boot_seed": 7,
+      "depth": 1,
+      "guess": 0.25,
+      "implied_interval_z": 1.2815515655446004,
+      "items_per_concept": 10,
+      "mastered_at": 0.85,
+      "mastery_link": 2.0,
+      "n_boot": 2000,
+      "n_concepts": 10,
+      "n_learners": 500,
+      "prereq_slack": 0.1,
+      "seed": 2026110502,
+      "slip": 0.1
+    },
+    "label": "[SIM]",
+    "n_rows": 5000,
+    "paired_differences": {
+      "estimator_minus_baseline": {
+        "coverage80": {
+          "hi": 0.18380000000000007,
+          "lo": 0.13440000000000007,
+          "mean": 0.1592
+        },
+        "pearson_r": {
+          "hi": -0.12883510491854816,
+          "lo": -0.1544471852175699,
+          "mean": -0.14152775651436156
+        },
+        "rmse": {
+          "hi": 0.15825102258446816,
+          "lo": 0.14198928807625286,
+          "mean": 0.1502062868484469
+        },
+        "spearman_rho": {
+          "hi": -0.03387930119175938,
+          "lo": -0.04609071631893244,
+          "mean": -0.039880723082720615
+        },
+        "state_accuracy": {
+          "hi": -0.20799499999999999,
+          "lo": -0.2704100000000001,
+          "mean": -0.23960000000000004
+        }
+      }
+    },
+    "pass_bar": {
+      "applies": true,
+      "coverage_pass": false,
+      "r_pass": false
+    },
+    "paths": {
+      "baseline_share_correct": {
+        "coverage80": {
+          "hi": 0.6018049999999999,
+          "lo": 0.562395,
+          "mean": 0.5824,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.8279404888734208,
+          "lo": 0.8014655487742451,
+          "mean": 0.8151721281817068,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.1926369950231724,
+          "lo": 0.18231794284408076,
+          "mean": 0.18739049145758557,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.8271450963593533,
+          "lo": 0.8005778294935907,
+          "mean": 0.8148054813973983,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.8408049999999999,
+          "lo": 0.8064,
+          "mean": 0.8236,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.7397291866754283,
+          "lo": 0.6547034729151693,
+          "mean": 0.698005698005698,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 0.5929983861157045,
+          "lo": 0.5383236258086216,
+          "mean": 0.5658198614318707,
+          "undefined_in_boot": 0.0
+        }
+      },
+      "estimator": {
+        "coverage80": {
+          "hi": 0.7622,
+          "lo": 0.722,
+          "mean": 0.7416,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.6933967417726329,
+          "lo": 0.6523280206094445,
+          "mean": 0.6736443716673453,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.3488213076772464,
+          "lo": 0.3262636106630159,
+          "mean": 0.33759677830603246,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.7884927836212002,
+          "lo": 0.7587982685631198,
+          "mean": 0.7749247583146777,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.6088,
+          "lo": 0.5596,
+          "mean": 0.584,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.4208638202115199,
+          "lo": 0.34315670477752586,
+          "mean": 0.3826269912834385,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 0.9873233653328802,
+          "lo": 0.9717884520048243,
+          "mean": 0.9799846035411856,
+          "undefined_in_boot": 0.0
+        }
+      }
+    },
+    "prevalence": 0.2598,
+    "share_shown_as_band": 1.0,
+    "task": "mastery recovery on simulated learners (latent continuous mastery and binary state at 0.85)"
+  },
+  "C10_D1_g0.25_k20": {
+    "config": {
+      "boot_seed": 7,
+      "depth": 1,
+      "guess": 0.25,
+      "implied_interval_z": 1.2815515655446004,
+      "items_per_concept": 20,
+      "mastered_at": 0.85,
+      "mastery_link": 2.0,
+      "n_boot": 2000,
+      "n_concepts": 10,
+      "n_learners": 500,
+      "prereq_slack": 0.1,
+      "seed": 2026110502,
+      "slip": 0.1
+    },
+    "label": "[SIM]",
+    "n_rows": 5000,
+    "paired_differences": {
+      "estimator_minus_baseline": {
+        "coverage80": {
+          "hi": 0.12619999999999998,
+          "lo": 0.0514,
+          "mean": 0.08799999999999997
+        },
+        "pearson_r": {
+          "hi": -0.18866341517082466,
+          "lo": -0.2181642220395095,
+          "mean": -0.20281709455674213
+        },
+        "rmse": {
+          "hi": 0.20670825615461574,
+          "lo": 0.18853694134811957,
+          "mean": 0.19737206460850845
+        },
+        "spearman_rho": {
+          "hi": -0.04864741169283255,
+          "lo": -0.05995389390210441,
+          "mean": -0.05403060929518111
+        },
+        "state_accuracy": {
+          "hi": -0.3002,
+          "lo": -0.3665999999999999,
+          "mean": -0.3330000000000001
+        }
+      }
+    },
+    "pass_bar": {
+      "applies": true,
+      "coverage_pass": false,
+      "r_pass": false
+    },
+    "paths": {
+      "baseline_share_correct": {
+        "coverage80": {
+          "hi": 0.5090049999999999,
+          "lo": 0.4634,
+          "mean": 0.4868,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.9032764606797051,
+          "lo": 0.8866052849389177,
+          "mean": 0.8956093392471757,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.1618348737701641,
+          "lo": 0.15166621858865537,
+          "mean": 0.15683348867305133,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.9001967697097883,
+          "lo": 0.8849235285764118,
+          "mean": 0.8937319057243938,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.8856,
+          "lo": 0.857995,
+          "mean": 0.8716,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.8267511436791538,
+          "lo": 0.7593470766138689,
+          "mean": 0.7946188340807175,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 0.7113437649844162,
+          "lo": 0.6529145169201134,
+          "mean": 0.6820631254811393,
+          "undefined_in_boot": 0.0
+        }
+      },
+      "estimator": {
+        "coverage80": {
+          "hi": 0.600405,
+          "lo": 0.549,
+          "mean": 0.5748,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.7112671389551364,
+          "lo": 0.6723407606892617,
+          "mean": 0.6927922446904335,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.36623801835933323,
+          "lo": 0.3427582380512092,
+          "mean": 0.3542055532815598,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.8485448300216145,
+          "lo": 0.8280099066971208,
+          "mean": 0.8397012964292127,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.567205,
+          "lo": 0.511385,
+          "mean": 0.5386,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.3984547045053297,
+          "lo": 0.32173667056146604,
+          "mean": 0.36023294509151416,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 1.0,
+          "lo": 1.0,
+          "mean": 1.0,
+          "undefined_in_boot": 0.0
+        }
+      }
+    },
+    "prevalence": 0.2598,
+    "share_shown_as_band": 1.0,
+    "task": "mastery recovery on simulated learners (latent continuous mastery and binary state at 0.85)"
+  },
+  "C10_D1_g0.25_k3": {
+    "config": {
+      "boot_seed": 7,
+      "depth": 1,
+      "guess": 0.25,
+      "implied_interval_z": 1.2815515655446004,
+      "items_per_concept": 3,
+      "mastered_at": 0.85,
+      "mastery_link": 2.0,
+      "n_boot": 2000,
+      "n_concepts": 10,
+      "n_learners": 500,
+      "prereq_slack": 0.1,
+      "seed": 2026110502,
+      "slip": 0.1
+    },
+    "label": "[SIM]",
+    "n_rows": 5000,
+    "paired_differences": {
+      "estimator_minus_baseline": {
+        "coverage80": {
+          "hi": 0.27560000000000007,
+          "lo": 0.25,
+          "mean": 0.26260000000000006
+        },
+        "pearson_r": {
+          "hi": -0.05193095072613706,
+          "lo": -0.07445896314969261,
+          "mean": -0.06290270678303667
+        },
+        "rmse": {
+          "hi": 0.009595496755040265,
+          "lo": 0.0005295736641154098,
+          "mean": 0.0048835122766703876
+        },
+        "spearman_rho": {
+          "hi": -0.02734357968978843,
+          "lo": -0.04417337081570857,
+          "mean": -0.03557185750792702
+        },
+        "state_accuracy": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        }
+      }
+    },
+    "pass_bar": {
+      "applies": false,
+      "coverage_pass": null,
+      "r_pass": null
+    },
+    "paths": {
+      "baseline_share_correct": {
+        "coverage80": {
+          "hi": 0.7202,
+          "lo": 0.691,
+          "mean": 0.7058,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.6403567979472267,
+          "lo": 0.5958937479434937,
+          "mean": 0.6192468635665442,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.2901423624724582,
+          "lo": 0.27623858901334397,
+          "mean": 0.2831777101351357,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.6382734370295142,
+          "lo": 0.5920068401184952,
+          "mean": 0.616974257586835,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.7720049999999999,
+          "lo": 0.709,
+          "mean": 0.7402,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": NaN,
+          "lo": NaN,
+          "mean": NaN,
+          "undefined_in_boot": 1.0
+        },
+        "state_recall": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0,
+          "undefined_in_boot": 0.0
+        }
+      },
+      "estimator": {
+        "coverage80": {
+          "hi": 0.9742049999999999,
+          "lo": 0.962395,
+          "mean": 0.9684,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.5799959842297957,
+          "lo": 0.5293388105694835,
+          "mean": 0.5563441567835076,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.29574730439362823,
+          "lo": 0.2802367051597962,
+          "mean": 0.2880612224118061,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.6038269424816617,
+          "lo": 0.5554634933199796,
+          "mean": 0.581402400078908,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.7720049999999999,
+          "lo": 0.709,
+          "mean": 0.7402,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": NaN,
+          "lo": NaN,
+          "mean": NaN,
+          "undefined_in_boot": 1.0
+        },
+        "state_recall": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0,
+          "undefined_in_boot": 0.0
+        }
+      }
+    },
+    "prevalence": 0.2598,
+    "share_shown_as_band": 1.0,
+    "task": "mastery recovery on simulated learners (latent continuous mastery and binary state at 0.85)"
+  },
+  "C10_D1_g0.25_k6": {
+    "config": {
+      "boot_seed": 7,
+      "depth": 1,
+      "guess": 0.25,
+      "implied_interval_z": 1.2815515655446004,
+      "items_per_concept": 6,
+      "mastered_at": 0.85,
+      "mastery_link": 2.0,
+      "n_boot": 2000,
+      "n_concepts": 10,
+      "n_learners": 500,
+      "prereq_slack": 0.1,
+      "seed": 2026110502,
+      "slip": 0.1
+    },
+    "label": "[SIM]",
+    "n_rows": 5000,
+    "paired_differences": {
+      "estimator_minus_baseline": {
+        "coverage80": {
+          "hi": 0.23820499999999994,
+          "lo": 0.206595,
+          "mean": 0.22199999999999998
+        },
+        "pearson_r": {
+          "hi": -0.08024076397472493,
+          "lo": -0.10287901277669424,
+          "mean": -0.09162922017123909
+        },
+        "rmse": {
+          "hi": 0.1011165599728067,
+          "lo": 0.0876163209888371,
+          "mean": 0.0944189040182506
+        },
+        "spearman_rho": {
+          "hi": -0.036724069555654736,
+          "lo": -0.05126943547950815,
+          "mean": -0.04378582914270568
+        },
+        "state_accuracy": {
+          "hi": -0.125,
+          "lo": -0.18861499999999998,
+          "mean": -0.15780000000000005
+        }
+      }
+    },
+    "pass_bar": {
+      "applies": false,
+      "coverage_pass": null,
+      "r_pass": null
+    },
+    "paths": {
+      "baseline_share_correct": {
+        "coverage80": {
+          "hi": 0.6572049999999999,
+          "lo": 0.6214,
+          "mean": 0.6398,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.7559872363178908,
+          "lo": 0.7218731381607482,
+          "mean": 0.7399139443412599,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.22498399647888231,
+          "lo": 0.21354084783427452,
+          "mean": 0.2191439356960344,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.7542853104938675,
+          "lo": 0.7190424465951801,
+          "mean": 0.738331121073053,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.8176,
+          "lo": 0.7774,
+          "mean": 0.7974,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.7350470430107527,
+          "lo": 0.6382081782671547,
+          "mean": 0.6896551724137931,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 0.42894051859696414,
+          "lo": 0.3716705607476635,
+          "mean": 0.40030792917628943,
+          "undefined_in_boot": 0.0
+        }
+      },
+      "estimator": {
+        "coverage80": {
+          "hi": 0.8758,
+          "lo": 0.8479949999999999,
+          "mean": 0.8618,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.6694443505439184,
+          "lo": 0.6262869498752203,
+          "mean": 0.6482847241700208,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.32391983540468544,
+          "lo": 0.3030093633932309,
+          "mean": 0.313562839714285,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.7120837148278683,
+          "lo": 0.6743667380202077,
+          "mean": 0.6945452919303473,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.6604,
+          "lo": 0.6196,
+          "mean": 0.6396,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.45140491244928765,
+          "lo": 0.3702734146695928,
+          "mean": 0.41209367354072,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 0.923317055420904,
+          "lo": 0.891433080039646,
+          "mean": 0.9076212471131639,
+          "undefined_in_boot": 0.0
+        }
+      }
+    },
+    "prevalence": 0.2598,
+    "share_shown_as_band": 1.0,
+    "task": "mastery recovery on simulated learners (latent continuous mastery and binary state at 0.85)"
+  },
+  "C10_D1_g0.40_k10": {
+    "config": {
+      "boot_seed": 7,
+      "depth": 1,
+      "guess": 0.4,
+      "implied_interval_z": 1.2815515655446004,
+      "items_per_concept": 10,
+      "mastered_at": 0.85,
+      "mastery_link": 2.0,
+      "n_boot": 2000,
+      "n_concepts": 10,
+      "n_learners": 500,
+      "prereq_slack": 0.1,
+      "seed": 2026110502,
+      "slip": 0.1
+    },
+    "label": "[SIM]",
+    "n_rows": 5000,
+    "paired_differences": {
+      "estimator_minus_baseline": {
+        "coverage80": {
+          "hi": 0.17099999999999999,
+          "lo": 0.12380000000000002,
+          "mean": 0.14760000000000006
+        },
+        "pearson_r": {
+          "hi": -0.17485693950940492,
+          "lo": -0.20385733066779785,
+          "mean": -0.18956221516863436
+        },
+        "rmse": {
+          "hi": 0.17105377155752977,
+          "lo": 0.15593962784596327,
+          "mean": 0.16383147768519604
+        },
+        "spearman_rho": {
+          "hi": -0.029295448246959014,
+          "lo": -0.04161093988113598,
+          "mean": -0.03555122821326706
+        },
+        "state_accuracy": {
+          "hi": -0.28559999999999997,
+          "lo": -0.35059999999999997,
+          "mean": -0.3182
+        }
+      }
+    },
+    "pass_bar": {
+      "applies": true,
+      "coverage_pass": false,
+      "r_pass": false
+    },
+    "paths": {
+      "baseline_share_correct": {
+        "coverage80": {
+          "hi": 0.5184,
+          "lo": 0.4736,
+          "mean": 0.4962,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.7531452098086815,
+          "lo": 0.720333118565027,
+          "mean": 0.7370309707244523,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.2498102768777892,
+          "lo": 0.23143002618714603,
+          "mean": 0.2407569627970891,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.7558440619257288,
+          "lo": 0.721295239706139,
+          "mean": 0.7394996500054051,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.8184,
+          "lo": 0.785795,
+          "mean": 0.8018,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.6654167438353462,
+          "lo": 0.5773829957143594,
+          "mean": 0.6224165341812401,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 0.6282008705879819,
+          "lo": 0.5766789389977214,
+          "mean": 0.6027713625866051,
+          "undefined_in_boot": 0.0
+        }
+      },
+      "estimator": {
+        "coverage80": {
+          "hi": 0.6712,
+          "lo": 0.616795,
+          "mean": 0.6438,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.568327598235613,
+          "lo": 0.5258770058254593,
+          "mean": 0.547468755555818,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.4200016104856526,
+          "lo": 0.3895825526400238,
+          "mean": 0.40458844048228515,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.7212141622452723,
+          "lo": 0.6845588941026998,
+          "mean": 0.703948421792138,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.5098,
+          "lo": 0.4584,
+          "mean": 0.4836,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.3682670686369534,
+          "lo": 0.2960041538984506,
+          "mean": 0.3328991924980464,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 0.9902914432690915,
+          "lo": 0.9768253462801241,
+          "mean": 0.9838337182448037,
+          "undefined_in_boot": 0.0
+        }
+      }
+    },
+    "prevalence": 0.2598,
+    "share_shown_as_band": 1.0,
+    "task": "mastery recovery on simulated learners (latent continuous mastery and binary state at 0.85)"
+  },
+  "C10_D1_g0.40_k20": {
+    "config": {
+      "boot_seed": 7,
+      "depth": 1,
+      "guess": 0.4,
+      "implied_interval_z": 1.2815515655446004,
+      "items_per_concept": 20,
+      "mastered_at": 0.85,
+      "mastery_link": 2.0,
+      "n_boot": 2000,
+      "n_concepts": 10,
+      "n_learners": 500,
+      "prereq_slack": 0.1,
+      "seed": 2026110502,
+      "slip": 0.1
+    },
+    "label": "[SIM]",
+    "n_rows": 5000,
+    "paired_differences": {
+      "estimator_minus_baseline": {
+        "coverage80": {
+          "hi": 0.12000499999999997,
+          "lo": 0.05639499999999995,
+          "mean": 0.08800000000000002
+        },
+        "pearson_r": {
+          "hi": -0.28301028884219764,
+          "lo": -0.3162356617192423,
+          "mean": -0.29883493909865166
+        },
+        "rmse": {
+          "hi": 0.22250077623944628,
+          "lo": 0.20506699206589557,
+          "mean": 0.21379271261704483
+        },
+        "spearman_rho": {
+          "hi": -0.05938944504380689,
+          "lo": -0.07761762595884909,
+          "mean": -0.06782347564652103
+        },
+        "state_accuracy": {
+          "hi": -0.39299500000000004,
+          "lo": -0.46059999999999995,
+          "mean": -0.4256
+        }
+      }
+    },
+    "pass_bar": {
+      "applies": true,
+      "coverage_pass": false,
+      "r_pass": false
+    },
+    "paths": {
+      "baseline_share_correct": {
+        "coverage80": {
+          "hi": 0.419,
+          "lo": 0.36839,
+          "mean": 0.3938,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.8496366277820482,
+          "lo": 0.8267853569339332,
+          "mean": 0.838650287724181,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.22792822011136424,
+          "lo": 0.2095306382441989,
+          "mean": 0.2188747624896015,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.8512389188928384,
+          "lo": 0.829106879068238,
+          "mean": 0.8413368270329129,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.8592049999999999,
+          "lo": 0.83059,
+          "mean": 0.8448,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.7313133383425611,
+          "lo": 0.6518086024942092,
+          "mean": 0.6929889298892989,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 0.7497939959541942,
+          "lo": 0.6942078364565588,
+          "mean": 0.7228637413394919,
+          "undefined_in_boot": 0.0
+        }
+      },
+      "estimator": {
+        "coverage80": {
+          "hi": 0.512,
+          "lo": 0.45039500000000005,
+          "mean": 0.4818,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.5597488413697466,
+          "lo": 0.517392701011528,
+          "mean": 0.5398153486255294,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.44857038653950154,
+          "lo": 0.41674500145378335,
+          "mean": 0.4326674751066463,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.7883093916962448,
+          "lo": 0.7546761849178376,
+          "mean": 0.7735133513863919,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.44780499999999995,
+          "lo": 0.39039,
+          "mean": 0.4192,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.3430850046750617,
+          "lo": 0.27373765743246975,
+          "mean": 0.30906495360456815,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 1.0,
+          "lo": 1.0,
+          "mean": 1.0,
+          "undefined_in_boot": 0.0
+        }
+      }
+    },
+    "prevalence": 0.2598,
+    "share_shown_as_band": 1.0,
+    "task": "mastery recovery on simulated learners (latent continuous mastery and binary state at 0.85)"
+  },
+  "C10_D1_g0.40_k3": {
+    "config": {
+      "boot_seed": 7,
+      "depth": 1,
+      "guess": 0.4,
+      "implied_interval_z": 1.2815515655446004,
+      "items_per_concept": 3,
+      "mastered_at": 0.85,
+      "mastery_link": 2.0,
+      "n_boot": 2000,
+      "n_concepts": 10,
+      "n_learners": 500,
+      "prereq_slack": 0.1,
+      "seed": 2026110502,
+      "slip": 0.1
+    },
+    "label": "[SIM]",
+    "n_rows": 5000,
+    "paired_differences": {
+      "estimator_minus_baseline": {
+        "coverage80": {
+          "hi": 0.2976,
+          "lo": 0.26879500000000006,
+          "mean": 0.2829999999999999
+        },
+        "pearson_r": {
+          "hi": -0.047324412639248026,
+          "lo": -0.07211803397648417,
+          "mean": -0.05976199790604253
+        },
+        "rmse": {
+          "hi": 0.007218495034743604,
+          "lo": -0.0004287505585029619,
+          "mean": 0.003282783395266442
+        },
+        "spearman_rho": {
+          "hi": -0.02249113362723509,
+          "lo": -0.04058447232583598,
+          "mean": -0.03157022056799924
+        },
+        "state_accuracy": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        }
+      }
+    },
+    "pass_bar": {
+      "applies": false,
+      "coverage_pass": null,
+      "r_pass": null
+    },
+    "paths": {
+      "baseline_share_correct": {
+        "coverage80": {
+          "hi": 0.6774,
+          "lo": 0.64,
+          "mean": 0.6588,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.5433378068879525,
+          "lo": 0.49478705156185626,
+          "mean": 0.5198554141846395,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.32993175452479684,
+          "lo": 0.3103829166197564,
+          "mean": 0.32003558355700995,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.5413279296113449,
+          "lo": 0.4893340511950344,
+          "mean": 0.5166096400245195,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.7720049999999999,
+          "lo": 0.709,
+          "mean": 0.7402,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": NaN,
+          "lo": NaN,
+          "mean": NaN,
+          "undefined_in_boot": 1.0
+        },
+        "state_recall": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0,
+          "undefined_in_boot": 0.0
+        }
+      },
+      "estimator": {
+        "coverage80": {
+          "hi": 0.9504,
+          "lo": 0.9332,
+          "mean": 0.9418,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.4850051213271074,
+          "lo": 0.43333039954833213,
+          "mean": 0.460093416278597,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.3334369634450143,
+          "lo": 0.31291766454389286,
+          "mean": 0.3233183669522764,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.5097383560155797,
+          "lo": 0.45724102041579007,
+          "mean": 0.48503941945652024,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.7720049999999999,
+          "lo": 0.709,
+          "mean": 0.7402,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": NaN,
+          "lo": NaN,
+          "mean": NaN,
+          "undefined_in_boot": 1.0
+        },
+        "state_recall": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0,
+          "undefined_in_boot": 0.0
+        }
+      }
+    },
+    "prevalence": 0.2598,
+    "share_shown_as_band": 1.0,
+    "task": "mastery recovery on simulated learners (latent continuous mastery and binary state at 0.85)"
+  },
+  "C10_D1_g0.40_k6": {
+    "config": {
+      "boot_seed": 7,
+      "depth": 1,
+      "guess": 0.4,
+      "implied_interval_z": 1.2815515655446004,
+      "items_per_concept": 6,
+      "mastered_at": 0.85,
+      "mastery_link": 2.0,
+      "n_boot": 2000,
+      "n_concepts": 10,
+      "n_learners": 500,
+      "prereq_slack": 0.1,
+      "seed": 2026110502,
+      "slip": 0.1
+    },
+    "label": "[SIM]",
+    "n_rows": 5000,
+    "paired_differences": {
+      "estimator_minus_baseline": {
+        "coverage80": {
+          "hi": 0.23020000000000007,
+          "lo": 0.20000000000000007,
+          "mean": 0.21499999999999997
+        },
+        "pearson_r": {
+          "hi": -0.10376138541936882,
+          "lo": -0.13018126049450382,
+          "mean": -0.11666050028688946
+        },
+        "rmse": {
+          "hi": 0.11470010266840207,
+          "lo": 0.10134925937967335,
+          "mean": 0.10814384986009368
+        },
+        "spearman_rho": {
+          "hi": -0.03459802280370078,
+          "lo": -0.0501484769733849,
+          "mean": -0.04220078819939477
+        },
+        "state_accuracy": {
+          "hi": -0.19399499999999997,
+          "lo": -0.262005,
+          "mean": -0.22899999999999998
+        }
+      }
+    },
+    "pass_bar": {
+      "applies": false,
+      "coverage_pass": null,
+      "r_pass": null
+    },
+    "paths": {
+      "baseline_share_correct": {
+        "coverage80": {
+          "hi": 0.5914,
+          "lo": 0.5484,
+          "mean": 0.5706,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.6657279360744183,
+          "lo": 0.6245431968444972,
+          "mean": 0.6457794320659103,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.27583582011013313,
+          "lo": 0.2572058808085269,
+          "mean": 0.2663820927626872,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.6673782514967241,
+          "lo": 0.6249866323419758,
+          "mean": 0.6469207205663596,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.8008049999999999,
+          "lo": 0.7616,
+          "mean": 0.7812,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.6624462550103482,
+          "lo": 0.5626413863109049,
+          "mean": 0.6150392817059483,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 0.4497382640999662,
+          "lo": 0.3935066103297969,
+          "mean": 0.42186297151655117,
+          "undefined_in_boot": 0.0
+        }
+      },
+      "estimator": {
+        "coverage80": {
+          "hi": 0.8062,
+          "lo": 0.764,
+          "mean": 0.7856,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.5514573724741215,
+          "lo": 0.506304612590497,
+          "mean": 0.5291189317790208,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.3884683437828577,
+          "lo": 0.3601365519182636,
+          "mean": 0.3745259426227809,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.6252135963409697,
+          "lo": 0.5817709017201064,
+          "mean": 0.6047199323669649,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.5742,
+          "lo": 0.531195,
+          "mean": 0.5522,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.39682072568778876,
+          "lo": 0.31957963946463874,
+          "mean": 0.3591971240263631,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 0.9369522475028834,
+          "lo": 0.907735982966643,
+          "mean": 0.9230177059276367,
+          "undefined_in_boot": 0.0
+        }
+      }
+    },
+    "prevalence": 0.2598,
+    "share_shown_as_band": 1.0,
+    "task": "mastery recovery on simulated learners (latent continuous mastery and binary state at 0.85)"
+  },
+  "C10_D3_g0.25_k10": {
+    "config": {
+      "boot_seed": 7,
+      "depth": 3,
+      "guess": 0.25,
+      "implied_interval_z": 1.2815515655446004,
+      "items_per_concept": 10,
+      "mastered_at": 0.85,
+      "mastery_link": 2.0,
+      "n_boot": 2000,
+      "n_concepts": 10,
+      "n_learners": 500,
+      "prereq_slack": 0.1,
+      "seed": 2026110502,
+      "slip": 0.1
+    },
+    "label": "[SIM]",
+    "n_rows": 5000,
+    "paired_differences": {
+      "estimator_minus_baseline": {
+        "coverage80": {
+          "hi": 0.199405,
+          "lo": 0.147195,
+          "mean": 0.1734
+        },
+        "pearson_r": {
+          "hi": -0.12753513042338377,
+          "lo": -0.1535855935877808,
+          "mean": -0.14039136535580055
+        },
+        "rmse": {
+          "hi": 0.16675773750552314,
+          "lo": 0.15043587341597833,
+          "mean": 0.1583395174465663
+        },
+        "spearman_rho": {
+          "hi": -0.03573155371295511,
+          "lo": -0.05022878296943326,
+          "mean": -0.04239453472343102
+        },
+        "state_accuracy": {
+          "hi": -0.18519499999999994,
+          "lo": -0.249005,
+          "mean": -0.2156
+        }
+      }
+    },
+    "pass_bar": {
+      "applies": true,
+      "coverage_pass": false,
+      "r_pass": false
+    },
+    "paths": {
+      "baseline_share_correct": {
+        "coverage80": {
+          "hi": 0.5788,
+          "lo": 0.5366,
+          "mean": 0.5572,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.8537753211621832,
+          "lo": 0.8310998077973747,
+          "mean": 0.8424613898976556,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.19580694153774175,
+          "lo": 0.185011584665323,
+          "mean": 0.19046919708989726,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.8520359066113733,
+          "lo": 0.8329909626851603,
+          "mean": 0.8433675709251969,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.8682,
+          "lo": 0.8334,
+          "mean": 0.8504,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.8014407508601498,
+          "lo": 0.7184067007044943,
+          "mean": 0.7616099071207431,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 0.6203076181359083,
+          "lo": 0.5569674671693499,
+          "mean": 0.5880478087649402,
+          "undefined_in_boot": 0.0
+        }
+      },
+      "estimator": {
+        "coverage80": {
+          "hi": 0.750605,
+          "lo": 0.7096,
+          "mean": 0.7306,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.7202593582931986,
+          "lo": 0.6828028262780707,
+          "mean": 0.7020700245418551,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.3608859249472694,
+          "lo": 0.3370019121858977,
+          "mean": 0.34880871453646356,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.812529933114321,
+          "lo": 0.7860982218998699,
+          "mean": 0.8009730362017659,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.6598,
+          "lo": 0.6102,
+          "mean": 0.6348,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.44996832358674466,
+          "lo": 0.3608140923879729,
+          "mean": 0.40642412323828253,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 0.9942719343604094,
+          "lo": 0.9810079101733788,
+          "mean": 0.9880478087649402,
+          "undefined_in_boot": 0.0
+        }
+      }
+    },
+    "prevalence": 0.251,
+    "share_shown_as_band": 1.0,
+    "task": "mastery recovery on simulated learners (latent continuous mastery and binary state at 0.85)"
+  },
+  "C10_D3_g0.25_k20": {
+    "config": {
+      "boot_seed": 7,
+      "depth": 3,
+      "guess": 0.25,
+      "implied_interval_z": 1.2815515655446004,
+      "items_per_concept": 20,
+      "mastered_at": 0.85,
+      "mastery_link": 2.0,
+      "n_boot": 2000,
+      "n_concepts": 10,
+      "n_learners": 500,
+      "prereq_slack": 0.1,
+      "seed": 2026110502,
+      "slip": 0.1
+    },
+    "label": "[SIM]",
+    "n_rows": 5000,
+    "paired_differences": {
+      "estimator_minus_baseline": {
+        "coverage80": {
+          "hi": 0.14199999999999996,
+          "lo": 0.0686,
+          "mean": 0.1064
+        },
+        "pearson_r": {
+          "hi": -0.18686955638235395,
+          "lo": -0.2157713047575373,
+          "mean": -0.20126849000208313
+        },
+        "rmse": {
+          "hi": 0.2121670943971456,
+          "lo": 0.19342980743934762,
+          "mean": 0.20281642832700986
+        },
+        "spearman_rho": {
+          "hi": -0.04967444049822533,
+          "lo": -0.06262830714234704,
+          "mean": -0.05594892400397233
+        },
+        "state_accuracy": {
+          "hi": -0.25579500000000005,
+          "lo": -0.3210100000000001,
+          "mean": -0.2882
+        }
+      }
+    },
+    "pass_bar": {
+      "applies": true,
+      "coverage_pass": false,
+      "r_pass": false
+    },
+    "paths": {
+      "baseline_share_correct": {
+        "coverage80": {
+          "hi": 0.487805,
+          "lo": 0.440595,
+          "mean": 0.4644,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.9146644811327527,
+          "lo": 0.8995660559013677,
+          "mean": 0.9074882485736953,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.17073838192832066,
+          "lo": 0.15969874817463986,
+          "mean": 0.1651501927609974,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.9090200549567408,
+          "lo": 0.8987552539949214,
+          "mean": 0.9049293586316923,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.8926049999999999,
+          "lo": 0.8631949999999999,
+          "mean": 0.8782,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.8444070957668286,
+          "lo": 0.7695523126391294,
+          "mean": 0.8093869731800766,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 0.7034568802951155,
+          "lo": 0.6420859114235329,
+          "mean": 0.6733067729083665,
+          "undefined_in_boot": 0.0
+        }
+      },
+      "estimator": {
+        "coverage80": {
+          "hi": 0.5988049999999999,
+          "lo": 0.541,
+          "mean": 0.5708,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.7241821589304165,
+          "lo": 0.6877806485369775,
+          "mean": 0.7062197585716121,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.38102483247168745,
+          "lo": 0.35525683652415585,
+          "mean": 0.36796662108800726,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.8562722013469221,
+          "lo": 0.8385918870496665,
+          "mean": 0.84898043462772,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.6180049999999999,
+          "lo": 0.561595,
+          "mean": 0.59,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.4216305104169474,
+          "lo": 0.33455271567331624,
+          "mean": 0.3796548592188919,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 1.0,
+          "lo": 0.9975143439295142,
+          "mean": 0.999203187250996,
+          "undefined_in_boot": 0.0
+        }
+      }
+    },
+    "prevalence": 0.251,
+    "share_shown_as_band": 1.0,
+    "task": "mastery recovery on simulated learners (latent continuous mastery and binary state at 0.85)"
+  },
+  "C10_D3_g0.25_k3": {
+    "config": {
+      "boot_seed": 7,
+      "depth": 3,
+      "guess": 0.25,
+      "implied_interval_z": 1.2815515655446004,
+      "items_per_concept": 3,
+      "mastered_at": 0.85,
+      "mastery_link": 2.0,
+      "n_boot": 2000,
+      "n_concepts": 10,
+      "n_learners": 500,
+      "prereq_slack": 0.1,
+      "seed": 2026110502,
+      "slip": 0.1
+    },
+    "label": "[SIM]",
+    "n_rows": 5000,
+    "paired_differences": {
+      "estimator_minus_baseline": {
+        "coverage80": {
+          "hi": 0.27340499999999995,
+          "lo": 0.24680000000000002,
+          "mean": 0.26
+        },
+        "pearson_r": {
+          "hi": -0.05694080186839197,
+          "lo": -0.08018910963625875,
+          "mean": -0.06866682128801371
+        },
+        "rmse": {
+          "hi": 0.017712886422682154,
+          "lo": 0.008220393867303553,
+          "mean": 0.01280379842943108
+        },
+        "spearman_rho": {
+          "hi": -0.0339422279917483,
+          "lo": -0.052009197197185414,
+          "mean": -0.043267136472229684
+        },
+        "state_accuracy": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        }
+      }
+    },
+    "pass_bar": {
+      "applies": false,
+      "coverage_pass": null,
+      "r_pass": null
+    },
+    "paths": {
+      "baseline_share_correct": {
+        "coverage80": {
+          "hi": 0.7190049999999999,
+          "lo": 0.6884,
+          "mean": 0.704,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.6788860751542785,
+          "lo": 0.6409459717896656,
+          "mean": 0.6601701066786074,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.28793893314224245,
+          "lo": 0.27456870802912886,
+          "mean": 0.2812536277679673,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.6761339518931682,
+          "lo": 0.6396230891363027,
+          "mean": 0.6590266584169686,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.7828,
+          "lo": 0.716595,
+          "mean": 0.749,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": NaN,
+          "lo": NaN,
+          "mean": NaN,
+          "undefined_in_boot": 1.0
+        },
+        "state_recall": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0,
+          "undefined_in_boot": 0.0
+        }
+      },
+      "estimator": {
+        "coverage80": {
+          "hi": 0.9698,
+          "lo": 0.958,
+          "mean": 0.964,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.6131298482428462,
+          "lo": 0.5693164384115481,
+          "mean": 0.5915032853905937,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.3024345705990868,
+          "lo": 0.28595870543015184,
+          "mean": 0.2940574261973984,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.634797243150686,
+          "lo": 0.5940969435569199,
+          "mean": 0.6157595219447389,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.7828,
+          "lo": 0.716595,
+          "mean": 0.749,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": NaN,
+          "lo": NaN,
+          "mean": NaN,
+          "undefined_in_boot": 1.0
+        },
+        "state_recall": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0,
+          "undefined_in_boot": 0.0
+        }
+      }
+    },
+    "prevalence": 0.251,
+    "share_shown_as_band": 1.0,
+    "task": "mastery recovery on simulated learners (latent continuous mastery and binary state at 0.85)"
+  },
+  "C10_D3_g0.25_k6": {
+    "config": {
+      "boot_seed": 7,
+      "depth": 3,
+      "guess": 0.25,
+      "implied_interval_z": 1.2815515655446004,
+      "items_per_concept": 6,
+      "mastered_at": 0.85,
+      "mastery_link": 2.0,
+      "n_boot": 2000,
+      "n_concepts": 10,
+      "n_learners": 500,
+      "prereq_slack": 0.1,
+      "seed": 2026110502,
+      "slip": 0.1
+    },
+    "label": "[SIM]",
+    "n_rows": 5000,
+    "paired_differences": {
+      "estimator_minus_baseline": {
+        "coverage80": {
+          "hi": 0.22539999999999993,
+          "lo": 0.19200000000000006,
+          "mean": 0.20879999999999999
+        },
+        "pearson_r": {
+          "hi": -0.093941295974342,
+          "lo": -0.11570294630393846,
+          "mean": -0.10509604619950574
+        },
+        "rmse": {
+          "hi": 0.11526262529580107,
+          "lo": 0.10077935942239367,
+          "mean": 0.10809417511800704
+        },
+        "spearman_rho": {
+          "hi": -0.042710633208618516,
+          "lo": -0.05677389046331326,
+          "mean": -0.04970194032373976
+        },
+        "state_accuracy": {
+          "hi": -0.10979500000000003,
+          "lo": -0.1734,
+          "mean": -0.1412
+        }
+      }
+    },
+    "pass_bar": {
+      "applies": false,
+      "coverage_pass": null,
+      "r_pass": null
+    },
+    "paths": {
+      "baseline_share_correct": {
+        "coverage80": {
+          "hi": 0.6394,
+          "lo": 0.6014,
+          "mean": 0.62,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.7842659236570184,
+          "lo": 0.7525720346519736,
+          "mean": 0.7688420815887029,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.22850714012874287,
+          "lo": 0.2168253810239402,
+          "mean": 0.22266526060322425,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.7846344285023471,
+          "lo": 0.7548969870813179,
+          "mean": 0.7710373355448247,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.838405,
+          "lo": 0.7962,
+          "mean": 0.817,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.7829654904571681,
+          "lo": 0.693650114789306,
+          "mean": 0.7401129943502824,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 0.44597853132211795,
+          "lo": 0.3873459006607555,
+          "mean": 0.41752988047808764,
+          "undefined_in_boot": 0.0
+        }
+      },
+      "estimator": {
+        "coverage80": {
+          "hi": 0.8442,
+          "lo": 0.8124,
+          "mean": 0.8288,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.6852548201882681,
+          "lo": 0.6422199976415095,
+          "mean": 0.6637460353891972,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.34221687430579795,
+          "lo": 0.3194329835776606,
+          "mean": 0.3307594357212313,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.7379517361145682,
+          "lo": 0.7027914775491845,
+          "mean": 0.7213353952210849,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.6966,
+          "lo": 0.6556,
+          "mean": 0.6758,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.47458462426341047,
+          "lo": 0.384945178120319,
+          "mean": 0.43135783945986494,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 0.930956950454781,
+          "lo": 0.902169719538379,
+          "mean": 0.9163346613545816,
+          "undefined_in_boot": 0.0
+        }
+      }
+    },
+    "prevalence": 0.251,
+    "share_shown_as_band": 1.0,
+    "task": "mastery recovery on simulated learners (latent continuous mastery and binary state at 0.85)"
+  },
+  "C10_D3_g0.40_k10": {
+    "config": {
+      "boot_seed": 7,
+      "depth": 3,
+      "guess": 0.4,
+      "implied_interval_z": 1.2815515655446004,
+      "items_per_concept": 10,
+      "mastered_at": 0.85,
+      "mastery_link": 2.0,
+      "n_boot": 2000,
+      "n_concepts": 10,
+      "n_learners": 500,
+      "prereq_slack": 0.1,
+      "seed": 2026110502,
+      "slip": 0.1
+    },
+    "label": "[SIM]",
+    "n_rows": 5000,
+    "paired_differences": {
+      "estimator_minus_baseline": {
+        "coverage80": {
+          "hi": 0.174805,
+          "lo": 0.12718999999999991,
+          "mean": 0.15139999999999998
+        },
+        "pearson_r": {
+          "hi": -0.18972423851043546,
+          "lo": -0.21924618820665479,
+          "mean": -0.20444386815102567
+        },
+        "rmse": {
+          "hi": 0.18600484574153442,
+          "lo": 0.16993483246215496,
+          "mean": 0.17778197496874198
+        },
+        "spearman_rho": {
+          "hi": -0.029784454134555622,
+          "lo": -0.043203623998456335,
+          "mean": -0.03625482028777183
+        },
+        "state_accuracy": {
+          "hi": -0.2867950000000001,
+          "lo": -0.3558049999999999,
+          "mean": -0.3196
+        }
+      }
+    },
+    "pass_bar": {
+      "applies": true,
+      "coverage_pass": false,
+      "r_pass": false
+    },
+    "paths": {
+      "baseline_share_correct": {
+        "coverage80": {
+          "hi": 0.4876,
+          "lo": 0.436995,
+          "mean": 0.4618,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.7857185051150237,
+          "lo": 0.7564813893392724,
+          "mean": 0.7718408123653107,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.26311954310955293,
+          "lo": 0.24423268277967522,
+          "mean": 0.2535943292589113,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.7916453093128101,
+          "lo": 0.7640889178818787,
+          "mean": 0.7791865124769861,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.8498049999999999,
+          "lo": 0.8168,
+          "mean": 0.833,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.7289128929372832,
+          "lo": 0.6375936030256399,
+          "mean": 0.6848591549295775,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 0.6507842799391904,
+          "lo": 0.5896941468546488,
+          "mean": 0.6199203187250996,
+          "undefined_in_boot": 0.0
+        }
+      },
+      "estimator": {
+        "coverage80": {
+          "hi": 0.6402049999999999,
+          "lo": 0.58379,
+          "mean": 0.6132,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.5882161486724111,
+          "lo": 0.5464928258482842,
+          "mean": 0.567396944214285,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.44781622024053763,
+          "lo": 0.4160871276020675,
+          "mean": 0.4313763042276533,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.7578639950315762,
+          "lo": 0.7252530421243311,
+          "mean": 0.7429316921892143,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.5388,
+          "lo": 0.487395,
+          "mean": 0.5134,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.3785836264097703,
+          "lo": 0.2966213057174082,
+          "mean": 0.3392467248908297,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 0.9960636082461524,
+          "lo": 0.9841264106798788,
+          "mean": 0.9904382470119522,
+          "undefined_in_boot": 0.0
+        }
+      }
+    },
+    "prevalence": 0.251,
+    "share_shown_as_band": 1.0,
+    "task": "mastery recovery on simulated learners (latent continuous mastery and binary state at 0.85)"
+  },
+  "C10_D3_g0.40_k20": {
+    "config": {
+      "boot_seed": 7,
+      "depth": 3,
+      "guess": 0.4,
+      "implied_interval_z": 1.2815515655446004,
+      "items_per_concept": 20,
+      "mastered_at": 0.85,
+      "mastery_link": 2.0,
+      "n_boot": 2000,
+      "n_concepts": 10,
+      "n_learners": 500,
+      "prereq_slack": 0.1,
+      "seed": 2026110502,
+      "slip": 0.1
+    },
+    "label": "[SIM]",
+    "n_rows": 5000,
+    "paired_differences": {
+      "estimator_minus_baseline": {
+        "coverage80": {
+          "hi": 0.12519999999999998,
+          "lo": 0.06159499999999999,
+          "mean": 0.09340000000000004
+        },
+        "pearson_r": {
+          "hi": -0.30229707302774517,
+          "lo": -0.334213977448529,
+          "mean": -0.3180277274183049
+        },
+        "rmse": {
+          "hi": 0.2358805556166622,
+          "lo": 0.2174548632458637,
+          "mean": 0.22654012138718244
+        },
+        "spearman_rho": {
+          "hi": -0.05657734804719344,
+          "lo": -0.07102852345158113,
+          "mean": -0.06375044163793409
+        },
+        "state_accuracy": {
+          "hi": -0.376,
+          "lo": -0.447,
+          "mean": -0.41059999999999997
+        }
+      }
+    },
+    "pass_bar": {
+      "applies": true,
+      "coverage_pass": false,
+      "r_pass": false
+    },
+    "paths": {
+      "baseline_share_correct": {
+        "coverage80": {
+          "hi": 0.39380499999999996,
+          "lo": 0.3424,
+          "mean": 0.3686,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.8663186530013602,
+          "lo": 0.8457441432965687,
+          "mean": 0.8566435781399845,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.2452646937891866,
+          "lo": 0.2260758315752067,
+          "mean": 0.23564969122838342,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.8675920959660676,
+          "lo": 0.8514149462562703,
+          "mean": 0.8609207066642502,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.8800049999999999,
+          "lo": 0.8504,
+          "mean": 0.8652,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.7787551898529174,
+          "lo": 0.694516147315918,
+          "mean": 0.7383100902379,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 0.7440635805359458,
+          "lo": 0.6886596290775354,
+          "mean": 0.7171314741035857,
+          "undefined_in_boot": 0.0
+        }
+      },
+      "estimator": {
+        "coverage80": {
+          "hi": 0.494,
+          "lo": 0.4272,
+          "mean": 0.462,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.5582234649268837,
+          "lo": 0.518487878892462,
+          "mean": 0.5386158507216796,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.48007329257199877,
+          "lo": 0.4452324224181948,
+          "mean": 0.46218981261556585,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.808348105728176,
+          "lo": 0.784192181465685,
+          "mean": 0.7971702650263162,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.48400499999999996,
+          "lo": 0.424985,
+          "mean": 0.4546,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.3530955194620789,
+          "lo": 0.2742168234094875,
+          "mean": 0.3150753768844221,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 1.0,
+          "lo": 0.9975143439295142,
+          "mean": 0.999203187250996,
+          "undefined_in_boot": 0.0
+        }
+      }
+    },
+    "prevalence": 0.251,
+    "share_shown_as_band": 1.0,
+    "task": "mastery recovery on simulated learners (latent continuous mastery and binary state at 0.85)"
+  },
+  "C10_D3_g0.40_k3": {
+    "config": {
+      "boot_seed": 7,
+      "depth": 3,
+      "guess": 0.4,
+      "implied_interval_z": 1.2815515655446004,
+      "items_per_concept": 3,
+      "mastered_at": 0.85,
+      "mastery_link": 2.0,
+      "n_boot": 2000,
+      "n_concepts": 10,
+      "n_learners": 500,
+      "prereq_slack": 0.1,
+      "seed": 2026110502,
+      "slip": 0.1
+    },
+    "label": "[SIM]",
+    "n_rows": 5000,
+    "paired_differences": {
+      "estimator_minus_baseline": {
+        "coverage80": {
+          "hi": 0.312405,
+          "lo": 0.2822,
+          "mean": 0.29699999999999993
+        },
+        "pearson_r": {
+          "hi": -0.05493640145030831,
+          "lo": -0.08042810717483874,
+          "mean": -0.06718324081735288
+        },
+        "rmse": {
+          "hi": 0.014605426236944552,
+          "lo": 0.005873774149509773,
+          "mean": 0.010125549903373665
+        },
+        "spearman_rho": {
+          "hi": -0.030244116158116514,
+          "lo": -0.04913453272929073,
+          "mean": -0.03946245394577319
+        },
+        "state_accuracy": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        }
+      }
+    },
+    "pass_bar": {
+      "applies": false,
+      "coverage_pass": null,
+      "r_pass": null
+    },
+    "paths": {
+      "baseline_share_correct": {
+        "coverage80": {
+          "hi": 0.6536,
+          "lo": 0.612795,
+          "mean": 0.6336,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.5814283456116712,
+          "lo": 0.5393517099058149,
+          "mean": 0.5611761738505283,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.337479561207555,
+          "lo": 0.3173204446419222,
+          "mean": 0.32721795515054003,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.5802532938213069,
+          "lo": 0.5396108329095997,
+          "mean": 0.5610268503929289,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.7828,
+          "lo": 0.716595,
+          "mean": 0.749,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": NaN,
+          "lo": NaN,
+          "mean": NaN,
+          "undefined_in_boot": 1.0
+        },
+        "state_recall": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0,
+          "undefined_in_boot": 0.0
+        }
+      },
+      "estimator": {
+        "coverage80": {
+          "hi": 0.9394049999999999,
+          "lo": 0.9212,
+          "mean": 0.9306,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.5170770933553119,
+          "lo": 0.4689247441417413,
+          "mean": 0.49399293303317543,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.34858275203566597,
+          "lo": 0.32652794255731377,
+          "mean": 0.3373435050539137,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.5430757425861563,
+          "lo": 0.49729166219230686,
+          "mean": 0.5215643964471557,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.7828,
+          "lo": 0.716595,
+          "mean": 0.749,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": NaN,
+          "lo": NaN,
+          "mean": NaN,
+          "undefined_in_boot": 1.0
+        },
+        "state_recall": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0,
+          "undefined_in_boot": 0.0
+        }
+      }
+    },
+    "prevalence": 0.251,
+    "share_shown_as_band": 1.0,
+    "task": "mastery recovery on simulated learners (latent continuous mastery and binary state at 0.85)"
+  },
+  "C10_D3_g0.40_k6": {
+    "config": {
+      "boot_seed": 7,
+      "depth": 3,
+      "guess": 0.4,
+      "implied_interval_z": 1.2815515655446004,
+      "items_per_concept": 6,
+      "mastered_at": 0.85,
+      "mastery_link": 2.0,
+      "n_boot": 2000,
+      "n_concepts": 10,
+      "n_learners": 500,
+      "prereq_slack": 0.1,
+      "seed": 2026110502,
+      "slip": 0.1
+    },
+    "label": "[SIM]",
+    "n_rows": 5000,
+    "paired_differences": {
+      "estimator_minus_baseline": {
+        "coverage80": {
+          "hi": 0.22540500000000002,
+          "lo": 0.19400000000000006,
+          "mean": 0.2096
+        },
+        "pearson_r": {
+          "hi": -0.11658542163542236,
+          "lo": -0.14086410998297477,
+          "mean": -0.1292463087932506
+        },
+        "rmse": {
+          "hi": 0.12633619764219503,
+          "lo": 0.11277526573986853,
+          "mean": 0.11944144350027536
+        },
+        "spearman_rho": {
+          "hi": -0.038035025868047204,
+          "lo": -0.05294163066108438,
+          "mean": -0.04588698377507949
+        },
+        "state_accuracy": {
+          "hi": -0.18200000000000005,
+          "lo": -0.252605,
+          "mean": -0.21619999999999995
+        }
+      }
+    },
+    "pass_bar": {
+      "applies": false,
+      "coverage_pass": null,
+      "r_pass": null
+    },
+    "paths": {
+      "baseline_share_correct": {
+        "coverage80": {
+          "hi": 0.5548,
+          "lo": 0.5076,
+          "mean": 0.5312,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.7006652813437723,
+          "lo": 0.6628579301517551,
+          "mean": 0.6826821206333785,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.28805262328002196,
+          "lo": 0.26851642527913655,
+          "mean": 0.2780298278750582,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.7056757650398836,
+          "lo": 0.6688193156315543,
+          "mean": 0.6884707161563229,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.8238049999999999,
+          "lo": 0.7838,
+          "mean": 0.8036,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.7133957352566035,
+          "lo": 0.6148325600841583,
+          "mean": 0.6654545454545454,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 0.4655855369192894,
+          "lo": 0.4076180532537841,
+          "mean": 0.43745019920318723,
+          "undefined_in_boot": 0.0
+        }
+      },
+      "estimator": {
+        "coverage80": {
+          "hi": 0.7628149999999999,
+          "lo": 0.717395,
+          "mean": 0.7408,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.5772834752935362,
+          "lo": 0.5285917730353935,
+          "mean": 0.5534358118401279,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.41259852759972027,
+          "lo": 0.38257865169012034,
+          "mean": 0.39747127137533356,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.6629245902464334,
+          "lo": 0.620689078299537,
+          "mean": 0.6425837323812434,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.6102,
+          "lo": 0.5664,
+          "mean": 0.5874,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.41207292175168814,
+          "lo": 0.3270996634493269,
+          "mean": 0.37109125717932356,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 0.9411775247733501,
+          "lo": 0.9134983075151624,
+          "mean": 0.9266932270916335,
+          "undefined_in_boot": 0.0
+        }
+      }
+    },
+    "prevalence": 0.251,
+    "share_shown_as_band": 1.0,
+    "task": "mastery recovery on simulated learners (latent continuous mastery and binary state at 0.85)"
+  },
+  "C30_D1_g0.25_k10": {
+    "config": {
+      "boot_seed": 7,
+      "depth": 1,
+      "guess": 0.25,
+      "implied_interval_z": 1.2815515655446004,
+      "items_per_concept": 10,
+      "mastered_at": 0.85,
+      "mastery_link": 2.0,
+      "n_boot": 2000,
+      "n_concepts": 30,
+      "n_learners": 500,
+      "prereq_slack": 0.1,
+      "seed": 2026110502,
+      "slip": 0.1
+    },
+    "label": "[SIM]",
+    "n_rows": 15000,
+    "paired_differences": {
+      "estimator_minus_baseline": {
+        "coverage80": {
+          "hi": 0.17427,
+          "lo": 0.1333233333333334,
+          "mean": 0.1534000000000001
+        },
+        "pearson_r": {
+          "hi": -0.14001165345912964,
+          "lo": -0.1572343931779861,
+          "mean": -0.14835912248096272
+        },
+        "rmse": {
+          "hi": 0.17720666731411353,
+          "lo": 0.16515085471181168,
+          "mean": 0.17121087724489442
+        },
+        "spearman_rho": {
+          "hi": -0.0447774591660923,
+          "lo": -0.05678236628107963,
+          "mean": -0.05036425237430309
+        },
+        "state_accuracy": {
+          "hi": -0.2348616666666667,
+          "lo": -0.27913333333333323,
+          "mean": -0.2575333333333334
+        }
+      }
+    },
+    "pass_bar": {
+      "applies": true,
+      "coverage_pass": false,
+      "r_pass": false
+    },
+    "paths": {
+      "baseline_share_correct": {
+        "coverage80": {
+          "hi": 0.5536033333333333,
+          "lo": 0.5153983333333333,
+          "mean": 0.5346666666666666,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.8347083970429616,
+          "lo": 0.813547273063474,
+          "mean": 0.8245335443298141,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.20819463741314476,
+          "lo": 0.19872421069870233,
+          "mean": 0.20347894353655954,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.8308166124577434,
+          "lo": 0.8056859717071861,
+          "mean": 0.8198814762802069,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.8970683333333334,
+          "lo": 0.8706666666666667,
+          "mean": 0.8839333333333333,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.7300993443426576,
+          "lo": 0.6469060471569674,
+          "mean": 0.6909090909090909,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 0.6022158668154761,
+          "lo": 0.5543159722448731,
+          "mean": 0.57890625,
+          "undefined_in_boot": 0.0
+        }
+      },
+      "estimator": {
+        "coverage80": {
+          "hi": 0.7056,
+          "lo": 0.6708649999999999,
+          "mean": 0.6880666666666667,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.6912991035852744,
+          "lo": 0.6596661423519817,
+          "mean": 0.6761744218488513,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.3842856070385736,
+          "lo": 0.3650271053219692,
+          "mean": 0.37468982078145396,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.7848316585943393,
+          "lo": 0.7503919869176636,
+          "mean": 0.7695172239059038,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.64547,
+          "lo": 0.607865,
+          "mean": 0.6264,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.3500130757188423,
+          "lo": 0.27362896739646136,
+          "mean": 0.31195947615517666,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 0.9910509385747108,
+          "lo": 0.981191163601454,
+          "mean": 0.986328125,
+          "undefined_in_boot": 0.0
+        }
+      }
+    },
+    "prevalence": 0.17066666666666666,
+    "share_shown_as_band": 1.0,
+    "task": "mastery recovery on simulated learners (latent continuous mastery and binary state at 0.85)"
+  },
+  "C30_D1_g0.25_k20": {
+    "config": {
+      "boot_seed": 7,
+      "depth": 1,
+      "guess": 0.25,
+      "implied_interval_z": 1.2815515655446004,
+      "items_per_concept": 20,
+      "mastered_at": 0.85,
+      "mastery_link": 2.0,
+      "n_boot": 2000,
+      "n_concepts": 30,
+      "n_learners": 500,
+      "prereq_slack": 0.1,
+      "seed": 2026110502,
+      "slip": 0.1
+    },
+    "label": "[SIM]",
+    "n_rows": 15000,
+    "paired_differences": {
+      "estimator_minus_baseline": {
+        "coverage80": {
+          "hi": 0.11900166666666666,
+          "lo": 0.06273166666666664,
+          "mean": 0.0905333333333333
+        },
+        "pearson_r": {
+          "hi": -0.20009672850097268,
+          "lo": -0.22048350407670123,
+          "mean": -0.21057737503236673
+        },
+        "rmse": {
+          "hi": 0.22474058065255664,
+          "lo": 0.21164519745469443,
+          "mean": 0.21839943662253491
+        },
+        "spearman_rho": {
+          "hi": -0.057962222403205886,
+          "lo": -0.0700365072786316,
+          "mean": -0.06368600678543124
+        },
+        "state_accuracy": {
+          "hi": -0.3089983333333334,
+          "lo": -0.35639999999999994,
+          "mean": -0.33353333333333335
+        }
+      }
+    },
+    "pass_bar": {
+      "applies": true,
+      "coverage_pass": false,
+      "r_pass": false
+    },
+    "paths": {
+      "baseline_share_correct": {
+        "coverage80": {
+          "hi": 0.45794499999999994,
+          "lo": 0.41492999999999997,
+          "mean": 0.4358666666666667,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.9047212991605947,
+          "lo": 0.891486545926963,
+          "mean": 0.898451319602309,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.18227359055378448,
+          "lo": 0.17228983926317143,
+          "mean": 0.17730970723631467,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.8975659520000171,
+          "lo": 0.8790454383111348,
+          "mean": 0.8900862772081116,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.9166666666666666,
+          "lo": 0.8950666666666667,
+          "mean": 0.9058666666666667,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.7859878424171457,
+          "lo": 0.7141466299473926,
+          "mean": 0.7524186455584873,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 0.690924443450223,
+          "lo": 0.6443977076521803,
+          "mean": 0.668359375,
+          "undefined_in_boot": 0.0
+        }
+      },
+      "estimator": {
+        "coverage80": {
+          "hi": 0.5466016666666667,
+          "lo": 0.50586,
+          "mean": 0.5264,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.70182199548462,
+          "lo": 0.673057391623487,
+          "mean": 0.6878739445699422,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.4051137701354315,
+          "lo": 0.38587255205040016,
+          "mean": 0.3957091438588496,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.8382191965810105,
+          "lo": 0.8102868925404364,
+          "mean": 0.8264002704226804,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.59467,
+          "lo": 0.5502633333333333,
+          "mean": 0.5723333333333334,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.3213336700340766,
+          "lo": 0.2483900838480021,
+          "mean": 0.2852367688022284,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 1.0,
+          "lo": 1.0,
+          "mean": 1.0,
+          "undefined_in_boot": 0.0
+        }
+      }
+    },
+    "prevalence": 0.17066666666666666,
+    "share_shown_as_band": 1.0,
+    "task": "mastery recovery on simulated learners (latent continuous mastery and binary state at 0.85)"
+  },
+  "C30_D1_g0.25_k3": {
+    "config": {
+      "boot_seed": 7,
+      "depth": 1,
+      "guess": 0.25,
+      "implied_interval_z": 1.2815515655446004,
+      "items_per_concept": 3,
+      "mastered_at": 0.85,
+      "mastery_link": 2.0,
+      "n_boot": 2000,
+      "n_concepts": 30,
+      "n_learners": 500,
+      "prereq_slack": 0.1,
+      "seed": 2026110502,
+      "slip": 0.1
+    },
+    "label": "[SIM]",
+    "n_rows": 15000,
+    "paired_differences": {
+      "estimator_minus_baseline": {
+        "coverage80": {
+          "hi": 0.28946666666666665,
+          "lo": 0.2700666666666667,
+          "mean": 0.2793333333333333
+        },
+        "pearson_r": {
+          "hi": -0.0567301943510597,
+          "lo": -0.0696575194289573,
+          "mean": -0.0633289449424147
+        },
+        "rmse": {
+          "hi": 0.017484701999234322,
+          "lo": 0.011018217969285076,
+          "mean": 0.014240486953067732
+        },
+        "spearman_rho": {
+          "hi": -0.03749814175849536,
+          "lo": -0.048195493902380995,
+          "mean": -0.04290032097613672
+        },
+        "state_accuracy": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        }
+      }
+    },
+    "pass_bar": {
+      "applies": false,
+      "coverage_pass": null,
+      "r_pass": null
+    },
+    "paths": {
+      "baseline_share_correct": {
+        "coverage80": {
+          "hi": 0.6850683333333334,
+          "lo": 0.6606666666666666,
+          "mean": 0.6729333333333334,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.6404968834933452,
+          "lo": 0.6083112362481197,
+          "mean": 0.624928417122997,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.304404345232981,
+          "lo": 0.2940546837569825,
+          "mean": 0.29906038916721756,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.6390697006602251,
+          "lo": 0.6041982648530564,
+          "mean": 0.6228420888667522,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.855135,
+          "lo": 0.8034633333333333,
+          "mean": 0.8293333333333334,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": NaN,
+          "lo": NaN,
+          "mean": NaN,
+          "undefined_in_boot": 1.0
+        },
+        "state_recall": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0,
+          "undefined_in_boot": 0.0
+        }
+      },
+      "estimator": {
+        "coverage80": {
+          "hi": 0.9571333333333333,
+          "lo": 0.9472,
+          "mean": 0.9522666666666667,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.5787036295530712,
+          "lo": 0.5435792265992461,
+          "mean": 0.5615994721805823,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.32005153903442707,
+          "lo": 0.30660372596156005,
+          "mean": 0.3133008761202853,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.5967481516762877,
+          "lo": 0.5602601154382582,
+          "mean": 0.5799417678906155,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.855135,
+          "lo": 0.8034633333333333,
+          "mean": 0.8293333333333334,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": NaN,
+          "lo": NaN,
+          "mean": NaN,
+          "undefined_in_boot": 1.0
+        },
+        "state_recall": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0,
+          "undefined_in_boot": 0.0
+        }
+      }
+    },
+    "prevalence": 0.17066666666666666,
+    "share_shown_as_band": 1.0,
+    "task": "mastery recovery on simulated learners (latent continuous mastery and binary state at 0.85)"
+  },
+  "C30_D1_g0.25_k6": {
+    "config": {
+      "boot_seed": 7,
+      "depth": 1,
+      "guess": 0.25,
+      "implied_interval_z": 1.2815515655446004,
+      "items_per_concept": 6,
+      "mastered_at": 0.85,
+      "mastery_link": 2.0,
+      "n_boot": 2000,
+      "n_concepts": 30,
+      "n_learners": 500,
+      "prereq_slack": 0.1,
+      "seed": 2026110502,
+      "slip": 0.1
+    },
+    "label": "[SIM]",
+    "n_rows": 15000,
+    "paired_differences": {
+      "estimator_minus_baseline": {
+        "coverage80": {
+          "hi": 0.2245366666666667,
+          "lo": 0.2003949999999999,
+          "mean": 0.2121333333333334
+        },
+        "pearson_r": {
+          "hi": -0.09296213481900195,
+          "lo": -0.10735699940056066,
+          "mean": -0.10010986867546989
+        },
+        "rmse": {
+          "hi": 0.11989657396562392,
+          "lo": 0.10938500955533188,
+          "mean": 0.11465436918369584
+        },
+        "spearman_rho": {
+          "hi": -0.04703645448067579,
+          "lo": -0.057851305930657855,
+          "mean": -0.05232558039053181
+        },
+        "state_accuracy": {
+          "hi": -0.15452999999999997,
+          "lo": -0.19900166666666663,
+          "mean": -0.1767333333333333
+        }
+      }
+    },
+    "pass_bar": {
+      "applies": false,
+      "coverage_pass": null,
+      "r_pass": null
+    },
+    "paths": {
+      "baseline_share_correct": {
+        "coverage80": {
+          "hi": 0.6158033333333334,
+          "lo": 0.5836,
+          "mean": 0.6000666666666666,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.7615506139919533,
+          "lo": 0.7344792333193351,
+          "mean": 0.7482655402748072,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.2385802553666111,
+          "lo": 0.22964252333362778,
+          "mean": 0.23415911036439654,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.7603278316017082,
+          "lo": 0.7293016916497354,
+          "mean": 0.7464772111282604,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.8796683333333334,
+          "lo": 0.8463966666666667,
+          "mean": 0.8628666666666667,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.7051123981123981,
+          "lo": 0.6164274890980593,
+          "mean": 0.6625727213962508,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 0.4228044607708317,
+          "lo": 0.37878259214616505,
+          "mean": 0.400390625,
+          "undefined_in_boot": 0.0
+        }
+      },
+      "estimator": {
+        "coverage80": {
+          "hi": 0.8249333333333333,
+          "lo": 0.7990666666666667,
+          "mean": 0.8122,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.6645149683461994,
+          "lo": 0.6298573113177811,
+          "mean": 0.6481556715993373,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.3575469526081999,
+          "lo": 0.3397690711278904,
+          "mean": 0.3488134795480924,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.7108226361718561,
+          "lo": 0.674302361464058,
+          "mean": 0.6941516307377286,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.7016033333333334,
+          "lo": 0.67013,
+          "mean": 0.6861333333333334,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.3812730128939605,
+          "lo": 0.3018070176279879,
+          "mean": 0.34210526315789475,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 0.9201631675664693,
+          "lo": 0.8980726208782345,
+          "mean": 0.908984375,
+          "undefined_in_boot": 0.0
+        }
+      }
+    },
+    "prevalence": 0.17066666666666666,
+    "share_shown_as_band": 1.0,
+    "task": "mastery recovery on simulated learners (latent continuous mastery and binary state at 0.85)"
+  },
+  "C30_D1_g0.40_k10": {
+    "config": {
+      "boot_seed": 7,
+      "depth": 1,
+      "guess": 0.4,
+      "implied_interval_z": 1.2815515655446004,
+      "items_per_concept": 10,
+      "mastered_at": 0.85,
+      "mastery_link": 2.0,
+      "n_boot": 2000,
+      "n_concepts": 30,
+      "n_learners": 500,
+      "prereq_slack": 0.1,
+      "seed": 2026110502,
+      "slip": 0.1
+    },
+    "label": "[SIM]",
+    "n_rows": 15000,
+    "paired_differences": {
+      "estimator_minus_baseline": {
+        "coverage80": {
+          "hi": 0.15219999999999995,
+          "lo": 0.11619499999999998,
+          "mean": 0.13379999999999997
+        },
+        "pearson_r": {
+          "hi": -0.18753020299439443,
+          "lo": -0.20583769974388078,
+          "mean": -0.1967781614095616
+        },
+        "rmse": {
+          "hi": 0.1931844416935289,
+          "lo": 0.18168900075703237,
+          "mean": 0.1875997323604875
+        },
+        "spearman_rho": {
+          "hi": -0.034062939838756086,
+          "lo": -0.043333557602127044,
+          "mean": -0.038702434973708066
+        },
+        "state_accuracy": {
+          "hi": -0.34506166666666666,
+          "lo": -0.3940666666666667,
+          "mean": -0.3701333333333333
+        }
+      }
+    },
+    "pass_bar": {
+      "applies": true,
+      "coverage_pass": false,
+      "r_pass": false
+    },
+    "paths": {
+      "baseline_share_correct": {
+        "coverage80": {
+          "hi": 0.4447366666666666,
+          "lo": 0.39859500000000003,
+          "mean": 0.4218,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.7558483379983749,
+          "lo": 0.7284746769894708,
+          "mean": 0.7428561634033919,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.28521208808779985,
+          "lo": 0.268256912891132,
+          "mean": 0.2769182218986143,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.7595405120186227,
+          "lo": 0.7269316695965841,
+          "mean": 0.7447118974557949,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.8770016666666667,
+          "lo": 0.8508666666666667,
+          "mean": 0.864,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.6412186963806801,
+          "lo": 0.5534229565014006,
+          "mean": 0.5981132075471698,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 0.6412534408302016,
+          "lo": 0.5967239974761335,
+          "mean": 0.619140625,
+          "undefined_in_boot": 0.0
+        }
+      },
+      "estimator": {
+        "coverage80": {
+          "hi": 0.580135,
+          "lo": 0.5314616666666666,
+          "mean": 0.5556,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.561321592433334,
+          "lo": 0.5293961260420282,
+          "mean": 0.5460780019938303,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.47726701109817143,
+          "lo": 0.45092263168321256,
+          "mean": 0.4645179542591018,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.7227733031719143,
+          "lo": 0.6855792484035812,
+          "mean": 0.7060094624820868,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.5128666666666667,
+          "lo": 0.475665,
+          "mean": 0.4938666666666667,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.2836197725864568,
+          "lo": 0.21686047273316278,
+          "mean": 0.2505947660586836,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 0.991680308540521,
+          "lo": 0.9830260636309207,
+          "mean": 0.9875,
+          "undefined_in_boot": 0.0
+        }
+      }
+    },
+    "prevalence": 0.17066666666666666,
+    "share_shown_as_band": 1.0,
+    "task": "mastery recovery on simulated learners (latent continuous mastery and binary state at 0.85)"
+  },
+  "C30_D1_g0.40_k20": {
+    "config": {
+      "boot_seed": 7,
+      "depth": 1,
+      "guess": 0.4,
+      "implied_interval_z": 1.2815515655446004,
+      "items_per_concept": 20,
+      "mastered_at": 0.85,
+      "mastery_link": 2.0,
+      "n_boot": 2000,
+      "n_concepts": 30,
+      "n_learners": 500,
+      "prereq_slack": 0.1,
+      "seed": 2026110502,
+      "slip": 0.1
+    },
+    "label": "[SIM]",
+    "n_rows": 15000,
+    "paired_differences": {
+      "estimator_minus_baseline": {
+        "coverage80": {
+          "hi": 0.08833500000000002,
+          "lo": 0.04225999999999995,
+          "mean": 0.06446666666666667
+        },
+        "pearson_r": {
+          "hi": -0.30626424799863255,
+          "lo": -0.32762837099632586,
+          "mean": -0.31719295208715903
+        },
+        "rmse": {
+          "hi": 0.24959349115715343,
+          "lo": 0.23605629523948318,
+          "mean": 0.24290052866728956
+        },
+        "spearman_rho": {
+          "hi": -0.05651817970751391,
+          "lo": -0.06439368103381227,
+          "mean": -0.06050500989456553
+        },
+        "state_accuracy": {
+          "hi": -0.4465283333333334,
+          "lo": -0.498805,
+          "mean": -0.473
+        }
+      }
+    },
+    "pass_bar": {
+      "applies": true,
+      "coverage_pass": false,
+      "r_pass": false
+    },
+    "paths": {
+      "baseline_share_correct": {
+        "coverage80": {
+          "hi": 0.3458,
+          "lo": 0.2987283333333334,
+          "mean": 0.32166666666666666,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.8500233523774717,
+          "lo": 0.8310906722706364,
+          "mean": 0.8411585006514815,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.2664402397195102,
+          "lo": 0.24898449980109094,
+          "mean": 0.25793485617009965,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.8490893968651944,
+          "lo": 0.8247058071048917,
+          "mean": 0.8386060827642632,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.8996683333333333,
+          "lo": 0.8771333333333333,
+          "mean": 0.8884,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.7012576954375367,
+          "lo": 0.6161461524375776,
+          "mean": 0.6605072463768116,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 0.7331162817874509,
+          "lo": 0.6905365354574409,
+          "mean": 0.712109375,
+          "undefined_in_boot": 0.0
+        }
+      },
+      "estimator": {
+        "coverage80": {
+          "hi": 0.4126016666666667,
+          "lo": 0.36019500000000004,
+          "mean": 0.38613333333333333,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.5388930281147785,
+          "lo": 0.5094739216238732,
+          "mean": 0.5239655485643224,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.5149534094079268,
+          "lo": 0.4863196343237315,
+          "mean": 0.5008353848373892,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.7894616563861288,
+          "lo": 0.7636184146256129,
+          "mean": 0.7781010728696977,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.4376,
+          "lo": 0.3949316666666667,
+          "mean": 0.4154,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.25681275346153093,
+          "lo": 0.19393891272067315,
+          "mean": 0.22596875275840764,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 1.0,
+          "lo": 1.0,
+          "mean": 1.0,
+          "undefined_in_boot": 0.0
+        }
+      }
+    },
+    "prevalence": 0.17066666666666666,
+    "share_shown_as_band": 1.0,
+    "task": "mastery recovery on simulated learners (latent continuous mastery and binary state at 0.85)"
+  },
+  "C30_D1_g0.40_k3": {
+    "config": {
+      "boot_seed": 7,
+      "depth": 1,
+      "guess": 0.4,
+      "implied_interval_z": 1.2815515655446004,
+      "items_per_concept": 3,
+      "mastered_at": 0.85,
+      "mastery_link": 2.0,
+      "n_boot": 2000,
+      "n_concepts": 30,
+      "n_learners": 500,
+      "prereq_slack": 0.1,
+      "seed": 2026110502,
+      "slip": 0.1
+    },
+    "label": "[SIM]",
+    "n_rows": 15000,
+    "paired_differences": {
+      "estimator_minus_baseline": {
+        "coverage80": {
+          "hi": 0.33446833333333337,
+          "lo": 0.31133333333333335,
+          "mean": 0.3228
+        },
+        "pearson_r": {
+          "hi": -0.05021448029878529,
+          "lo": -0.0648054964522686,
+          "mean": -0.05751541296083357
+        },
+        "rmse": {
+          "hi": 0.011849709383530395,
+          "lo": 0.006331047772689143,
+          "mean": 0.009133623839001959
+        },
+        "spearman_rho": {
+          "hi": -0.030611210068213476,
+          "lo": -0.042339109793804404,
+          "mean": -0.03646859506133038
+        },
+        "state_accuracy": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        }
+      }
+    },
+    "pass_bar": {
+      "applies": false,
+      "coverage_pass": null,
+      "r_pass": null
+    },
+    "paths": {
+      "baseline_share_correct": {
+        "coverage80": {
+          "hi": 0.6052666666666666,
+          "lo": 0.5696666666666667,
+          "mean": 0.5874,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.5352025908496635,
+          "lo": 0.501968784086146,
+          "mean": 0.5191365433414565,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.36358308324153626,
+          "lo": 0.34706246556151715,
+          "mean": 0.3552552418192969,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.5369949751193799,
+          "lo": 0.5007758867488048,
+          "mean": 0.5203025574219308,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.855135,
+          "lo": 0.8034633333333333,
+          "mean": 0.8293333333333334,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": NaN,
+          "lo": NaN,
+          "mean": NaN,
+          "undefined_in_boot": 1.0
+        },
+        "state_recall": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0,
+          "undefined_in_boot": 0.0
+        }
+      },
+      "estimator": {
+        "coverage80": {
+          "hi": 0.9191333333333334,
+          "lo": 0.9013333333333333,
+          "mean": 0.9102,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.47880192486008377,
+          "lo": 0.4432580971785663,
+          "mean": 0.46162113038062297,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.37403302969186053,
+          "lo": 0.35468978791217187,
+          "mean": 0.36438886565829887,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.5020206803526293,
+          "lo": 0.463184375950587,
+          "mean": 0.4838339623606004,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.855135,
+          "lo": 0.8034633333333333,
+          "mean": 0.8293333333333334,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": NaN,
+          "lo": NaN,
+          "mean": NaN,
+          "undefined_in_boot": 1.0
+        },
+        "state_recall": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0,
+          "undefined_in_boot": 0.0
+        }
+      }
+    },
+    "prevalence": 0.17066666666666666,
+    "share_shown_as_band": 1.0,
+    "task": "mastery recovery on simulated learners (latent continuous mastery and binary state at 0.85)"
+  },
+  "C30_D1_g0.40_k6": {
+    "config": {
+      "boot_seed": 7,
+      "depth": 1,
+      "guess": 0.4,
+      "implied_interval_z": 1.2815515655446004,
+      "items_per_concept": 6,
+      "mastered_at": 0.85,
+      "mastery_link": 2.0,
+      "n_boot": 2000,
+      "n_concepts": 30,
+      "n_learners": 500,
+      "prereq_slack": 0.1,
+      "seed": 2026110502,
+      "slip": 0.1
+    },
+    "label": "[SIM]",
+    "n_rows": 15000,
+    "paired_differences": {
+      "estimator_minus_baseline": {
+        "coverage80": {
+          "hi": 0.22060000000000002,
+          "lo": 0.19839833333333326,
+          "mean": 0.20913333333333334
+        },
+        "pearson_r": {
+          "hi": -0.11213409476737549,
+          "lo": -0.12814011084776022,
+          "mean": -0.1201509460092467
+        },
+        "rmse": {
+          "hi": 0.1308766745550257,
+          "lo": 0.12086687982045895,
+          "mean": 0.12585015719038994
+        },
+        "spearman_rho": {
+          "hi": -0.038788829090089925,
+          "lo": -0.04921651161068583,
+          "mean": -0.04423647974189271
+        },
+        "state_accuracy": {
+          "hi": -0.24313166666666666,
+          "lo": -0.2912666666666667,
+          "mean": -0.26713333333333333
+        }
+      }
+    },
+    "pass_bar": {
+      "applies": false,
+      "coverage_pass": null,
+      "r_pass": null
+    },
+    "paths": {
+      "baseline_share_correct": {
+        "coverage80": {
+          "hi": 0.514,
+          "lo": 0.4718633333333333,
+          "mean": 0.49346666666666666,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.6624304626706242,
+          "lo": 0.6309409621715522,
+          "mean": 0.6471806406115439,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.31009052160844996,
+          "lo": 0.2933932332749893,
+          "mean": 0.3019035806350146,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.6671894133777606,
+          "lo": 0.6308110539250587,
+          "mean": 0.6501645215491308,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.8624716666666666,
+          "lo": 0.829865,
+          "mean": 0.8460666666666666,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.61029151057937,
+          "lo": 0.5151609695603757,
+          "mean": 0.5645908389089037,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 0.45211528799283435,
+          "lo": 0.4061555452121311,
+          "mean": 0.428515625,
+          "undefined_in_boot": 0.0
+        }
+      },
+      "estimator": {
+        "coverage80": {
+          "hi": 0.722935,
+          "lo": 0.6824633333333333,
+          "mean": 0.7026,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.5446253861651777,
+          "lo": 0.5088730803144639,
+          "mean": 0.5270296946022972,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.44049262270297695,
+          "lo": 0.41509331632554824,
+          "mean": 0.42775373782540455,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.624388130778178,
+          "lo": 0.5849609683370218,
+          "mean": 0.6059280418072381,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.5942033333333333,
+          "lo": 0.563465,
+          "mean": 0.5789333333333333,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.31454355305402715,
+          "lo": 0.24246045896572987,
+          "mean": 0.2788506829957607,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 0.935070693372524,
+          "lo": 0.9152703990174266,
+          "mean": 0.925,
+          "undefined_in_boot": 0.0
+        }
+      }
+    },
+    "prevalence": 0.17066666666666666,
+    "share_shown_as_band": 1.0,
+    "task": "mastery recovery on simulated learners (latent continuous mastery and binary state at 0.85)"
+  },
+  "C30_D3_g0.25_k10": {
+    "config": {
+      "boot_seed": 7,
+      "depth": 3,
+      "guess": 0.25,
+      "implied_interval_z": 1.2815515655446004,
+      "items_per_concept": 10,
+      "mastered_at": 0.85,
+      "mastery_link": 2.0,
+      "n_boot": 2000,
+      "n_concepts": 30,
+      "n_learners": 500,
+      "prereq_slack": 0.1,
+      "seed": 2026110502,
+      "slip": 0.1
+    },
+    "label": "[SIM]",
+    "n_rows": 15000,
+    "paired_differences": {
+      "estimator_minus_baseline": {
+        "coverage80": {
+          "hi": 0.17500333333333326,
+          "lo": 0.139065,
+          "mean": 0.15700000000000003
+        },
+        "pearson_r": {
+          "hi": -0.14326391694577872,
+          "lo": -0.15709765894527475,
+          "mean": -0.1500597404874875
+        },
+        "rmse": {
+          "hi": 0.17774917022054545,
+          "lo": 0.16674185033633704,
+          "mean": 0.1724300177844218
+        },
+        "spearman_rho": {
+          "hi": -0.04404341012975899,
+          "lo": -0.05544044592881041,
+          "mean": -0.04977798747307127
+        },
+        "state_accuracy": {
+          "hi": -0.23532999999999996,
+          "lo": -0.27173833333333336,
+          "mean": -0.2541333333333333
+        }
+      }
+    },
+    "pass_bar": {
+      "applies": true,
+      "coverage_pass": false,
+      "r_pass": false
+    },
+    "paths": {
+      "baseline_share_correct": {
+        "coverage80": {
+          "hi": 0.5405366666666667,
+          "lo": 0.5063316666666666,
+          "mean": 0.5240666666666667,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.8333711064670504,
+          "lo": 0.8150873360843923,
+          "mean": 0.8243976868197737,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.20919882206641888,
+          "lo": 0.2004846578472316,
+          "mean": 0.2047354854142654,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.8299179314366402,
+          "lo": 0.8071424990388517,
+          "mean": 0.8196350916334499,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.8982683333333333,
+          "lo": 0.8754649999999999,
+          "mean": 0.8874666666666666,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.7376299096402394,
+          "lo": 0.6720415101781825,
+          "mean": 0.7070124879923151,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 0.5967805750693627,
+          "lo": 0.5552639540877236,
+          "mean": 0.5772549019607843,
+          "undefined_in_boot": 0.0
+        }
+      },
+      "estimator": {
+        "coverage80": {
+          "hi": 0.6962,
+          "lo": 0.6666666666666666,
+          "mean": 0.6810666666666667,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.6873716066248134,
+          "lo": 0.6606659750466584,
+          "mean": 0.6743379463322862,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.385379906666291,
+          "lo": 0.36855784965651195,
+          "mean": 0.3771655031986872,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.784104280012302,
+          "lo": 0.753548201040254,
+          "mean": 0.7698571041603787,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.6496716666666665,
+          "lo": 0.617465,
+          "mean": 0.6333333333333333,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.3477253261790052,
+          "lo": 0.28287437321398096,
+          "mean": 0.3148845381526104,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 0.988801129902742,
+          "lo": 0.9786954011892811,
+          "mean": 0.983921568627451,
+          "undefined_in_boot": 0.0
+        }
+      }
+    },
+    "prevalence": 0.17,
+    "share_shown_as_band": 1.0,
+    "task": "mastery recovery on simulated learners (latent continuous mastery and binary state at 0.85)"
+  },
+  "C30_D3_g0.25_k20": {
+    "config": {
+      "boot_seed": 7,
+      "depth": 3,
+      "guess": 0.25,
+      "implied_interval_z": 1.2815515655446004,
+      "items_per_concept": 20,
+      "mastered_at": 0.85,
+      "mastery_link": 2.0,
+      "n_boot": 2000,
+      "n_concepts": 30,
+      "n_learners": 500,
+      "prereq_slack": 0.1,
+      "seed": 2026110502,
+      "slip": 0.1
+    },
+    "label": "[SIM]",
+    "n_rows": 15000,
+    "paired_differences": {
+      "estimator_minus_baseline": {
+        "coverage80": {
+          "hi": 0.11353333333333332,
+          "lo": 0.065,
+          "mean": 0.08906666666666668
+        },
+        "pearson_r": {
+          "hi": -0.2092183583810295,
+          "lo": -0.22485529815089902,
+          "mean": -0.2170223296537267
+        },
+        "rmse": {
+          "hi": 0.2258020548992905,
+          "lo": 0.21414137612100767,
+          "mean": 0.22017858404380897
+        },
+        "spearman_rho": {
+          "hi": -0.06164074910332816,
+          "lo": -0.07351547425443182,
+          "mean": -0.06729381385840194
+        },
+        "state_accuracy": {
+          "hi": -0.31373,
+          "lo": -0.3502683333333333,
+          "mean": -0.33219999999999994
+        }
+      }
+    },
+    "pass_bar": {
+      "applies": true,
+      "coverage_pass": false,
+      "r_pass": false
+    },
+    "paths": {
+      "baseline_share_correct": {
+        "coverage80": {
+          "hi": 0.44587166666666667,
+          "lo": 0.4086666666666667,
+          "mean": 0.42793333333333333,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.9042426204325356,
+          "lo": 0.8923634808439616,
+          "mean": 0.8986212096089582,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.18396675054454065,
+          "lo": 0.17510452935487322,
+          "mean": 0.17959302034435792,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.8972861235687617,
+          "lo": 0.8804925090749177,
+          "mean": 0.8899158131071284,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.9200683333333334,
+          "lo": 0.9021316666666667,
+          "mean": 0.9116,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.7982229562595213,
+          "lo": 0.738336630884656,
+          "mean": 0.7703180212014135,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 0.702405231969369,
+          "lo": 0.6641007504265766,
+          "mean": 0.683921568627451,
+          "undefined_in_boot": 0.0
+        }
+      },
+      "estimator": {
+        "coverage80": {
+          "hi": 0.5351333333333333,
+          "lo": 0.5006666666666667,
+          "mean": 0.517,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.6927510600289213,
+          "lo": 0.6695616478781493,
+          "mean": 0.6815988799552315,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.408525677500579,
+          "lo": 0.39059413037939805,
+          "mean": 0.3997716043881669,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.834262199653727,
+          "lo": 0.8078396889243072,
+          "mean": 0.8226219992487265,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.5972,
+          "lo": 0.5615966666666666,
+          "mean": 0.5794,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.31936939970871203,
+          "lo": 0.2566126848069549,
+          "mean": 0.28779496443491026,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 1.0,
+          "lo": 0.9987483832433668,
+          "mean": 0.9996078431372549,
+          "undefined_in_boot": 0.0
+        }
+      }
+    },
+    "prevalence": 0.17,
+    "share_shown_as_band": 1.0,
+    "task": "mastery recovery on simulated learners (latent continuous mastery and binary state at 0.85)"
+  },
+  "C30_D3_g0.25_k3": {
+    "config": {
+      "boot_seed": 7,
+      "depth": 3,
+      "guess": 0.25,
+      "implied_interval_z": 1.2815515655446004,
+      "items_per_concept": 3,
+      "mastered_at": 0.85,
+      "mastery_link": 2.0,
+      "n_boot": 2000,
+      "n_concepts": 30,
+      "n_learners": 500,
+      "prereq_slack": 0.1,
+      "seed": 2026110502,
+      "slip": 0.1
+    },
+    "label": "[SIM]",
+    "n_rows": 15000,
+    "paired_differences": {
+      "estimator_minus_baseline": {
+        "coverage80": {
+          "hi": 0.2901999999999999,
+          "lo": 0.27146666666666663,
+          "mean": 0.28046666666666664
+        },
+        "pearson_r": {
+          "hi": -0.05380443514196806,
+          "lo": -0.06687992482561486,
+          "mean": -0.0603717314410217
+        },
+        "rmse": {
+          "hi": 0.01746173267389076,
+          "lo": 0.011226478152165008,
+          "mean": 0.014417924631853096
+        },
+        "spearman_rho": {
+          "hi": -0.03375880024238873,
+          "lo": -0.04392488331335276,
+          "mean": -0.03881066950503165
+        },
+        "state_accuracy": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        }
+      }
+    },
+    "pass_bar": {
+      "applies": false,
+      "coverage_pass": null,
+      "r_pass": null
+    },
+    "paths": {
+      "baseline_share_correct": {
+        "coverage80": {
+          "hi": 0.6811333333333334,
+          "lo": 0.6577316666666666,
+          "mean": 0.67,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.632079161887152,
+          "lo": 0.6003203399196867,
+          "mean": 0.6166680268903467,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.30643219779259084,
+          "lo": 0.2964694274257154,
+          "mean": 0.30128776403064134,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.6290193774946552,
+          "lo": 0.5950557733538909,
+          "mean": 0.6127575192628736,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.852535,
+          "lo": 0.805125,
+          "mean": 0.83,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": NaN,
+          "lo": NaN,
+          "mean": NaN,
+          "undefined_in_boot": 1.0
+        },
+        "state_recall": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0,
+          "undefined_in_boot": 0.0
+        }
+      },
+      "estimator": {
+        "coverage80": {
+          "hi": 0.9550683333333333,
+          "lo": 0.9458,
+          "mean": 0.9504666666666667,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.5721314788055496,
+          "lo": 0.5396967713001214,
+          "mean": 0.556296295449325,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.32216163556496175,
+          "lo": 0.3095715190205812,
+          "mean": 0.31570568866249443,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.5908633680255276,
+          "lo": 0.5556254155922724,
+          "mean": 0.5739468497578419,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.852535,
+          "lo": 0.805125,
+          "mean": 0.83,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": NaN,
+          "lo": NaN,
+          "mean": NaN,
+          "undefined_in_boot": 1.0
+        },
+        "state_recall": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0,
+          "undefined_in_boot": 0.0
+        }
+      }
+    },
+    "prevalence": 0.17,
+    "share_shown_as_band": 1.0,
+    "task": "mastery recovery on simulated learners (latent continuous mastery and binary state at 0.85)"
+  },
+  "C30_D3_g0.25_k6": {
+    "config": {
+      "boot_seed": 7,
+      "depth": 3,
+      "guess": 0.25,
+      "implied_interval_z": 1.2815515655446004,
+      "items_per_concept": 6,
+      "mastered_at": 0.85,
+      "mastery_link": 2.0,
+      "n_boot": 2000,
+      "n_concepts": 30,
+      "n_learners": 500,
+      "prereq_slack": 0.1,
+      "seed": 2026110502,
+      "slip": 0.1
+    },
+    "label": "[SIM]",
+    "n_rows": 15000,
+    "paired_differences": {
+      "estimator_minus_baseline": {
+        "coverage80": {
+          "hi": 0.22293500000000008,
+          "lo": 0.19846666666666668,
+          "mean": 0.21100000000000008
+        },
+        "pearson_r": {
+          "hi": -0.09756210872507735,
+          "lo": -0.11101125780057074,
+          "mean": -0.10450222788912022
+        },
+        "rmse": {
+          "hi": 0.12367410413711176,
+          "lo": 0.11415077997884628,
+          "mean": 0.11907301261682851
+        },
+        "spearman_rho": {
+          "hi": -0.04508407018864755,
+          "lo": -0.054902539542601374,
+          "mean": -0.04990855941934624
+        },
+        "state_accuracy": {
+          "hi": -0.15973166666666663,
+          "lo": -0.19853500000000002,
+          "mean": -0.1800666666666666
+        }
+      }
+    },
+    "pass_bar": {
+      "applies": false,
+      "coverage_pass": null,
+      "r_pass": null
+    },
+    "paths": {
+      "baseline_share_correct": {
+        "coverage80": {
+          "hi": 0.6061333333333333,
+          "lo": 0.5756633333333333,
+          "mean": 0.5912,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.7577698154522992,
+          "lo": 0.733480827839238,
+          "mean": 0.7457580812533392,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.24078661464283627,
+          "lo": 0.2317485413994931,
+          "mean": 0.23633968958236634,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.7553925654322721,
+          "lo": 0.7267222742278379,
+          "mean": 0.7417238618901004,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.8798,
+          "lo": 0.8500616666666666,
+          "mean": 0.8651333333333333,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.7111608702373141,
+          "lo": 0.6352200137215512,
+          "mean": 0.6750830564784053,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 0.4172566382336876,
+          "lo": 0.3787315174680671,
+          "mean": 0.3984313725490196,
+          "undefined_in_boot": 0.0
+        }
+      },
+      "estimator": {
+        "coverage80": {
+          "hi": 0.8142016666666667,
+          "lo": 0.79053,
+          "mean": 0.8022,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.6564769943640749,
+          "lo": 0.625918946781414,
+          "mean": 0.641255853364219,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.3635748373757387,
+          "lo": 0.34708870019224347,
+          "mean": 0.35541270219919485,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.7075983693642816,
+          "lo": 0.6746326901174502,
+          "mean": 0.6918153024707542,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.6984683333333334,
+          "lo": 0.6705333333333333,
+          "mean": 0.6850666666666667,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.37646110287872186,
+          "lo": 0.30759522975623427,
+          "mean": 0.34172976121141524,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 0.9297352803777146,
+          "lo": 0.9095114837056391,
+          "mean": 0.9203921568627451,
+          "undefined_in_boot": 0.0
+        }
+      }
+    },
+    "prevalence": 0.17,
+    "share_shown_as_band": 1.0,
+    "task": "mastery recovery on simulated learners (latent continuous mastery and binary state at 0.85)"
+  },
+  "C30_D3_g0.40_k10": {
+    "config": {
+      "boot_seed": 7,
+      "depth": 3,
+      "guess": 0.4,
+      "implied_interval_z": 1.2815515655446004,
+      "items_per_concept": 10,
+      "mastered_at": 0.85,
+      "mastery_link": 2.0,
+      "n_boot": 2000,
+      "n_concepts": 30,
+      "n_learners": 500,
+      "prereq_slack": 0.1,
+      "seed": 2026110502,
+      "slip": 0.1
+    },
+    "label": "[SIM]",
+    "n_rows": 15000,
+    "paired_differences": {
+      "estimator_minus_baseline": {
+        "coverage80": {
+          "hi": 0.15527166666666664,
+          "lo": 0.12506666666666666,
+          "mean": 0.13973333333333338
+        },
+        "pearson_r": {
+          "hi": -0.19765977597289727,
+          "lo": -0.214011164586854,
+          "mean": -0.20629059717365728
+        },
+        "rmse": {
+          "hi": 0.19579392140004928,
+          "lo": 0.18564025507140547,
+          "mean": 0.19102689128741457
+        },
+        "spearman_rho": {
+          "hi": -0.03389373168099999,
+          "lo": -0.04327956700521934,
+          "mean": -0.03851398350922208
+        },
+        "state_accuracy": {
+          "hi": -0.34859333333333337,
+          "lo": -0.38919999999999993,
+          "mean": -0.36966666666666664
+        }
+      }
+    },
+    "pass_bar": {
+      "applies": true,
+      "coverage_pass": false,
+      "r_pass": false
+    },
+    "paths": {
+      "baseline_share_correct": {
+        "coverage80": {
+          "hi": 0.42666833333333337,
+          "lo": 0.3872,
+          "mean": 0.40746666666666664,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.7544660196227644,
+          "lo": 0.7305372931312066,
+          "mean": 0.7431605410937836,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.2863044148099121,
+          "lo": 0.2707997803355435,
+          "mean": 0.2785255096147824,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.7579640862108911,
+          "lo": 0.7288590162594135,
+          "mean": 0.7448709414999884,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.8769333333333333,
+          "lo": 0.8541333333333333,
+          "mean": 0.8662666666666666,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.6410166932804728,
+          "lo": 0.5687961859923322,
+          "mean": 0.6055081458494957,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 0.630617542446187,
+          "lo": 0.5912911903372607,
+          "mean": 0.6121568627450981,
+          "undefined_in_boot": 0.0
+        }
+      },
+      "estimator": {
+        "coverage80": {
+          "hi": 0.5686033333333333,
+          "lo": 0.5273316666666666,
+          "mean": 0.5472,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.5504677727757298,
+          "lo": 0.5228257892197669,
+          "mean": 0.5368699439201263,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.48130084196103834,
+          "lo": 0.4575214486347133,
+          "mean": 0.46955240090219696,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.7215234809807922,
+          "lo": 0.6890724971512104,
+          "mean": 0.7063569579907664,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.5123366666666667,
+          "lo": 0.48093166666666665,
+          "mean": 0.4966,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.28061568482913457,
+          "lo": 0.2226219764990973,
+          "mean": 0.250871774434592,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 0.9914795923438365,
+          "lo": 0.9833000084254051,
+          "mean": 0.9874509803921568,
+          "undefined_in_boot": 0.0
+        }
+      }
+    },
+    "prevalence": 0.17,
+    "share_shown_as_band": 1.0,
+    "task": "mastery recovery on simulated learners (latent continuous mastery and binary state at 0.85)"
+  },
+  "C30_D3_g0.40_k20": {
+    "config": {
+      "boot_seed": 7,
+      "depth": 3,
+      "guess": 0.4,
+      "implied_interval_z": 1.2815515655446004,
+      "items_per_concept": 20,
+      "mastered_at": 0.85,
+      "mastery_link": 2.0,
+      "n_boot": 2000,
+      "n_concepts": 30,
+      "n_learners": 500,
+      "prereq_slack": 0.1,
+      "seed": 2026110502,
+      "slip": 0.1
+    },
+    "label": "[SIM]",
+    "n_rows": 15000,
+    "paired_differences": {
+      "estimator_minus_baseline": {
+        "coverage80": {
+          "hi": 0.08693666666666668,
+          "lo": 0.049931666666666666,
+          "mean": 0.06766666666666665
+        },
+        "pearson_r": {
+          "hi": -0.3187155769294425,
+          "lo": -0.3353332556909951,
+          "mean": -0.3269723728595124
+        },
+        "rmse": {
+          "hi": 0.25181293252297393,
+          "lo": 0.2393476387879011,
+          "mean": 0.24590436405108518
+        },
+        "spearman_rho": {
+          "hi": -0.061622152580691515,
+          "lo": -0.06998038998617213,
+          "mean": -0.06565596725308209
+        },
+        "state_accuracy": {
+          "hi": -0.4541283333333333,
+          "lo": -0.49613333333333337,
+          "mean": -0.47613333333333335
+        }
+      }
+    },
+    "pass_bar": {
+      "applies": true,
+      "coverage_pass": false,
+      "r_pass": false
+    },
+    "paths": {
+      "baseline_share_correct": {
+        "coverage80": {
+          "hi": 0.32966833333333334,
+          "lo": 0.29186666666666666,
+          "mean": 0.3114,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.8518828680418601,
+          "lo": 0.8349388546774577,
+          "mean": 0.8436544273100679,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.2683530769862523,
+          "lo": 0.2525183551245452,
+          "mean": 0.2603921339488674,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.8494510812556666,
+          "lo": 0.8260452003304365,
+          "mean": 0.8390822661349986,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.9032033333333334,
+          "lo": 0.8839333333333333,
+          "mean": 0.894,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.7071960242022445,
+          "lo": 0.6395697230676077,
+          "mean": 0.6745454545454546,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 0.7439817055538928,
+          "lo": 0.7097067263390991,
+          "mean": 0.7274509803921568,
+          "undefined_in_boot": 0.0
+        }
+      },
+      "estimator": {
+        "coverage80": {
+          "hi": 0.4029366666666666,
+          "lo": 0.35679666666666665,
+          "mean": 0.37906666666666666,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.528970170865434,
+          "lo": 0.5044906433678923,
+          "mean": 0.5166820544505555,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.5193904344166546,
+          "lo": 0.4929318463034781,
+          "mean": 0.5062964979999526,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.7851269252857912,
+          "lo": 0.7596169668451256,
+          "mean": 0.7734262988819165,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.43606833333333334,
+          "lo": 0.4002,
+          "mean": 0.41786666666666666,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.25392707930623926,
+          "lo": 0.19921152010050874,
+          "mean": 0.22597517730496453,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 1.0,
+          "lo": 0.9987483832433668,
+          "mean": 0.9996078431372549,
+          "undefined_in_boot": 0.0
+        }
+      }
+    },
+    "prevalence": 0.17,
+    "share_shown_as_band": 1.0,
+    "task": "mastery recovery on simulated learners (latent continuous mastery and binary state at 0.85)"
+  },
+  "C30_D3_g0.40_k3": {
+    "config": {
+      "boot_seed": 7,
+      "depth": 3,
+      "guess": 0.4,
+      "implied_interval_z": 1.2815515655446004,
+      "items_per_concept": 3,
+      "mastered_at": 0.85,
+      "mastery_link": 2.0,
+      "n_boot": 2000,
+      "n_concepts": 30,
+      "n_learners": 500,
+      "prereq_slack": 0.1,
+      "seed": 2026110502,
+      "slip": 0.1
+    },
+    "label": "[SIM]",
+    "n_rows": 15000,
+    "paired_differences": {
+      "estimator_minus_baseline": {
+        "coverage80": {
+          "hi": 0.32986999999999994,
+          "lo": 0.30786666666666673,
+          "mean": 0.31853333333333333
+        },
+        "pearson_r": {
+          "hi": -0.04506116444655133,
+          "lo": -0.059058451988767684,
+          "mean": -0.05208141669199834
+        },
+        "rmse": {
+          "hi": 0.012080435139040417,
+          "lo": 0.007137907453193518,
+          "mean": 0.009670656050801751
+        },
+        "spearman_rho": {
+          "hi": -0.02410082675309598,
+          "lo": -0.035011762303147745,
+          "mean": -0.02957016690523606
+        },
+        "state_accuracy": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        }
+      }
+    },
+    "pass_bar": {
+      "applies": false,
+      "coverage_pass": null,
+      "r_pass": null
+    },
+    "paths": {
+      "baseline_share_correct": {
+        "coverage80": {
+          "hi": 0.6047333333333333,
+          "lo": 0.571395,
+          "mean": 0.5885333333333334,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.5294028568252879,
+          "lo": 0.4968506278277212,
+          "mean": 0.5139791898359386,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.36488217782028487,
+          "lo": 0.34860828891991885,
+          "mean": 0.3565781183494811,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.5295418991546005,
+          "lo": 0.494066114980552,
+          "mean": 0.5130767380923658,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.852535,
+          "lo": 0.805125,
+          "mean": 0.83,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": NaN,
+          "lo": NaN,
+          "mean": NaN,
+          "undefined_in_boot": 1.0
+        },
+        "state_recall": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0,
+          "undefined_in_boot": 0.0
+        }
+      },
+      "estimator": {
+        "coverage80": {
+          "hi": 0.9148016666666666,
+          "lo": 0.8989983333333333,
+          "mean": 0.9070666666666667,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.4783601027580518,
+          "lo": 0.44456035813579226,
+          "mean": 0.46189777314394026,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.37516263229383273,
+          "lo": 0.3575313060055363,
+          "mean": 0.36624877440028286,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.5011936729849145,
+          "lo": 0.4637624817706762,
+          "mean": 0.4835065711871297,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.852535,
+          "lo": 0.805125,
+          "mean": 0.83,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": NaN,
+          "lo": NaN,
+          "mean": NaN,
+          "undefined_in_boot": 1.0
+        },
+        "state_recall": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0,
+          "undefined_in_boot": 0.0
+        }
+      }
+    },
+    "prevalence": 0.17,
+    "share_shown_as_band": 1.0,
+    "task": "mastery recovery on simulated learners (latent continuous mastery and binary state at 0.85)"
+  },
+  "C30_D3_g0.40_k6": {
+    "config": {
+      "boot_seed": 7,
+      "depth": 3,
+      "guess": 0.4,
+      "implied_interval_z": 1.2815515655446004,
+      "items_per_concept": 6,
+      "mastered_at": 0.85,
+      "mastery_link": 2.0,
+      "n_boot": 2000,
+      "n_concepts": 30,
+      "n_learners": 500,
+      "prereq_slack": 0.1,
+      "seed": 2026110502,
+      "slip": 0.1
+    },
+    "label": "[SIM]",
+    "n_rows": 15000,
+    "paired_differences": {
+      "estimator_minus_baseline": {
+        "coverage80": {
+          "hi": 0.2188,
+          "lo": 0.19779499999999997,
+          "mean": 0.20819999999999994
+        },
+        "pearson_r": {
+          "hi": -0.11645335865533221,
+          "lo": -0.13072564249434201,
+          "mean": -0.12378894067419388
+        },
+        "rmse": {
+          "hi": 0.13327698504575364,
+          "lo": 0.12463019200706435,
+          "mean": 0.12915427888454278
+        },
+        "spearman_rho": {
+          "hi": -0.0370619178760507,
+          "lo": -0.04677832577287902,
+          "mean": -0.04182332298927416
+        },
+        "state_accuracy": {
+          "hi": -0.24813333333333343,
+          "lo": -0.2898666666666667,
+          "mean": -0.2698666666666666
+        }
+      }
+    },
+    "pass_bar": {
+      "applies": false,
+      "coverage_pass": null,
+      "r_pass": null
+    },
+    "paths": {
+      "baseline_share_correct": {
+        "coverage80": {
+          "hi": 0.507735,
+          "lo": 0.46886666666666665,
+          "mean": 0.48886666666666667,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.6645205379107387,
+          "lo": 0.6352607263088802,
+          "mean": 0.6502584942918332,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.31040942347304507,
+          "lo": 0.29489481253920585,
+          "mean": 0.302545437804586,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.667588359617784,
+          "lo": 0.6342015445723206,
+          "mean": 0.6518289266409582,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.8642016666666666,
+          "lo": 0.8355316666666667,
+          "mean": 0.8502666666666666,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.6216560492289772,
+          "lo": 0.5394242935396922,
+          "mean": 0.5816326530612245,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 0.443751033247612,
+          "lo": 0.40456311617710417,
+          "mean": 0.42470588235294116,
+          "undefined_in_boot": 0.0
+        }
+      },
+      "estimator": {
+        "coverage80": {
+          "hi": 0.7148666666666667,
+          "lo": 0.6788633333333333,
+          "mean": 0.6970666666666666,
+          "undefined_in_boot": 0.0
+        },
+        "pearson_r": {
+          "hi": 0.5416687204989238,
+          "lo": 0.5108426559763324,
+          "mean": 0.5264695536176394,
+          "undefined_in_boot": 0.0
+        },
+        "rmse": {
+          "hi": 0.4427773297527323,
+          "lo": 0.42010344820385925,
+          "mean": 0.43169971668912877,
+          "undefined_in_boot": 0.0
+        },
+        "spearman_rho": {
+          "hi": 0.6266761189335636,
+          "lo": 0.5910854174190934,
+          "mean": 0.610005603651684,
+          "undefined_in_boot": 0.0
+        },
+        "state_accuracy": {
+          "hi": 0.594,
+          "lo": 0.567,
+          "mean": 0.5804,
+          "undefined_in_boot": 0.0
+        },
+        "state_precision": {
+          "hi": 0.31162622551902414,
+          "lo": 0.2487519450089498,
+          "mean": 0.2794013669573415,
+          "undefined_in_boot": 0.0
+        },
+        "state_recall": {
+          "hi": 0.9389283651850648,
+          "lo": 0.91984254173466,
+          "mean": 0.9298039215686275,
+          "undefined_in_boot": 0.0
+        }
+      }
+    },
+    "prevalence": 0.17,
+    "share_shown_as_band": 1.0,
+    "task": "mastery recovery on simulated learners (latent continuous mastery and binary state at 0.85)"
+  },
+  "_provenance": {
+    "code_commit": "ad47d93f7ce16712abd47e9e8a61a0ba2aa24fc7",
+    "command": "python3 -m ml.evaluation.sim.recovery_run --suite prereg --n 500 --seed 2026110502",
+    "generator_sha256": "db3433fff4ed9101ac224eaff9c968f0b37304715adec9718b948060dbad55ef",
+    "harness_sha256": "5fafb645152fbba2d07927d9f763f012433adc5d6dcc7d0a80e70f74c49d6d69",
+    "label": "[SIM]",
+    "n_learners_per_cell": 500,
+    "note": "",
+    "prereg_commit": "82892a0a482c5080bf0092879aa71448e1a0f606",
+    "run_utc": "2026-11-05T08:06:02Z",
+    "seed": 2026110502,
+    "task": "mastery recovery on simulated learners (latent continuous mastery and binary state at 0.85)"
+  }
+}

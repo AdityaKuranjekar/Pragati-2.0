@@ -93,9 +93,30 @@ export const EvalRowSchema = z.object({
   verdict_detail: z.string(),
   named_miss: z.boolean(),
 });
+export const SetRowSchema = z.object({
+  id: z.string(),
+  setting: z.string(),
+  metric: z.string(),
+  result: z.string(),
+  baseline: z.string(),
+  interval: z.string(),
+  verdict: z.enum(["pass", "miss", "descriptive"]),
+  detail: z.string(),
+});
+export const EvalSetSchema = z.object({
+  id: z.string(),
+  name: z.string(),
+  origin: OriginSchema,
+  task: z.string(),
+  status: z.enum(["computed", "not computed"]),
+  reason: z.string(),
+  expected_file: z.string(),
+  rows: z.array(SetRowSchema),
+});
 export const EvaluationSchema = z.object({
   runs: z.array(z.object({ id: z.string(), title: z.string(), note: z.string() })),
   rows: z.array(EvalRowSchema),
+  sets: z.array(EvalSetSchema),
 });
 
 export type Band = z.infer<typeof BandSchema>;
@@ -107,3 +128,5 @@ export type Config = z.infer<typeof ConfigSchema>;
 export type Origin = z.infer<typeof OriginSchema>;
 export type EvalRow = z.infer<typeof EvalRowSchema>;
 export type Evaluation = z.infer<typeof EvaluationSchema>;
+export type EvalSet = z.infer<typeof EvalSetSchema>;
+export type SetRow = z.infer<typeof SetRowSchema>;

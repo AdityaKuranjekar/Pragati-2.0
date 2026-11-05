@@ -1,0 +1,33 @@
+{
+  "e4": {
+    "cases": 40,
+    "courses": {
+      "D1": 20,
+      "D3": 20
+    },
+    "items_per_concept": 6,
+    "seed": 2026110504
+  },
+  "e6": {
+    "policies": [
+      "adaptive",
+      "fixed",
+      "random"
+    ],
+    "profiles": 50,
+    "ranks_per_slot": 3,
+    "rows": 450,
+    "seed": 2026110505,
+    "slots_per_profile": 3
+  },
+  "key_files_gitignored": {
+    "keys/e4_key.json_sha256": "e963921a54923ae16fc5cae541f99baa5210bfa8469b4f1989ac4c3a4ecdb94e",
+    "keys/e6_key.json_sha256": "3f5baf6d4004a0fb177567aa35a7e96778c59fc30ccf06a9e0badeaf82f0179c"
+  },
+  "label": "[SIM]",
+  "purpose": "E4 root-cause and E6 relevance review material; no rating or expert label is recorded",
+  "sheet_sha256": {
+    "e4_root_cause_sheet.csv": "8bafbbbab6b7ce6ee4865bc208937059aa553896e84ff2f78c5e80fe15916a4e",
+    "e6_relevance_sheet.csv": "22dbf10c19e5e1c28544c95a1b055597e3946973b5356cce0eb065a1aa7323a8"
+  }
+}

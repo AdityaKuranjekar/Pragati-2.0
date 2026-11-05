@@ -13,7 +13,7 @@ Status: deployed; anonymous access and in-browser page check still open. Updated
 | Health check (production) | `GET /api/health` returned HTTP 200 `{"status": "ok", "version": "11c21729ab57bd69a0442e7a75370dded0cd8de7"}` |
 | `/prototype` (production) | HTTP 200; page is part of the build. Server HTML contains the console shell and loading skeleton; the page body is client-rendered, so its text was not confirmed in a browser |
 | Check method | The sandbox egress proxy returns 403 for `*.vercel.app`, so curl from the sandbox failed. Checks were made with the Vercel MCP fetch tool, which runs outside the sandbox but with the owner's Vercel session |
-| Deployment protection | Project default (Vercel Auth, all except custom domains) is still on, so anonymous visitors are likely challenged. Not changed; owner decision |
+| Deployment protection | Vercel Auth turned off on this project at the owner's request, so the URLs are public |
 
 Notes
 - The page is inside the existing root layout, so it renders within the institute console shell. Changing that would need edits outside the new route group.

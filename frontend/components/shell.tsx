@@ -95,7 +95,6 @@ export function Shell({ children }: { children: ReactNode }) {
       <aside className="fixed inset-y-0 left-0 z-40 hidden w-64 flex-col border-r border-line bg-white lg:flex" data-testid="sidebar">
         {brand}
         <Nav path={path} />
-        <p className="px-5 py-4 text-xs leading-snug text-ink-mute">{L("Demo data", "डेमो डेटा")}</p>
       </aside>
       {open && (
         <div className="fixed inset-0 z-50 lg:hidden" role="dialog" aria-modal="true" aria-label={L("Menu", "मेन्यू")}>
@@ -108,7 +107,6 @@ export function Shell({ children }: { children: ReactNode }) {
               </button>
             </div>
             <Nav path={path} onGo={() => setOpen(false)} />
-            <p className="px-5 py-4 text-xs text-ink-mute">{L("Demo data", "डेमो डेटा")}</p>
           </div>
         </div>
       )}

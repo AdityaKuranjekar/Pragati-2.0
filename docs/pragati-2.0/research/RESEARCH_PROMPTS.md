@@ -150,10 +150,17 @@
 
 ## Findings register
 
-| ID | Status | Findings file | Unverified items |
+Filed 2026-11-05 in `findings/REPORT_2026-11-05.md`, which carries the verification status of every claim.
+
+| ID | Status | Findings file | Still unverified |
 |---|---|---|---|
-| R1 | Partly checked (secondary) | not yet written | Gazette text of s.9; Fourth Schedule; commencement |
-| R2 | Partly checked | not yet written | ASSISTments terms; OULAD and JEEBench licence files; NTA reuse terms |
-| R3 | Not started | - | All syllabus and pattern facts beyond the NTA notice |
-| R4 | Not started | - | Everything |
-| R5 to R10 | Not started | - | Everything |
+| R1 | Fourth Schedule educational-institution exemption supported by secondary sources; processor and cross-tenant question open | `findings/REPORT_2026-11-05.md` | Gazette text, Rule 10/12 numbering, commencement date, whether a coaching centre qualifies, processor status |
+| R2 | OpenStax NC-SA and EdNet NC confirmed; ASSISTments, OULAD, JEEBench, NCERT, NTA not confirmed | same | ASSISTments terms; OULAD and JEEBench licence files; NCERT and NTA reuse |
+| R3 | Not verified | same | JEE Main/Advanced pattern details, EAPCET and WBJEE marking |
+| R4 | **Not found.** Report's dates and rubric unsourced | same | Everything; obtain official page from owner |
+| R5 | Literature matches memory; numeric ranges not verified | same | Benchmark figures |
+| R6 | Deductions only; not used | same | Primary statistics |
+| R7 | Deductions only | same | Provider pricing pages |
+| R8 | d = 0.76 from memory; d = 0.3 and ICC 0.05 are assumptions | same | Source for ICC; effect-size priors |
+| R9 | Plausible; not checked | same | CSTT use |
+| R10 | Consistent with plan | same | Olympiad rights (not needed for the pilot) |

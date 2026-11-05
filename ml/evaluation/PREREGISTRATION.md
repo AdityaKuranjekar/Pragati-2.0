@@ -123,9 +123,12 @@ what error? Does the engine's stated uncertainty cover the truth at the nominal 
 | Estimator mastered prediction | band == "mastered" (requires p >= 0.85 and n >= 5; design choices, not fitted) |
 | Baseline B0 (raw share correct) | estimate = correct / k; 80% interval = Wilson score (z = 1.2816); predicted mastered = share >= 0.85 and k >= 5 (the same guard) |
 | Bootstrap | 2000 resamples of learners (indices shared across estimator and baseline, so differences are paired), percentile 95% CI, boot seed 7 |
-| Command | `python3 -m ml.evaluation.sim.recovery --suite prereg --n 500 --seed 2026110502 --out ml/evaluation/results/e3_recovery_v1.json` |
+| Command | `python3 -m ml.evaluation.sim.recovery_run --suite prereg --n 500 --seed 2026110502 --out ml/evaluation/results/e3_recovery_v1.json` (see Amendment 1) |
 
 BKT parameters are the engine's fixed defaults: p_init 0.10, p_transit 0.20, guess 0.25, slip 0.10. **They were not fitted.** The 0.85 mastery threshold and the 5-answer guard are design choices. Guessing 0.40 is outside the engine's 0.25 guess parameter by design (misspecification).
+
+## Amendment 1 (2026-11-05, before the registered run; no design value changed)
+The command module is `ml/evaluation/sim/recovery_run.py`, not `recovery.py`. The generator (`recovery.py`) must not import the engine, and a test enforces that, so the engine-running harness is a separate file, as in E9 (`compare.py`). The design, seed, sample size, metrics, bars and predictions are unchanged. Before this amendment, a smoke test ran at seed 1 with 20 learners per cell, only to check that the harness executes. Its numbers were not used to change any value above.
 
 ## Metrics (per setting, over all learner x concept rows, N x C rows)
 | Metric | Definition | Better is |

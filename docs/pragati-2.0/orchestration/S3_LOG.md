@@ -1,5 +1,7 @@
 # S3 log: prototype API over the engine
 
+> **Updated by `S3_CLOSE_LOG.md`.** The gaps listed under "Not built" below for teacher scope, RLS, the day input and the served-item check were closed in that stage. Where this file differs from it, the close log is current.
+
 **Date:** 2026-11-05. **Branch:** claude/serene-sagan-8za1vh (synced to origin/main first). **Owner review:** pending. No pull request opened.
 
 ## ADR-003 status
@@ -14,16 +16,18 @@
 | `GET .../cohorts/{cohort_id}/bottlenecks` | teacher only | `cohort_bottlenecks` output, with the learner count; no learner ids. Counts only learners that exist in the same institute. |
 | `GET .../health` | anyone | No tenant data. |
 
-Tenancy: institute comes only from the principal. Learner and cohort are looked up under `(principal.institute_id, id)`; another institute's record reads as 404. A student asking for any learner but their own gets 403 before any lookup (so other students' existence is not revealed). Teachers may read any learner or cohort in their own institute (decision of this stage: not restricted to assigned cohorts). The demo flag is server configuration (`create_app(demo_allow_unapproved=...)` or `PRAGATI_DEMO_UNAPPROVED=1`), never a request parameter.
+Tenancy: institute comes only from the principal. Learner and cohort are looked up under `(principal.institute_id, id)`; another institute's record reads as 404. A student asking for any learner but their own gets 403 before any lookup (so other students' existence is not revealed). Teacher scope was institute-wide in this first stage; the close stage restricts it to assigned cohorts. The demo flag is server configuration (`create_app(demo_allow_unapproved=...)` or `PRAGATI_DEMO_UNAPPROVED=1`), never a request parameter.
 
-## Tests (83, all pass)
-| Set | Count | File |
-|---|---|---|
-| E13 tenancy (every route; forged `institute_id` in body, query and header; cross-institute both ways; student vs student; student on teacher route; missing/bad token; mixed-cohort leak; health) | 40 | `test_e13_tenancy.py` |
-| E0 for the API (idempotent duplicate, conflicting duplicate, per-tenant `event_id`, 11 rejected fields, malformed values, replay determinism, cold start) | 30 | `test_e0_api.py` |
-| Contract (reason and trace identical to the engine on 5 histories, approved-only gating, demo flag in response and not client-settable, no item text, no ASSISTments/JEEBench/pending-source text or timing/hint keys in any response incl. OpenAPI, bottleneck equals engine output) | 13 | `test_contract.py` |
+## Tests (first stage: 83, superseded: 268 now, see the close log)
+| Set | First stage | Now (after close) | File |
+|---|---|---|---|
+| E13 tenancy: every route; forged `institute_id` in body, query, header; cross-institute both ways; student vs student; student on teacher route; cohort scope; owner-only assign; every-route-requires-principal sweep | 40 | **134** (67 on in-memory + 67 on PostgreSQL) | `test_e13_tenancy.py` |
+| E13 row-level security, throw-away PostgreSQL only | 0 | **23** | `test_rls_postgres.py` |
+| E0 for the API: idempotency, conflicts, rejected fields, served-item check, server day, replay | 30 | **83** (41 + 41 + 1 pure) | `test_e0_api.py` |
+| Contract: reason and trace equal the engine's; gating; no source text or timing/hint keys | 13 | **28** (14 + 14) | `test_contract.py` |
+| **Total** | 83 | **268** | |
 
-Mutation check: removing the student own-learner check fails 16 tests; removing the teacher-only check fails 2. The restored code passes all 83. Engine tests (`app/intelligence/tests`) still pass (97).
+Mutation check (first stage): removing the student own-learner check failed 16 tests; removing the teacher-only check failed 2.
 
 ## Commands
 ```bash

@@ -5,9 +5,13 @@
   unknown body fields are a 422.
 * Every learner and cohort is looked up under (principal.institute_id, id) before any read or write.
   Another institute's record is indistinguishable from a missing one (404).
-* Students reach only their own learner (403 otherwise, checked before any lookup so existence of
-  other students is not revealed). Teachers read learners and cohorts of their own institute and
-  cannot write attempts.
+* Order of checks: role, then institute (lookup under the principal's institute, 404 if absent), then
+  cohort scope. Students reach only their own learner (403 before any lookup, so the existence of
+  other students is not revealed). A teacher reads a cohort, or a learner in it, only if assigned to
+  that cohort (403 otherwise). Teachers cannot write attempts. The owner role assigns teachers to
+  cohorts and reads no learner data.
+* The day is a server-side per-learner counter (service.py); the client cannot send one.
+* An attempt is accepted only for an item the server served to that learner for that concept, once.
 * The demo flag is server configuration, never a request parameter, and is echoed in next-step.
 No LLM, no response-time or hint data anywhere.
 """
@@ -28,7 +32,8 @@ from app.intelligence.policy import cohort_bottlenecks
 from app.intelligence.selection import BankItem
 
 from .auth import Principal, StubTokenAuth, current_principal
-from .repository import ConflictingEvent, LearnerRecord, Repository
+from .repository import ConflictingEvent, LearnerRecord, NotServed, Repository
+from .service import schedules_for
 
 DEFAULT_BUDGET_ITEMS = 50   # demo default for the budget input; the real value will come from the goal
 
@@ -62,22 +67,29 @@ def create_app(repo: Repository, auth: StubTokenAuth, bank: Sequence[BankItem],
 
     def learner_access(write: bool):
         def dep(learner_id: str, p: Principal = Depends(current_principal)) -> LearnerRecord:
+            if p.role == "owner":
+                raise HTTPException(403, "this role has no access to learner data")
             if p.role == "student" and p.learner_id != learner_id:
                 raise HTTPException(403, "students may reach only their own learner")
             if write and p.role != "student":
                 raise HTTPException(403, "only the learner may submit attempts")
-            rec = repo.get_learner(p.institute_id, learner_id)
+            rec = repo.get_learner(p.institute_id, learner_id)          # institute check first
             if rec is None:
                 raise HTTPException(404, "learner not found")
+            if p.role == "teacher" and not (
+                    rec.cohort_id and repo.is_teacher_assigned(p.institute_id, rec.cohort_id, p.user_id)):
+                raise HTTPException(403, "teacher is not assigned to this learner's cohort")   # cohort second
             return rec
         return dep
 
     def teacher_cohort(cohort_id: str, p: Principal = Depends(current_principal)):
         if p.role != "teacher":
             raise HTTPException(403, "teacher only")
-        rec = repo.get_cohort(p.institute_id, cohort_id)
+        rec = repo.get_cohort(p.institute_id, cohort_id)                # institute check first
         if rec is None:
             raise HTTPException(404, "cohort not found")
+        if not repo.is_teacher_assigned(p.institute_id, cohort_id, p.user_id):   # cohort second
+            raise HTTPException(403, "teacher is not assigned to this cohort")
         return rec
 
     def states_of(rec: LearnerRecord) -> dict[str, ConceptState]:
@@ -86,6 +98,19 @@ def create_app(repo: Repository, auth: StubTokenAuth, bank: Sequence[BankItem],
     @app.get("/api/prototype/health")
     def health():
         return {"status": "ok", "policy_version": POLICY_VERSION}
+
+    @app.put("/api/prototype/cohorts/{cohort_id}/teachers/{teacher_user_id}")
+    def assign_teacher(cohort_id: str, teacher_user_id: str, response: Response,
+                       p: Principal = Depends(current_principal)):
+        if p.role != "owner":
+            raise HTTPException(403, "owner only")
+        if repo.get_cohort(p.institute_id, cohort_id) is None:
+            raise HTTPException(404, "cohort not found")
+        if repo.get_user_role(p.institute_id, teacher_user_id) != "teacher":
+            raise HTTPException(404, "teacher not found")
+        created = repo.assign_teacher(p.institute_id, cohort_id, teacher_user_id)
+        response.status_code = 201 if created else 200
+        return {"cohort_id": cohort_id, "teacher_user_id": teacher_user_id, "assigned": True}
 
     @app.post("/api/prototype/learners/{learner_id}/events")
     def post_event(body: AttemptIn, response: Response,
@@ -99,8 +124,11 @@ def create_app(repo: Repository, auth: StubTokenAuth, bank: Sequence[BankItem],
                                             body.concept_id, body.item_id, body.correct)
         except ConflictingEvent:
             raise HTTPException(409, "event_id already used with different content")
+        except NotServed as e:
+            raise HTTPException(422, str(e))
         response.status_code = 201 if created else 200
         return {"event_id": ev.event_id, "seq": ev.seq, "duplicate": not created,
+                "day": repo.day_of(rec.institute_id, rec.learner_id),
                 "concepts": _states_json(states_of(rec)), "policy_version": POLICY_VERSION}
 
     @app.get("/api/prototype/learners/{learner_id}/state")
@@ -111,11 +139,19 @@ def create_app(repo: Repository, auth: StubTokenAuth, bank: Sequence[BankItem],
 
     @app.get("/api/prototype/learners/{learner_id}/next-step")
     def get_next_step(rec: LearnerRecord = Depends(learner_access(write=False)),
-                      day: int = Query(0, ge=0), budget_remaining: int = Query(DEFAULT_BUDGET_ITEMS, ge=0)):
+                      p: Principal = Depends(current_principal),
+                      budget_remaining: int = Query(DEFAULT_BUDGET_ITEMS, ge=0)):
+        events = repo.events_for(rec.institute_id, rec.learner_id)
+        kinds = {s.item_id: s.kind for s in repo.served_for(rec.institute_id, rec.learner_id)}
+        day = repo.day_of(rec.institute_id, rec.learner_id)          # server-side; never from the client
         session = AdaptiveSession(rec.learner_id, graph, rec.goal, bank,
                                   PlannerConfig(allow_unapproved_demo=demo_allow_unapproved), names)
-        session.events = repo.events_for(rec.institute_id, rec.learner_id)
+        session.events = events
+        session.schedules = schedules_for(events, kinds)
         step = session.next_step(day, budget_remaining)
+        if p.role == "student" and step.item_id is not None and step.concept_id is not None:
+            # Only the learner's own call counts as serving; a teacher looking does not.
+            repo.mark_served(rec.institute_id, rec.learner_id, step.concept_id, step.item_id, step.kind)
         return jsonable_encoder({
             "kind": step.kind, "concept_id": step.concept_id, "item_id": step.item_id,
             "reason": step.reason, "trace": step.trace,
@@ -128,8 +164,8 @@ def create_app(repo: Repository, auth: StubTokenAuth, bank: Sequence[BankItem],
     @app.get("/api/prototype/cohorts/{cohort_id}/bottlenecks")
     def get_bottlenecks(cohort=Depends(teacher_cohort)):
         members = {}
-        for lid in cohort.learner_ids:
-            lrec = repo.get_learner(cohort.institute_id, lid)   # same-institute only, even if mis-seeded
+        for lid in repo.cohort_learner_ids(cohort.institute_id, cohort.cohort_id):
+            lrec = repo.get_learner(cohort.institute_id, lid)
             if lrec is not None:
                 members[lid] = states_of(lrec)
         return {"cohort_id": cohort.cohort_id, "learner_count": len(members),

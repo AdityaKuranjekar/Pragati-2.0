@@ -1,4 +1,4 @@
-"""STUB authentication. NOT for production.
+"""STUB authentication. NOT FOR PRODUCTION.
 
 A bearer token maps to (user, institute, role, learner). The map is configuration held in memory.
 It stands in for the real provider (Supabase or Firebase, Phase 0) so that tenancy is enforced from
@@ -12,7 +12,7 @@ from typing import Mapping
 
 from fastapi import Header, HTTPException, Request
 
-ROLES = frozenset({"student", "teacher"})
+ROLES = frozenset({"student", "teacher", "owner"})
 
 
 @dataclass(frozen=True)

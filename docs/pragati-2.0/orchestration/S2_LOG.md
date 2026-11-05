@@ -17,11 +17,11 @@ Command: `cd backend && python3 -m pytest app/intelligence/tests -q`
 
 | Set | Tests | Result |
 |---|---|---|
-| E0 invariants, determinism, idempotency, input contract, graph validity | 19 | pass |
-| E7 no prerequisite violation across 300 random graphs and histories (over 100 checked); order is topological; removing an edge changes the path; proposed edges named in the reason | 6 | pass |
-| E10 cold start, one or two answers, contradictory evidence, lucky guess run, missing concept, unknown goal, goal mastered, cohort bottleneck | 9 | pass |
+| E0 invariants, determinism, idempotency, input contract, graph validity | 21 | pass |
+| E7 no prerequisite violation across 300 random graphs and histories (over 100 checked); order is topological; removing an edge changes the path; proposed edges named in the reason | 4 | pass |
+| E10 cold start, one or two answers, contradictory evidence, lucky guess run, missing concept, unknown goal, goal mastered, cohort bottleneck | 8 | pass |
 | Demo flow (wow sequence) | 3 | pass |
-| **Total** | **36** | **36 pass** |
+| **Total** (E0 21 + E7 4 + E10 8 + demo 3) | **36** | **36 pass** |
 
 Mutation check: reversing the chain order makes 8 tests fail. The restored code passes all 36.
 

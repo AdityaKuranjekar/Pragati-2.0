@@ -1,18 +1,20 @@
 "use client";
 import Link from "next/link";
-import { useMemo, useState, type FormEvent } from "react";
-import { ALL_LEARNERS, CONCEPTS, EDGES, SIM_COUNT, SIM_SEED, conceptById } from "@/lib/prototype/data";
+import { useState, type FormEvent } from "react";
+import { ALL_LEARNERS, CONCEPTS, EDGES, conceptById } from "@/lib/prototype/data";
 import { bottleneck, coverage, groupRows, useRows, type Row } from "@/lib/prototype/derive";
-import { MASTERED_AT, MIN_EVIDENCE, firstUnmet } from "@/lib/prototype/engine";
+import { MIN_EVIDENCE, firstUnmet } from "@/lib/prototype/engine";
 import { f2, fmtTime } from "@/lib/prototype/format";
-import { STEPS, STEP_LABEL } from "@/lib/prototype/mastery-scale";
+import { NO_ESTIMATE_LONG, NO_ESTIMATE_WORD, STEPS, STEP_RANGE, STEP_WORD } from "@/lib/prototype/mastery-scale";
 import { recordDecision, useDemoState } from "@/lib/prototype/store";
 import type { Decision, EdgeState, Estimate, Step } from "@/lib/prototype/types";
 import { Card, OriginTag, Warn } from "./frame";
 
 const stepClass = (e: Estimate) => (e.insufficient ? "m0" : `m${e.step}`);
+const wordOf = (e: Estimate) => (e.insufficient ? NO_ESTIMATE_WORD : STEP_WORD[e.step]);
+const plural = (n: number, one: string, many = `${one}s`) => `${n} ${n === 1 ? one : many}`;
 
-/* ---------- cohort summary ---------- */
+/* ---------- summary ---------- */
 export function CohortSummary() {
   const rows = useRows();
   const fix = groupRows(rows, "fixture");
@@ -21,31 +23,31 @@ export function CohortSummary() {
   const cs = coverage(sim);
   const b = bottleneck(rows);
   return (
-    <Card title="Cohort summary">
+    <Card title="At a glance">
       <dl className="p-stats">
         <div className="p-stat">
           <dt>Learners</dt>
-          <dd className="num"><span className="big">{fix.length}</span> <span className="muted">fixtures</span> <OriginTag origin="DEMO FIXTURE" /></dd>
-          <dd className="num"><span className="big">{sim.length}</span> <span className="muted">simulated</span> <OriginTag origin="SIM" /></dd>
+          <dd><span className="big num">{rows.length}</span> <span className="muted">learners</span></dd>
+          <dd className="line num">{fix.length} demo <OriginTag origin="DEMO FIXTURE" /> and {sim.length} simulated <OriginTag origin="SIM" /></dd>
         </div>
         <div className="p-stat">
-          <dt>Concepts with enough evidence ({MIN_EVIDENCE} or more attempts)</dt>
-          <dd className="num"><span className="big">{cf.withEvidence} of {cf.total}</span> <span className="muted">fixtures</span> <OriginTag origin="DEMO FIXTURE" /></dd>
-          <dd className="num"><span className="big">{cs.withEvidence} of {cs.total}</span> <span className="muted">simulated</span> <OriginTag origin="SIM" /></dd>
+          <dt>Topics with enough practice to judge</dt>
+          <dd><span className="big num">{cf.withEvidence + cs.withEvidence} of {cf.total + cs.total}</span></dd>
+          <dd className="line num">Demo learners: {cf.withEvidence} of {cf.total} · Simulated: {cs.withEvidence} of {cs.total}</dd>
         </div>
         <div className="p-stat">
-          <dt>Bottleneck concept</dt>
+          <dt>Where most learners should start</dt>
           {b ? (
             <>
               <dd className="big">{b.concept.label}</dd>
               <dd className="line num">
-                First unmet concept for {b.simCount} of {b.simTotal} simulated <OriginTag origin="SIM" /> and {b.fixCount} of {b.fixTotal} fixture <OriginTag origin="DEMO FIXTURE" /> learners.
-                {b.downstream > 0 ? ` Blocks ${b.downstream} later concept${b.downstream === 1 ? "" : "s"} in this chain.` : ""}
+                {b.simCount} of {b.simTotal} simulated and {b.fixCount} of {b.fixTotal} demo learners are not yet secure here.
+                {b.downstream > 0 ? ` ${plural(b.downstream, "later topic")} in this chain depend${b.downstream === 1 ? "s" : ""} on it.` : ""}
               </dd>
-              <dd className="line"><Link href="/prototype/teacher/bottleneck">Open bottleneck panel</Link></dd>
+              <dd className="line"><Link href="/prototype/teacher/bottleneck">See where learners get stuck</Link></dd>
             </>
           ) : (
-            <dd className="line">No concept is the first unmet concept for any simulated learner.</dd>
+            <dd className="line">Every simulated learner is secure on every topic.</dd>
           )}
         </div>
       </dl>
@@ -56,35 +58,40 @@ export function CohortSummary() {
 /* ---------- heatmap ---------- */
 function Legend() {
   return (
-    <div className="p-legend" aria-label="Mastery scale">
-      <span>Estimate:</span>
+    <div className="p-legend" aria-label="Colour key">
       {STEPS.map((s) => (
-        <span key={s} className={`sw m${s}`}>{STEP_LABEL[s]}</span>
+        <span key={s} className={`sw m${s}`}>{STEP_WORD[s]}</span>
       ))}
-      <span className="sw m0">--</span>
-      <span>Fewer than {MIN_EVIDENCE} attempts: no estimate</span>
+      <span className="sw m0">{NO_ESTIMATE_WORD}</span>
+      <span>Too early means fewer than {MIN_EVIDENCE} questions answered.</span>
     </div>
   );
 }
 
-function DistBar({ rows, conceptIndex, label }: { rows: Row[]; conceptIndex: number; label: string }) {
-  const counts: Record<Step, number> = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+function groupSentence(rows: Row[], i: number) {
+  const c: Record<Step, number> = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
   let none = 0;
-  rows.forEach((r) => {
-    const e = r.est[conceptIndex];
-    if (e.insufficient) none++;
-    else counts[e.step]++;
-  });
-  const summary = [...STEPS.map((s) => `${STEP_LABEL[s]}: ${counts[s]}`), `fewer than ${MIN_EVIDENCE} attempts: ${none}`].join(", ");
+  rows.forEach((r) => (r.est[i].insufficient ? none++ : c[r.est[i].step]++));
+  const parts = [
+    { n: c[4] + c[5], t: "secure or mostly secure" },
+    { n: c[3], t: "getting there" },
+    { n: c[1] + c[2], t: "just starting or need practice" },
+    { n: none, t: "too early to tell" },
+  ].filter((p) => p.n > 0);
+  return { c, none, text: parts.map((p) => `${p.n} ${p.t}`).join(" · ") || "No learners" };
+}
+
+function GroupCell({ rows, i, label }: { rows: Row[]; i: number; label: string }) {
+  const { c, none, text } = groupSentence(rows, i);
   return (
     <div>
-      <div className="p-dist" role="img" aria-label={`${label}. ${summary}`}>
+      <div className="p-dist" role="img" aria-label={`${label}: ${text}`}>
         {none > 0 && <span className="m0" style={{ flexGrow: none }}>{none}</span>}
-        {STEPS.filter((s) => counts[s] > 0).map((s) => (
-          <span key={s} className={`m${s}`} style={{ flexGrow: counts[s] }}>{counts[s]}</span>
+        {STEPS.filter((s) => c[s] > 0).map((s) => (
+          <span key={s} className={`m${s}`} style={{ flexGrow: c[s] }}>{c[s]}</span>
         ))}
       </div>
-      <p className="cap small muted num" style={{ marginTop: 4 }}>{summary}</p>
+      <p className="small muted num" style={{ marginTop: 6 }}>{text}</p>
     </div>
   );
 }
@@ -100,11 +107,11 @@ export function ConceptHeatmap() {
 
   return (
     <Card
-      title="Concept by learner"
+      title="How each topic is going"
       right={
         <div className="p-seg" role="group" aria-label="View">
-          <button type="button" aria-pressed={view === "group"} onClick={() => setView("group")}>Group</button>
-          <button type="button" aria-pressed={view === "learner"} onClick={() => setView("learner")}>Learner</button>
+          <button type="button" aria-pressed={view === "group"} onClick={() => setView("group")}>Whole group</button>
+          <button type="button" aria-pressed={view === "learner"} onClick={() => setView("learner")}>Each learner</button>
         </div>
       }
     >
@@ -113,33 +120,33 @@ export function ConceptHeatmap() {
         <table className="p-gtable stack">
           <thead>
             <tr>
-              <th scope="col">Concept (syllabus order)</th>
-              <th scope="col">Fixtures ({fix.length}) <OriginTag origin="DEMO FIXTURE" /></th>
-              <th scope="col">Simulated ({sim.length}) <OriginTag origin="SIM" /></th>
+              <th scope="col">Topic</th>
+              <th scope="col">Demo learners ({fix.length}) <OriginTag origin="DEMO FIXTURE" /></th>
+              <th scope="col">Simulated learners ({sim.length}) <OriginTag origin="SIM" /></th>
             </tr>
           </thead>
           <tbody>
             {CONCEPTS.map((c, i) => (
               <tr key={c.id}>
                 <th scope="row">{c.label}</th>
-                <td data-label={`Fixtures (${fix.length}) [DEMO FIXTURE]`}><DistBar rows={fix} conceptIndex={i} label={`${c.label}, fixtures`} /></td>
-                <td data-label={`Simulated (${sim.length}) [SIM]`}><DistBar rows={sim} conceptIndex={i} label={`${c.label}, simulated`} /></td>
+                <td data-label={`Demo learners (${fix.length})`}><GroupCell rows={fix} i={i} label={`${c.label}, demo learners`} /></td>
+                <td data-label={`Simulated learners (${sim.length})`}><GroupCell rows={sim} i={i} label={`${c.label}, simulated learners`} /></td>
               </tr>
             ))}
           </tbody>
         </table>
       ) : (
         <>
-          <div className="p-scroll" tabIndex={0} aria-label="Concept by learner table, scrolls sideways">
+          <div className="p-scroll" tabIndex={0} aria-label="Topics by learner, scrolls sideways">
             <table className="p-grid">
               <thead>
                 <tr>
-                  <th scope="col"><span className="sr-only">Concept</span></th>
-                  <th scope="colgroup" colSpan={fix.length} className="grp">Fixtures <OriginTag origin="DEMO FIXTURE" /></th>
+                  <th scope="col"><span className="sr-only">Topic</span></th>
+                  <th scope="colgroup" colSpan={fix.length} className="grp">Demo <OriginTag origin="DEMO FIXTURE" /></th>
                   <th scope="colgroup" colSpan={sim.length} className="grp" style={{ borderLeft: "1px solid var(--border)" }}>Simulated <OriginTag origin="SIM" /></th>
                 </tr>
                 <tr>
-                  <th scope="col">Concept</th>
+                  <th scope="col">Topic</th>
                   {ALL_LEARNERS.map((l, i) => (
                     <th key={l.id} scope="col" style={i === fix.length ? { borderLeft: "1px solid var(--border)" } : undefined}>{l.label}</th>
                   ))}
@@ -158,11 +165,11 @@ export function ConceptHeatmap() {
                             type="button"
                             className={`p-cell ${stepClass(e)}`}
                             aria-pressed={active}
-                            aria-label={`${r.learner.label}, ${c.label}: ${e.insufficient ? "no estimate" : `estimate ${f2(e.mean)}`}, ${e.n} attempts`}
+                            aria-label={`${r.learner.label}, ${c.label}: ${e.insufficient ? NO_ESTIMATE_LONG : STEP_WORD[e.step]}, ${plural(e.n, "question")} answered`}
                             onClick={() => setSel(active ? null : { learnerId: r.learner.id, conceptId: c.id })}
                           >
-                            <b className="num">{e.insufficient ? "--" : f2(e.mean)}</b>
-                            <i className="num">n={e.n}</i>
+                            <b>{wordOf(e)}</b>
+                            <i className="num">{e.n} answered</i>
                           </button>
                         </td>
                       );
@@ -174,68 +181,77 @@ export function ConceptHeatmap() {
           </div>
           <div aria-live="polite" style={{ marginTop: 16 }}>
             {selRow && selEst ? (
-              <>
-                <h3 className="p-h2" style={{ marginBottom: 8 }}>{selRow.learner.label} <OriginTag origin={selRow.learner.origin} /></h3>
-                <dl className="p-detail">
-                  <div><dt>Concept</dt><dd>{conceptById(selEst.conceptId).label}</dd></div>
-                  <div><dt>Estimate</dt><dd className="num">{selEst.insufficient ? "No estimate" : f2(selEst.mean)}</dd></div>
-                  <div><dt>Range (80%)</dt><dd className="num">{selEst.insufficient ? "Not shown" : `${f2(selEst.lo)} to ${f2(selEst.hi)}`}</dd></div>
-                  <div><dt>Attempts</dt><dd className="num">{selEst.n}</dd></div>
-                  <div><dt>Status</dt><dd>{selEst.insufficient ? <Warn>Insufficient evidence</Warn> : selEst.early ? "Early estimate" : "Enough evidence"}</dd></div>
-                </dl>
-              </>
+              <div className="p-stack" style={{ gap: 8 }}>
+                <h3 className="p-h2">{selRow.learner.label} <OriginTag origin={selRow.learner.origin} /></h3>
+                <p className="p-sentence">
+                  <strong>{conceptById(selEst.conceptId).label}:</strong>{" "}
+                  {selEst.insufficient
+                    ? `${NO_ESTIMATE_LONG}. ${plural(selEst.n, "question")} answered so far; at least ${MIN_EVIDENCE} are needed.`
+                    : `${STEP_WORD[selEst.step]}. ${selEst.k} of ${selEst.n} answers were correct.${selEst.early ? " This rests on few questions, so it may change." : ""}`}
+                </p>
+                {!selEst.insufficient && (
+                  <details className="p-more">
+                    <summary>Show the numbers</summary>
+                    <dl className="p-detail">
+                      <div><dt>Estimate</dt><dd className="num">{f2(selEst.mean)}</dd></div>
+                      <div><dt>Likely range (80%)</dt><dd className="num">{f2(selEst.lo)} to {f2(selEst.hi)}</dd></div>
+                      <div><dt>Level band</dt><dd className="num">{STEP_RANGE[selEst.step]}</dd></div>
+                    </dl>
+                  </details>
+                )}
+              </div>
             ) : (
-              <p className="muted small">Select a cell to see the range and evidence for that learner and concept.</p>
+              <p className="muted small">Select a cell to see what is behind it.</p>
             )}
           </div>
         </>
       )}
       <p className="small muted" style={{ marginTop: 16, maxWidth: "75ch" }}>
-        Rows follow syllabus order. Columns are not sorted by score. Simulated learners come from a fixed seed ({SIM_SEED}, {SIM_COUNT} learners) in a generator separate from the estimate function; they say nothing about real learners.
-        Estimates here are the share-correct rule used by this prototype, not the Pragati engine.
+        Topics follow syllabus order. Learners are not ranked or sorted by score. Simulated learners are made up and say nothing about real students.
       </p>
     </Card>
   );
 }
 
-/* ---------- bottleneck panel ---------- */
+/* ---------- bottleneck ---------- */
 const STATE_LABEL: Record<EdgeState, string> = {
-  proposed: "Proposed, unreviewed",
-  accepted: "Accepted",
-  modified: "Modified",
-  dismissed: "Dismissed",
+  proposed: "Suggested, not yet reviewed by a teacher",
+  accepted: "Confirmed by a teacher",
+  modified: "Changed by a teacher",
+  dismissed: "Removed by a teacher",
 };
 const stateOf = (edgeId: string, decisions: Decision[]): EdgeState => {
   const last = [...decisions].reverse().find((d) => d.edgeId === edgeId);
   return last ? last.decision : "proposed";
 };
+const edgeText = (e: (typeof EDGES)[number]) => `${conceptById(e.from).short} comes before ${conceptById(e.to).short}`;
 
 export function BottleneckView() {
   const rows = useRows();
   const { decisions } = useDemoState();
   const b = bottleneck(rows);
   const fixtures = groupRows(rows, "fixture");
-  const sim = groupRows(rows, "sim");
 
   return (
     <div className="p-stack">
-      <Card title={b ? `Bottleneck: ${b.concept.label}` : "No bottleneck"} origin={["DEMO FIXTURE", "SIM"]}>
+      <Card title={b ? `Most learners should start with ${b.concept.label}` : "No common starting point"} origin={["DEMO FIXTURE", "SIM"]}>
         {b ? (
           <>
-            <p className="num">
-              First unmet concept for {b.simCount} of {b.simTotal} simulated learners <OriginTag origin="SIM" /> and {b.fixCount} of {b.fixTotal} fixture learners <OriginTag origin="DEMO FIXTURE" />.
-              {b.downstream > 0 ? ` It blocks ${b.downstream} later concept${b.downstream === 1 ? "" : "s"} in this chain.` : ""}
+            <p className="p-sentence num">
+              {b.simCount} of {b.simTotal} simulated learners and {b.fixCount} of {b.fixTotal} demo learners are not yet secure on this topic, and it is the first one they need to work on.
+              {b.downstream > 0 ? ` ${plural(b.downstream, "later topic")} in this chain depend${b.downstream === 1 ? "s" : ""} on it.` : ""}
             </p>
-            <p className="small muted" style={{ marginTop: 8 }}>
-              Method: count of learners whose first concept in chain order with an estimate below {f2(MASTERED_AT)}, or with fewer than {MIN_EVIDENCE} attempts, is this one. Ties go to the earlier concept.
-            </p>
+            <details className="p-more">
+              <summary>How this was worked out</summary>
+              <p className="muted">For each learner we take the first topic, in syllabus order, that is not yet secure or has too few answers to judge. The topic that is first for the most simulated learners is shown. If two topics tie, the earlier one is shown.</p>
+            </details>
           </>
         ) : (
-          <p>No concept is the first unmet concept for any simulated learner.</p>
+          <p>Every simulated learner is secure on every topic.</p>
         )}
       </Card>
 
-      <Card title="Prerequisite path">
+      <Card title="How the topics connect">
         <div className="p-chain">
           {CONCEPTS.map((c, i) => {
             const e = EDGES[i];
@@ -245,43 +261,41 @@ export function BottleneckView() {
                 <div className="p-node">{c.label}</div>
                 {e && st && (
                   <div className={`p-edge ${st}`}>
-                    <span>Prerequisite edge: {conceptById(e.from).short} before {conceptById(e.to).short}</span>
+                    <span>{conceptById(e.from).short} has to come before {conceptById(e.to).short}</span>
                     {st === "proposed" ? <Warn>{STATE_LABEL[st]}</Warn> : <strong>{STATE_LABEL[st]}</strong>}
-                    <span>{e.source}</span>
                   </div>
                 )}
               </div>
             );
           })}
         </div>
-        <p className="small muted" style={{ marginTop: 12 }}>Edges marked proposed are suggestions, not confirmed facts.</p>
+        <p className="small muted" style={{ marginTop: 12 }}>These links are suggestions from the content team. Until a teacher reviews them they are not treated as fact.</p>
       </Card>
 
-      <Card title="Why this concept is flagged" origin={["DEMO FIXTURE", "SIM"]}>
+      <Card title="Who is stuck, and where" origin={["DEMO FIXTURE", "SIM"]}>
         <ul className="p-stack" style={{ gap: 8 }}>
           {fixtures.map((r) => {
             const t = firstUnmet(r.est);
-            const e = b ? r.est[b.index] : null;
             return (
               <li key={r.learner.id} className="num">
-                <strong>{r.learner.label}</strong> <OriginTag origin="DEMO FIXTURE" />:{" "}
-                {e ? (e.insufficient ? <>no estimate on {b!.concept.short} ({e.n} attempts)</> : <>{f2(e.mean)} on {b!.concept.short} ({e.n} attempts)</>) : "no data"}
-                {t ? `. First unmet concept: ${conceptById(t.conceptId).short}.` : ". No unmet concept."}
+                <strong>{r.learner.label}</strong> <OriginTag origin="DEMO FIXTURE" />{" "}
+                {t ? `should start with ${conceptById(t.conceptId).short} (${t.insufficient ? `${plural(t.n, "question")} answered so far` : `${t.k} of ${t.n} answers correct`}).` : "is secure on every topic."}
               </li>
             );
           })}
           <li className="num">
-            <strong>Simulated learners</strong> <OriginTag origin="SIM" />: {b ? `${b.simCounts.map((n, i) => `${CONCEPTS[i].short} ${n}`).join(", ")} of ${sim.length} (count of learners whose first unmet concept is that one)` : "none"}.
+            <strong>Simulated learners</strong> <OriginTag origin="SIM" />{" "}
+            {b ? `should start with: ${CONCEPTS.map((c, i) => `${c.short} (${b.simCounts[i]})`).join(", ")}.` : "are secure on every topic."}
           </li>
         </ul>
       </Card>
 
-      <OverrideForm decisions={decisions} />
+      <ReviewForm decisions={decisions} />
     </div>
   );
 }
 
-function OverrideForm({ decisions }: { decisions: Decision[] }) {
+function ReviewForm({ decisions }: { decisions: Decision[] }) {
   const [edgeId, setEdgeId] = useState(EDGES[0].id);
   const [decision, setDecision] = useState<Decision["decision"]>("accepted");
   const [reason, setReason] = useState("");
@@ -292,52 +306,57 @@ function OverrideForm({ decisions }: { decisions: Decision[] }) {
     recordDecision({ edgeId, decision, reason: reason.trim() });
     setReason("");
   };
-  const edge = useMemo(() => EDGES.find((e) => e.id === edgeId)!, [edgeId]);
+  const DECISIONS = [
+    { v: "accepted", t: "Yes, keep this link" },
+    { v: "modified", t: "Change it" },
+    { v: "dismissed", t: "No, remove it" },
+  ] as const;
+  const PAST = { accepted: "Confirmed", modified: "Changed", dismissed: "Removed" } as const;
   return (
-    <Card title="Review a suggested edge">
+    <Card title="Review a suggested link">
       <form className="p-form" onSubmit={submit}>
         <fieldset className="p-fs">
-          <legend>Edge</legend>
+          <legend>Which link?</legend>
           {EDGES.map((e) => (
             <label key={e.id} className="p-radio">
               <input type="radio" name="edge" value={e.id} checked={edgeId === e.id} onChange={() => setEdgeId(e.id)} />
-              {conceptById(e.from).short} before {conceptById(e.to).short}
+              {edgeText(e)}
             </label>
           ))}
         </fieldset>
         <fieldset className="p-fs">
-          <legend>Decision for “{conceptById(edge.from).short} before {conceptById(edge.to).short}”</legend>
-          {(["accepted", "modified", "dismissed"] as const).map((d) => (
-            <label key={d} className="p-radio">
-              <input type="radio" name="decision" value={d} checked={decision === d} onChange={() => setDecision(d)} />
-              {d === "accepted" ? "Accept" : d === "modified" ? "Modify" : "Dismiss"}
+          <legend>Is this a real prerequisite?</legend>
+          {DECISIONS.map((d) => (
+            <label key={d.v} className="p-radio">
+              <input type="radio" name="decision" value={d.v} checked={decision === d.v} onChange={() => setDecision(d.v)} />
+              {d.t}
             </label>
           ))}
         </fieldset>
         <div>
-          <label htmlFor="reason" style={{ display: "block", fontWeight: 500, marginBottom: 6 }}>Reason (required)</label>
+          <label htmlFor="reason" style={{ display: "block", fontWeight: 500, marginBottom: 6 }}>Why? (required)</label>
           <textarea id="reason" className="p-text" value={reason} onChange={(e) => setReason(e.target.value)} aria-describedby="reason-help" />
-          <p id="reason-help" className="small muted" style={{ marginTop: 4 }}>For Modify, describe the change you want.</p>
+          <p id="reason-help" className="small muted" style={{ marginTop: 4 }}>If you chose “Change it”, say what the link should be.</p>
         </div>
         <div><button type="submit" className="p-btn primary" disabled={!ok}>Save decision</button></div>
       </form>
-      <h3 className="p-h2" style={{ margin: "20px 0 8px" }}>Saved decisions</h3>
+      <h3 className="p-h2" style={{ margin: "20px 0 8px" }}>Decisions so far</h3>
       {decisions.length === 0 ? (
-        <p className="muted">None.</p>
+        <p className="muted">None yet.</p>
       ) : (
         <ul className="p-stack" style={{ gap: 8 }}>
           {decisions.map((d) => {
             const e = EDGES.find((x) => x.id === d.edgeId)!;
             return (
               <li key={d.id}>
-                <strong>{d.decision === "accepted" ? "Accepted" : d.decision === "modified" ? "Modified" : "Dismissed"}</strong>: {conceptById(e.from).short} before {conceptById(e.to).short}. {d.reason}
+                <strong>{PAST[d.decision]}:</strong> {edgeText(e)}. {d.reason}
                 <span className="small muted"> {d.decidedBy}, {fmtTime(d.decidedAt)}</span>
               </li>
             );
           })}
         </ul>
       )}
-      <p className="small muted" style={{ marginTop: 12 }}>Decisions are kept in this browser session only. They do not change the engine.</p>
+      <p className="small muted" style={{ marginTop: 12 }}>Decisions are kept in this browser tab only. They do not change how learners are recommended.</p>
     </Card>
   );
 }

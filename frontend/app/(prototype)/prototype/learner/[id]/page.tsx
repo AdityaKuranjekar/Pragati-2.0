@@ -12,7 +12,7 @@ export default function LearnerPage({ params }: { params: { id: string } }) {
   if (!FIXTURES.some((l) => l.id === params.id)) notFound();
   return (
     <>
-      <PageHead title="Learner view" sub="One next step with its reason and the evidence behind it, then the concept estimates." />
+      <PageHead title="Learner view" sub="What this learner should do next and why, then how each topic is going." />
       <LearnerView id={params.id} />
     </>
   );

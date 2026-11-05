@@ -51,20 +51,22 @@ export function nextStepFor(est: Estimate[], concepts: Concept[]): NextStep | nu
   const c = concepts[idx];
   const prev = idx > 0 ? { e: est[idx - 1], c: concepts[idx - 1] } : null;
   const next = concepts[idx + 1];
+  const q = (n: number) => `${n} question${n === 1 ? "" : "s"}`;
   let reason: string;
   if (target.insufficient) {
-    reason = `${c.label} has ${target.n} recorded attempt${target.n === 1 ? "" : "s"}; at least ${MIN_EVIDENCE} are needed before an estimate is shown. Diagnostic questions come first.`;
+    reason = `So far ${q(target.n)} answered on ${c.short}. At least ${MIN_EVIDENCE} are needed before we judge it, so a few diagnostic questions come next.`;
   } else {
-    reason = `${c.label}: estimate ${f2(target.mean)} (range ${f2(target.lo)} to ${f2(target.hi)}) from ${target.n} attempts, below the ${f2(MASTERED_AT)} set for this prototype.`;
-    if (!prev) reason += next ? ` It is a prerequisite of ${next.label}, so it comes first.` : "";
-    else reason += ` Its prerequisite ${prev.c.label} is at ${f2(prev.e.mean)}, so the gap is in this concept.`;
+    reason = `${prev ? `${prev.c.short} looks secure (${prev.e.k} of ${prev.e.n} answers correct). ` : ""}On ${c.short}, ${target.k} of ${target.n} answers were correct, which is still below what we treat as secure.`;
+    if (prev) reason += " The gap is here, not earlier in the chain.";
+    else if (next) reason += ` ${next.short} builds on it, so it comes first.`;
   }
   return {
     action: target.insufficient ? "diagnostic" : "practise",
     conceptId: c.id,
-    title: `${target.insufficient ? "Diagnostic questions" : "Practise"}: ${c.label}`,
+    title: `${target.insufficient ? "Answer a few questions" : "Practise"}: ${c.label}`,
     reason,
     evidence: [...(prev ? [prev] : []), { e: target, c }].map(({ e, c: cc }) => ({ conceptId: cc.id, label: cc.label, attempts: e.n })),
+    rule: `Topics are checked in syllabus order and the first one that is not yet secure comes next. A topic counts as secure once at least ${MIN_EVIDENCE} questions are answered and the estimate is ${f2(MASTERED_AT)} or higher.`,
     policyVersion: POLICY_VERSION,
   };
 }

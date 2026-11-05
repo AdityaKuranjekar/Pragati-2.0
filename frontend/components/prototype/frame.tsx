@@ -2,7 +2,11 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState, type ReactNode } from "react";
-import { originText } from "@/lib/prototype/origin";
+import { SIM_COUNT, SIM_SEED } from "@/lib/prototype/data";
+import { MASTERED_AT, MIN_EVIDENCE, POLICY_VERSION } from "@/lib/prototype/engine";
+import { f2 } from "@/lib/prototype/format";
+import { ORIGIN_MEANING, ORIGIN_WORD, originText } from "@/lib/prototype/origin";
+import { resetDemo } from "@/lib/prototype/store";
 import type { Origin } from "@/lib/prototype/types";
 
 const TABS = [
@@ -29,13 +33,13 @@ export function TopBar() {
 }
 
 export function StatusLine() {
-  const [line, setLine] = useState("API status: checking");
+  const [line, setLine] = useState("Service: checking");
   useEffect(() => {
     let live = true;
     fetch("/api/health", { cache: "no-store" })
       .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
-      .then((h: { status: string; version: string }) => live && setLine(`API status: ${h.status}, version ${String(h.version).slice(0, 7)}`))
-      .catch(() => live && setLine("API status: not reachable"));
+      .then((h: { status: string; version: string }) => live && setLine(h.status === "ok" ? `Service: running (version ${String(h.version).slice(0, 7)})` : `Service: ${h.status}`))
+      .catch(() => live && setLine("Service: not reachable"));
     return () => {
       live = false;
     };
@@ -43,8 +47,31 @@ export function StatusLine() {
   return <p role="status">{line}</p>;
 }
 
+/** Plain-word chip. The bracketed tag is in the hover text and listed under "About these numbers". */
 export function OriginTag({ origin }: { origin: Origin }) {
-  return <span className="p-origin">{originText(origin)}</span>;
+  return <span className="p-origin" title={`${originText(origin)} ${ORIGIN_MEANING[origin]}`}>{ORIGIN_WORD[origin]}</span>;
+}
+
+export function AboutNumbers() {
+  return (
+    <details className="p-about">
+      <summary>About these numbers</summary>
+      <div className="p-about-body">
+        <ul>
+          {(Object.keys(ORIGIN_WORD) as Origin[]).map((o) => (
+            <li key={o}>
+              <strong>{ORIGIN_WORD[o]}</strong> <span className="num">{originText(o)}</span>. {ORIGIN_MEANING[o]}
+            </li>
+          ))}
+        </ul>
+        <p>
+          The 24 simulated learners come from a fixed seed ({SIM_SEED}, {SIM_COUNT} learners) in a program separate from the estimate rule.
+          Each estimate is the share of correct answers with a small adjustment for few answers. A topic needs at least {MIN_EVIDENCE} answers before it is judged, and counts as secure at {f2(MASTERED_AT)} or higher.
+          This is a simple stand-in for the real recommendation engine (rule version {POLICY_VERSION}).
+        </p>
+      </div>
+    </details>
+  );
 }
 
 export function PageHead({ title, sub }: { title: string; sub?: string }) {
@@ -63,7 +90,7 @@ export function Card({ title, origin, children, right }: { title?: string; origi
       {title || origins.length ? (
         <div className="p-card-head">
           {title ? <h2 className="p-h2">{title}</h2> : <span />}
-          <span style={{ display: "inline-flex", gap: 12 }}>
+          <span style={{ display: "inline-flex", gap: 8, alignItems: "center" }}>
             {right}
             {origins.map((o) => <OriginTag key={o} origin={o} />)}
           </span>
@@ -86,12 +113,11 @@ export function Warn({ children }: { children: ReactNode }) {
   );
 }
 
-import { resetDemo } from "@/lib/prototype/store";
 export function ResetDemo() {
   return (
     <p>
-      Attempts and decisions live in this browser tab only.{" "}
-      <button type="button" className="p-btn link" onClick={resetDemo}>Reset demo state</button>
+      Answers and decisions are kept in this browser tab only.{" "}
+      <button type="button" className="p-btn link" onClick={resetDemo}>Start the demo over</button>
     </p>
   );
 }

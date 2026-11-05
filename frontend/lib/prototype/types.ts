@@ -31,5 +31,6 @@ export type NextStep = {
   title: string;
   reason: string;
   evidence: { conceptId: string; label: string; attempts: number }[];
+  rule: string;
   policyVersion: string;
 };

@@ -532,3 +532,18 @@ This replaces the colour values in sections 4.1 to 4.3 and the brief's section 3
 | Step to step (normal / deuteranopia / protanopia / tritanopia) | m1-m2 1.47 / 1.49 / 1.43 / 1.45; m2-m3 1.81 / 1.87 / 1.71 / 1.77; m3-m4 1.91 / 1.83 / 1.78 / 1.72; m4-m5 2.13 / 2.11 / 2.26 / 2.25 | none; luminance order is preserved in all three simulations |
 
 The grey `#6B7389` used for captions in the console is 4.46:1 on the page colour, below 4.5, so the prototype uses `#4B5367` for all small text. Adjacent steps are still close in lightness, so the printed number remains the primary cue. These are computed values, not a browser simulator pass.
+
+## 10. Plain-language pass (2026-11-05)
+
+Owner request: people should see data in a form they can read and draw meaning from, not model internals. Changes:
+
+| Before | Now |
+|---|---|
+| Heatmap cells showed `0.36` and `n=9` | Cells show a word (Just starting, Needs practice, Getting there, Mostly secure, Secure, Too early) and "9 answered". The number, the 80% range and the band appear under "Show the numbers" |
+| Reasons quoted estimates and ranges | Reasons quote counts: "3 of 9 answers were correct". Rule text and rule version are under "How this was decided" |
+| Origin chips read `[SIM]`, `[DEMO FIXTURE]` | Chips read Simulated, Demo data, Public data, Expert-labelled. The bracketed tags stay in the hover text and in the "About these numbers" panel on every page, with the seed, the estimate rule and its thresholds |
+| Evaluation columns: Metric, Baseline, 95% CI, Bar, Outcome | What was tested, Data, Compared with, Result, Uncertainty, Target, Verdict, with one sentence on how to read each score. Outcomes read Meets target, Below target, Not judged yet |
+| Edge states: Proposed, unreviewed / Accepted / Modified / Dismissed | Suggested, not yet reviewed by a teacher / Confirmed / Changed / Removed by a teacher |
+| Footer: API status and version | "Service: running (version ...)" |
+
+Departure from the rule that every number carries a literal origin tag: the visible chip is now a plain word, and the literal tag is one hover or one click away. If the literal tags must be visible on the face of every number, say so and they can be restored next to the plain chips.

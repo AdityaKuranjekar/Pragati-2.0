@@ -10,7 +10,8 @@ from dataclasses import dataclass, field
 from typing import Mapping
 
 from .graph import Graph
-from .mastery import POLICY_VERSION, ConceptState, MIN_EVIDENCE
+from .mastery import (DEFAULT_PARAMS, MASTERED_AT, MIN_EVIDENCE, MIN_MASTERY_EVIDENCE, POLICY_VERSION,
+                      BKTParams, ConceptState, bkt_update)
 
 
 @dataclass(frozen=True)
@@ -103,3 +104,70 @@ def cohort_bottlenecks(graph: Graph, learners: Mapping[str, Mapping[str, Concept
             rows.append({"concept_id": c, "learners_blocked": blocked_for,
                          "dependents": sorted(deps), "edge_review": [graph.edge(c, d).review_status for d in sorted(deps)]})
     return sorted(rows, key=lambda r: (-r["learners_blocked"], r["concept_id"]))
+
+
+# ---------------------------------------------------------------------------------------------
+# Time, goal and pace (USP row 6)
+# ---------------------------------------------------------------------------------------------
+SHORT_SLACK = 1.5   # policy parameter: the budget is "short" if it is under 1.5x the best-case need
+
+
+def items_to_reach(p_known: float, n: int, goal_p: float = MASTERED_AT,
+                   min_n: int = MIN_MASTERY_EVIDENCE, params: BKTParams = DEFAULT_PARAMS) -> int:
+    """BEST-CASE number of further items to reach a 'mastered' label: every answer correct.
+    A lower bound, not a forecast. Mastered needs p >= goal_p AND at least `min_n` answers."""
+    k = 0
+    while (p_known < goal_p or n < min_n) and k < 200:
+        p_known = bkt_update(p_known, True, params)
+        n += 1
+        k += 1
+    return k
+
+
+def items_available(days_left: int, items_per_day: int) -> int:
+    """Budget helper: items before the goal date from a planned study rate. Both are explicit inputs
+    set by the learner or teacher. The engine never measures response time or pace from behaviour."""
+    if days_left < 0 or items_per_day < 0:
+        raise ValueError("days_left and items_per_day must be non-negative")
+    return days_left * items_per_day
+
+
+def recommend_with_budget(graph: Graph, goal: str, states: Mapping[str, ConceptState],
+                          budget_items: int, names: Mapping[str, str] | None = None,
+                          slack: float = SHORT_SLACK) -> Recommendation:
+    """Same choice of concept as `recommend`, plus a budget check.
+
+    budget_items: items the learner can still do before the goal date. If it is under `slack` times
+    the best-case need for every unmastered concept on the goal chain, the budget is short: the trace
+    carries the minimum-item plan and the reason says so. In that case optional work (revision
+    rechecks) is deferred by the planner; the recommended concept is the same one `recommend` gives.
+    """
+    if not isinstance(budget_items, int) or isinstance(budget_items, bool) or budget_items < 0:
+        raise ValueError("budget_items must be a non-negative integer")
+    base = recommend(graph, goal, states, names)
+    chain = goal_chain(graph, goal)
+    plan = []
+    for c in chain:
+        st = states.get(c, ConceptState(c, DEFAULT_PARAMS.p_init, 0, "insufficient"))
+        if st.band == "mastered":
+            continue
+        plan.append({"concept_id": c, "min_items": items_to_reach(st.p_known, st.n)})
+    needed = sum(p["min_items"] for p in plan)
+    short = needed > 0 and budget_items < int(-(-needed * slack // 1))
+    unreachable = needed > budget_items
+    budget = {"available": budget_items, "min_items_needed": needed, "plan": plan,
+              "short": short, "goal_unreachable_in_budget": unreachable, "slack": slack,
+              "needed_is": "best case, every answer correct"}
+    if needed == 0:
+        reason = base.reason + f" Budget: nothing left to practise; {budget_items} items remain."
+    elif not short:
+        reason = base.reason + (f" Budget: {budget_items} items remain and the chain needs at least "
+                                f"{needed} even if every answer is correct, so there is room.")
+    elif unreachable:
+        reason = (f"Budget is short: {budget_items} items remain but the chain needs at least {needed} "
+                  f"even if every answer is correct, so the goal estimate cannot be reached in time. "
+                  f"Minimum-item path: {base.reason} Optional rechecks are deferred.")
+    else:
+        reason = (f"Budget is short: {budget_items} items remain against a best-case need of {needed}. "
+                  f"Recommending the minimum-item path. {base.reason} Optional rechecks are deferred.")
+    return Recommendation(base.action, base.concept_id, reason, {**base.trace, "budget": budget})

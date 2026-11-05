@@ -15,6 +15,32 @@
 - **JEE content:** build from curriculum-aligned NCERT/official material, rights-reviewed JEEBench items, official NTA/JEE papers or original reviewed questions; never assume public or coaching-institute PDFs are redistributable.
 - **Prototype hosting:** Vercel for the frontend, Render for FastAPI, Neon or Supabase for PostgreSQL, and Supabase/Firebase for authentication. Processed/static demo data should run within free-tier limits, with public datasets kept server-side and a cold-start fallback demo.
 
+## Drift corrections (2026-11-05)
+
+Reviewed against the repository and the planning set. The original direction above is kept; these corrections apply on top of it.
+
+- **Response speed and response time for minors.** Stage 1 ("response speed") and the ASSISTments role ("response time") are research-only for under-18 learners until B1 (DPDP s.9(3)) is answered. The product uses correctness-only evidence for minors (D3, B16, ADR-003).
+- **JEE item content.** JEEBench is benchmark-only and never student-facing until R11 settles its rights. NTA and JEE Advanced archives wait for written permission. NCERT and Exemplar are reference only. OpenStax is CC BY-NC-SA, so it is excluded from the commercial path. Original and reviewed items are the core source (`data/DATASET_PIPELINE.md`).
+- **Hosting.** The Vercel frontend is live (S0). The API host (Render or Vercel functions) is still open (B17).
+- **Collaborative filtering and graph algorithms.** The problem brief names both, and the direction above did not. They are added here: collaborative filtering as a benchmark and cold-start fallback, and graph algorithms for prerequisite traversal and bottleneck scoring (B7).
+- **Target module names.** The intelligence modules in the target structure map to the engine as: `mastery.py` (knowledge tracing), `graph.py` and `policy.py` (diagnosis and recommendation). Adaptive item selection and revision are not built yet (see the USP below).
+
+## The USP: the adaptive engine, defined so it can be tested
+
+Pragati's differentiator is an adaptive learning path, not a dashboard. The engine must do all of the following. Each item is either built and tested, or marked as not yet built.
+
+| # | Adaptive behaviour | Status (2026-11-05) | Evidence that would show it works |
+|---|---|---|---|
+| 1 | Chooses the next concept from the prerequisite chain, and explains why | Built (S2, `backend/app/intelligence/policy.py`); E7 passes | E7 (no violations); E4 root-cause agreement with experts |
+| 2 | Keeps a learner's state from the evidence, with uncertainty and a guard against lucky guesses | Built as fixed-parameter BKT (S2); not fitted | E3 recovery on an independent simulator; E1 on held-out learners |
+| 3 | Chooses the next **item** by difficulty: guided entry for a weak learner, then a deliberate step up toward the target difficulty; no easy-only paths | Built and tested (`selection.py`, 21 tests). No approved items exist yet; simulated only | E9 simulated comparison with a fixed path; E6 teacher ratings |
+| 4 | Raises challenge only when evidence supports it, and does not keep raising it after one lucky correct answer | Built and tested (`challenge.py`, 11 tests). Simulation shows no measurable benefit | E10 contradictory and guessed runs; E9 |
+| 5 | Schedules revision as memory fades (time since last success, errors, prerequisite role) | Built and tested (`revision.py`, 17 tests); time and errors only, prerequisite role not built. Simulation shows no measurable benefit | Retention on a held-out delay; labelled as simulation until a pilot |
+| 6 | Uses time, goal and pace to decide what fits the deadline | Built and tested (`recommend_with_budget`). Simulation: helps under a short budget, mixed elsewhere | E9 items-to-mastery under a fixed budget |
+| 7 | Shows a benefit over a fixed path, with the comparison pre-registered | Pre-registered and run in simulation only. Adaptive leaves more concepts mastered and fewer prerequisite violations; it reaches the goal concept less often. See `orchestration/S2_FULL_LOG.md` | E9 (simulation, labelled) then E8 (pilot, randomised) |
+
+**Rule for claims:** until rows 3 to 7 have results, the product may say it chooses the concept adaptively and explains why. It may not say the learning path is adaptive by difficulty or revision, and it may not say adaptation improves learning.
+
 ## Product north star
 
 Pragati 2.0 should do more than report how a learner performed. It should determine **what the learner should learn next, why that is the right next step, deliver the learning activity, and measure whether the learner improved**.

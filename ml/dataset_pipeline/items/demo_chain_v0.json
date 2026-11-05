@@ -1,0 +1,1830 @@
+{
+  "manifest": {
+    "generator": "demo-templates-v0",
+    "seed": 20261105,
+    "count": 60,
+    "concepts": {
+      "jee.math.complex_numbers.algebra_complex_argand": 20,
+      "jee.math.quadratic_equations.roots_nature": 20,
+      "jee.math.quadratic_equations.equation_formation": 20
+    },
+    "status": "draft; review pending"
+  },
+  "items": [
+    {
+      "id": "demo-v0-001",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.complex_numbers.algebra_complex_argand",
+      "q_type": "mcq_single",
+      "text": "If z = 3 + 3i, find |z|^2.",
+      "options": [
+        "A) 0",
+        "B) 18",
+        "C) 36",
+        "D) 20"
+      ],
+      "answer": "B",
+      "solution": "|z|^2 = a^2 + b^2 = 9 + 9 = 18.",
+      "difficulty_target": "easy",
+      "params": {
+        "op": "mod2",
+        "a": 3,
+        "b": 3
+      },
+      "answer_value": "18",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-002",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.complex_numbers.algebra_complex_argand",
+      "q_type": "mcq_single",
+      "text": "If z = 7 + 5i, find |z|^2.",
+      "options": [
+        "A) 74",
+        "B) 24",
+        "C) 144",
+        "D) 76"
+      ],
+      "answer": "A",
+      "solution": "|z|^2 = a^2 + b^2 = 49 + 25 = 74.",
+      "difficulty_target": "easy",
+      "params": {
+        "op": "mod2",
+        "a": 7,
+        "b": 5
+      },
+      "answer_value": "74",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-003",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.complex_numbers.algebra_complex_argand",
+      "q_type": "mcq_single",
+      "text": "If z = 1 + 8i, find |z|^2.",
+      "options": [
+        "A) -63",
+        "B) 65",
+        "C) 81",
+        "D) 67"
+      ],
+      "answer": "B",
+      "solution": "|z|^2 = a^2 + b^2 = 1 + 64 = 65.",
+      "difficulty_target": "easy",
+      "params": {
+        "op": "mod2",
+        "a": 1,
+        "b": 8
+      },
+      "answer_value": "65",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-004",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.complex_numbers.algebra_complex_argand",
+      "q_type": "mcq_single",
+      "text": "If z = 8 - 3i, find |z|^2.",
+      "options": [
+        "A) 75",
+        "B) 25",
+        "C) 55",
+        "D) 73"
+      ],
+      "answer": "D",
+      "solution": "|z|^2 = a^2 + b^2 = 64 + 9 = 73.",
+      "difficulty_target": "easy",
+      "params": {
+        "op": "mod2",
+        "a": 8,
+        "b": -3
+      },
+      "answer_value": "73",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-005",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.complex_numbers.algebra_complex_argand",
+      "q_type": "mcq_single",
+      "text": "If z = 9 + 7i, find |z|^2.",
+      "options": [
+        "A) 32",
+        "B) 130",
+        "C) 256",
+        "D) 132"
+      ],
+      "answer": "B",
+      "solution": "|z|^2 = a^2 + b^2 = 81 + 49 = 130.",
+      "difficulty_target": "easy",
+      "params": {
+        "op": "mod2",
+        "a": 9,
+        "b": 7
+      },
+      "answer_value": "130",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-006",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.complex_numbers.algebra_complex_argand",
+      "q_type": "mcq_single",
+      "text": "For z = 4 - 4i, find the real part of 1/z.",
+      "options": [
+        "A) -1/8",
+        "B) 1/8",
+        "C) 9/8",
+        "D) 4"
+      ],
+      "answer": "B",
+      "solution": "1/z = conj(z)/|z|^2, so Re(1/z) = a/(a^2+b^2) = 4/32.",
+      "difficulty_target": "medium",
+      "params": {
+        "op": "re_inv",
+        "a": 4,
+        "b": -4
+      },
+      "answer_value": "1/8",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-007",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.complex_numbers.algebra_complex_argand",
+      "q_type": "mcq_single",
+      "text": "For z = 2 + 1i, find the real part of 1/z.",
+      "options": [
+        "A) 1/5",
+        "B) -2/5",
+        "C) 2",
+        "D) 2/5"
+      ],
+      "answer": "D",
+      "solution": "1/z = conj(z)/|z|^2, so Re(1/z) = a/(a^2+b^2) = 2/5.",
+      "difficulty_target": "medium",
+      "params": {
+        "op": "re_inv",
+        "a": 2,
+        "b": 1
+      },
+      "answer_value": "2/5",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-008",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.complex_numbers.algebra_complex_argand",
+      "q_type": "mcq_single",
+      "text": "For z = 6 + 6i, find the real part of 1/z.",
+      "options": [
+        "A) 13/12",
+        "B) -1/12",
+        "C) 6",
+        "D) 1/12"
+      ],
+      "answer": "D",
+      "solution": "1/z = conj(z)/|z|^2, so Re(1/z) = a/(a^2+b^2) = 6/72.",
+      "difficulty_target": "medium",
+      "params": {
+        "op": "re_inv",
+        "a": 6,
+        "b": 6
+      },
+      "answer_value": "1/12",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-009",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.complex_numbers.algebra_complex_argand",
+      "q_type": "mcq_single",
+      "text": "For z = 7 + 4i, find the real part of 1/z.",
+      "options": [
+        "A) 7/65",
+        "B) 7",
+        "C) -7/65",
+        "D) 4/65"
+      ],
+      "answer": "A",
+      "solution": "1/z = conj(z)/|z|^2, so Re(1/z) = a/(a^2+b^2) = 7/65.",
+      "difficulty_target": "medium",
+      "params": {
+        "op": "re_inv",
+        "a": 7,
+        "b": 4
+      },
+      "answer_value": "7/65",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-010",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.complex_numbers.algebra_complex_argand",
+      "q_type": "mcq_single",
+      "text": "For z = 5 - 7i, find the real part of 1/z.",
+      "options": [
+        "A) 5/74",
+        "B) -7/74",
+        "C) -5/74",
+        "D) 5"
+      ],
+      "answer": "A",
+      "solution": "1/z = conj(z)/|z|^2, so Re(1/z) = a/(a^2+b^2) = 5/74.",
+      "difficulty_target": "medium",
+      "params": {
+        "op": "re_inv",
+        "a": 5,
+        "b": -7
+      },
+      "answer_value": "5/74",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-011",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.complex_numbers.algebra_complex_argand",
+      "q_type": "mcq_single",
+      "text": "Let z = 4 + 3i and w = 6 + 5i. Find the imaginary part of conj(z)·w.",
+      "options": [
+        "A) -2",
+        "B) 39",
+        "C) 8",
+        "D) 2"
+      ],
+      "answer": "D",
+      "solution": "conj(z)·w = (ac+bd) + (ad-bc)i, so Im = ad - bc = 2.",
+      "difficulty_target": "medium",
+      "params": {
+        "op": "im_conj_prod",
+        "a": 4,
+        "b": 3,
+        "c": 6,
+        "d": 5
+      },
+      "answer_value": "2",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-012",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.complex_numbers.algebra_complex_argand",
+      "q_type": "mcq_single",
+      "text": "Let z = 1 + 2i and w = 1 - 5i. Find the imaginary part of conj(z)·w.",
+      "options": [
+        "A) 7",
+        "B) -7",
+        "C) -9",
+        "D) -3"
+      ],
+      "answer": "B",
+      "solution": "conj(z)·w = (ac+bd) + (ad-bc)i, so Im = ad - bc = -7.",
+      "difficulty_target": "medium",
+      "params": {
+        "op": "im_conj_prod",
+        "a": 1,
+        "b": 2,
+        "c": 1,
+        "d": -5
+      },
+      "answer_value": "-7",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-013",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.complex_numbers.algebra_complex_argand",
+      "q_type": "mcq_single",
+      "text": "Let z = 4 + 3i and w = 1 - 2i. Find the imaginary part of conj(z)·w.",
+      "options": [
+        "A) 11",
+        "B) -2",
+        "C) -5",
+        "D) -11"
+      ],
+      "answer": "D",
+      "solution": "conj(z)·w = (ac+bd) + (ad-bc)i, so Im = ad - bc = -11.",
+      "difficulty_target": "medium",
+      "params": {
+        "op": "im_conj_prod",
+        "a": 4,
+        "b": 3,
+        "c": 1,
+        "d": -2
+      },
+      "answer_value": "-11",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-014",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.complex_numbers.algebra_complex_argand",
+      "q_type": "mcq_single",
+      "text": "Let z = 1 - 3i and w = 4 - 6i. Find the imaginary part of conj(z)·w.",
+      "options": [
+        "A) 22",
+        "B) 0",
+        "C) -6",
+        "D) 6"
+      ],
+      "answer": "D",
+      "solution": "conj(z)·w = (ac+bd) + (ad-bc)i, so Im = ad - bc = 6.",
+      "difficulty_target": "medium",
+      "params": {
+        "op": "im_conj_prod",
+        "a": 1,
+        "b": -3,
+        "c": 4,
+        "d": -6
+      },
+      "answer_value": "6",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-015",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.complex_numbers.algebra_complex_argand",
+      "q_type": "mcq_single",
+      "text": "Let z = 4 + 4i and w = 1 + 6i. Find the imaginary part of conj(z)·w.",
+      "options": [
+        "A) 21",
+        "B) 28",
+        "C) 20",
+        "D) -20"
+      ],
+      "answer": "C",
+      "solution": "conj(z)·w = (ac+bd) + (ad-bc)i, so Im = ad - bc = 20.",
+      "difficulty_target": "medium",
+      "params": {
+        "op": "im_conj_prod",
+        "a": 4,
+        "b": 4,
+        "c": 1,
+        "d": 6
+      },
+      "answer_value": "20",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-016",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.complex_numbers.algebra_complex_argand",
+      "q_type": "mcq_single",
+      "text": "Find the real part of (5 - 5i)^2.",
+      "options": [
+        "A) 0",
+        "B) 1",
+        "C) 50",
+        "D) -50"
+      ],
+      "answer": "A",
+      "solution": "(a+bi)^2 = (a^2-b^2) + 2abi, so Re = 25 - 25 = 0.",
+      "difficulty_target": "easy",
+      "params": {
+        "op": "re_sq",
+        "a": 5,
+        "b": -5
+      },
+      "answer_value": "0",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-017",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.complex_numbers.algebra_complex_argand",
+      "q_type": "mcq_single",
+      "text": "Find the real part of (7 + 7i)^2.",
+      "options": [
+        "A) 0",
+        "B) 98",
+        "C) -1",
+        "D) 1"
+      ],
+      "answer": "A",
+      "solution": "(a+bi)^2 = (a^2-b^2) + 2abi, so Re = 49 - 49 = 0.",
+      "difficulty_target": "easy",
+      "params": {
+        "op": "re_sq",
+        "a": 7,
+        "b": 7
+      },
+      "answer_value": "0",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-018",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.complex_numbers.algebra_complex_argand",
+      "q_type": "mcq_single",
+      "text": "Find the real part of (2 + 1i)^2.",
+      "options": [
+        "A) 3",
+        "B) 4",
+        "C) -3",
+        "D) 5"
+      ],
+      "answer": "A",
+      "solution": "(a+bi)^2 = (a^2-b^2) + 2abi, so Re = 4 - 1 = 3.",
+      "difficulty_target": "easy",
+      "params": {
+        "op": "re_sq",
+        "a": 2,
+        "b": 1
+      },
+      "answer_value": "3",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-019",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.complex_numbers.algebra_complex_argand",
+      "q_type": "mcq_single",
+      "text": "Find the real part of (8 - 8i)^2.",
+      "options": [
+        "A) 128",
+        "B) 1",
+        "C) -128",
+        "D) 0"
+      ],
+      "answer": "D",
+      "solution": "(a+bi)^2 = (a^2-b^2) + 2abi, so Re = 64 - 64 = 0.",
+      "difficulty_target": "easy",
+      "params": {
+        "op": "re_sq",
+        "a": 8,
+        "b": -8
+      },
+      "answer_value": "0",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-020",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.complex_numbers.algebra_complex_argand",
+      "q_type": "mcq_single",
+      "text": "Find the real part of (6 - 5i)^2.",
+      "options": [
+        "A) -60",
+        "B) -11",
+        "C) 11",
+        "D) 61"
+      ],
+      "answer": "C",
+      "solution": "(a+bi)^2 = (a^2-b^2) + 2abi, so Re = 36 - 25 = 11.",
+      "difficulty_target": "easy",
+      "params": {
+        "op": "re_sq",
+        "a": 6,
+        "b": -5
+      },
+      "answer_value": "11",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-021",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.quadratic_equations.roots_nature",
+      "q_type": "mcq_single",
+      "text": "Find the discriminant of 5x^2 - 3x + 4 = 0.",
+      "options": [
+        "A) 89",
+        "B) -71",
+        "C) -31",
+        "D) -9"
+      ],
+      "answer": "B",
+      "solution": "D = b^2 - 4ac = 9 - 4(5)(4) = -71.",
+      "difficulty_target": "easy",
+      "params": {
+        "op": "disc",
+        "a": 5,
+        "b": -3,
+        "c": 4
+      },
+      "answer_value": "-71",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-022",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.quadratic_equations.roots_nature",
+      "q_type": "mcq_single",
+      "text": "Find the discriminant of x^2 - 5x + 3 = 0.",
+      "options": [
+        "A) 37",
+        "B) -25",
+        "C) 13",
+        "D) 19"
+      ],
+      "answer": "C",
+      "solution": "D = b^2 - 4ac = 25 - 4(1)(3) = 13.",
+      "difficulty_target": "easy",
+      "params": {
+        "op": "disc",
+        "a": 1,
+        "b": -5,
+        "c": 3
+      },
+      "answer_value": "13",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-023",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.quadratic_equations.roots_nature",
+      "q_type": "mcq_single",
+      "text": "Find the discriminant of 3x^2 - 6x + 0 = 0.",
+      "options": [
+        "A) 35",
+        "B) -36",
+        "C) 37",
+        "D) 36"
+      ],
+      "answer": "D",
+      "solution": "D = b^2 - 4ac = 36 - 4(3)(0) = 36.",
+      "difficulty_target": "easy",
+      "params": {
+        "op": "disc",
+        "a": 3,
+        "b": -6,
+        "c": 0
+      },
+      "answer_value": "36",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-024",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.quadratic_equations.roots_nature",
+      "q_type": "mcq_single",
+      "text": "Find the discriminant of 2x^2 - 4x - 1 = 0.",
+      "options": [
+        "A) 24",
+        "B) 20",
+        "C) 8",
+        "D) -16"
+      ],
+      "answer": "A",
+      "solution": "D = b^2 - 4ac = 16 - 4(2)(-1) = 24.",
+      "difficulty_target": "easy",
+      "params": {
+        "op": "disc",
+        "a": 2,
+        "b": -4,
+        "c": -1
+      },
+      "answer_value": "24",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-025",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.quadratic_equations.roots_nature",
+      "q_type": "mcq_single",
+      "text": "Find the discriminant of 3x^2 + x - 2 = 0.",
+      "options": [
+        "A) 25",
+        "B) 13",
+        "C) -23",
+        "D) -1"
+      ],
+      "answer": "A",
+      "solution": "D = b^2 - 4ac = 1 - 4(3)(-2) = 25.",
+      "difficulty_target": "easy",
+      "params": {
+        "op": "disc",
+        "a": 3,
+        "b": 1,
+        "c": -2
+      },
+      "answer_value": "25",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-026",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.quadratic_equations.roots_nature",
+      "q_type": "mcq_single",
+      "text": "For x^2 + 3x - 2 = 0, how many distinct real roots exist? (Answer as a number.)",
+      "options": [
+        "A) 2",
+        "B) 0",
+        "C) 1",
+        "D) 3"
+      ],
+      "answer": "A",
+      "solution": "D = 17: two distinct real roots.",
+      "difficulty_target": "medium",
+      "params": {
+        "op": "nature",
+        "a": 1,
+        "b": 3,
+        "c": -2
+      },
+      "answer_value": "2",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-027",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.quadratic_equations.roots_nature",
+      "q_type": "mcq_single",
+      "text": "For 4x^2 - 4x + 0 = 0, how many distinct real roots exist? (Answer as a number.)",
+      "options": [
+        "A) 1",
+        "B) 3",
+        "C) 0",
+        "D) 2"
+      ],
+      "answer": "D",
+      "solution": "D = 16: two distinct real roots.",
+      "difficulty_target": "medium",
+      "params": {
+        "op": "nature",
+        "a": 4,
+        "b": -4,
+        "c": 0
+      },
+      "answer_value": "2",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-028",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.quadratic_equations.roots_nature",
+      "q_type": "mcq_single",
+      "text": "For 2x^2 - x - 4 = 0, how many distinct real roots exist? (Answer as a number.)",
+      "options": [
+        "A) 2",
+        "B) 1",
+        "C) 3",
+        "D) 0"
+      ],
+      "answer": "A",
+      "solution": "D = 33: two distinct real roots.",
+      "difficulty_target": "medium",
+      "params": {
+        "op": "nature",
+        "a": 2,
+        "b": -1,
+        "c": -4
+      },
+      "answer_value": "2",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-029",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.quadratic_equations.roots_nature",
+      "q_type": "mcq_single",
+      "text": "For 4x^2 - 2x + 0 = 0, how many distinct real roots exist? (Answer as a number.)",
+      "options": [
+        "A) 0",
+        "B) 3",
+        "C) 2",
+        "D) 1"
+      ],
+      "answer": "C",
+      "solution": "D = 4: two distinct real roots.",
+      "difficulty_target": "medium",
+      "params": {
+        "op": "nature",
+        "a": 4,
+        "b": -2,
+        "c": 0
+      },
+      "answer_value": "2",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-030",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.quadratic_equations.roots_nature",
+      "q_type": "mcq_single",
+      "text": "For 3x^2 - 2x - 3 = 0, how many distinct real roots exist? (Answer as a number.)",
+      "options": [
+        "A) 3",
+        "B) 1",
+        "C) 2",
+        "D) 0"
+      ],
+      "answer": "C",
+      "solution": "D = 40: two distinct real roots.",
+      "difficulty_target": "medium",
+      "params": {
+        "op": "nature",
+        "a": 3,
+        "b": -2,
+        "c": -3
+      },
+      "answer_value": "2",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-031",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.quadratic_equations.roots_nature",
+      "q_type": "mcq_single",
+      "text": "For x^2 + px + 4 = 0, find the positive value of p for which the roots are equal.",
+      "options": [
+        "A) 5",
+        "B) 8",
+        "C) 4",
+        "D) 2"
+      ],
+      "answer": "C",
+      "solution": "Equal roots need p^2 = 4q = 16, so p = 4.",
+      "difficulty_target": "medium",
+      "params": {
+        "op": "equal_roots",
+        "m": 2
+      },
+      "answer_value": "4",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-032",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.quadratic_equations.roots_nature",
+      "q_type": "mcq_single",
+      "text": "For x^2 + px + 25 = 0, find the positive value of p for which the roots are equal.",
+      "options": [
+        "A) 5",
+        "B) 20",
+        "C) 10",
+        "D) 25"
+      ],
+      "answer": "C",
+      "solution": "Equal roots need p^2 = 4q = 100, so p = 10.",
+      "difficulty_target": "medium",
+      "params": {
+        "op": "equal_roots",
+        "m": 5
+      },
+      "answer_value": "10",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-033",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.quadratic_equations.roots_nature",
+      "q_type": "mcq_single",
+      "text": "For x^2 + px + 36 = 0, find the positive value of p for which the roots are equal.",
+      "options": [
+        "A) 6",
+        "B) 36",
+        "C) 12",
+        "D) 24"
+      ],
+      "answer": "C",
+      "solution": "Equal roots need p^2 = 4q = 144, so p = 12.",
+      "difficulty_target": "medium",
+      "params": {
+        "op": "equal_roots",
+        "m": 6
+      },
+      "answer_value": "12",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-034",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.quadratic_equations.roots_nature",
+      "q_type": "mcq_single",
+      "text": "For x^2 + px + 9 = 0, find the positive value of p for which the roots are equal.",
+      "options": [
+        "A) 6",
+        "B) 12",
+        "C) 9",
+        "D) 3"
+      ],
+      "answer": "A",
+      "solution": "Equal roots need p^2 = 4q = 36, so p = 6.",
+      "difficulty_target": "medium",
+      "params": {
+        "op": "equal_roots",
+        "m": 3
+      },
+      "answer_value": "6",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-035",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.quadratic_equations.roots_nature",
+      "q_type": "mcq_single",
+      "text": "For x^2 + px + 1 = 0, find the positive value of p for which the roots are equal.",
+      "options": [
+        "A) 1",
+        "B) 4",
+        "C) 3",
+        "D) 2"
+      ],
+      "answer": "D",
+      "solution": "Equal roots need p^2 = 4q = 4, so p = 2.",
+      "difficulty_target": "medium",
+      "params": {
+        "op": "equal_roots",
+        "m": 1
+      },
+      "answer_value": "2",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-036",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.quadratic_equations.roots_nature",
+      "q_type": "mcq_single",
+      "text": "What is the sum of the roots of 2x^2 - 8x + 5 = 0?",
+      "options": [
+        "A) -5/2",
+        "B) 5/2",
+        "C) -4",
+        "D) 4"
+      ],
+      "answer": "D",
+      "solution": "Sum of roots = -b/a = 4.",
+      "difficulty_target": "easy",
+      "params": {
+        "op": "sum_roots",
+        "a": 2,
+        "b": -8
+      },
+      "answer_value": "4",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-037",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.quadratic_equations.roots_nature",
+      "q_type": "mcq_single",
+      "text": "What is the sum of the roots of 5x^2 - 9x + 5 = 0?",
+      "options": [
+        "A) -1",
+        "B) -9/5",
+        "C) 9/5",
+        "D) 1"
+      ],
+      "answer": "C",
+      "solution": "Sum of roots = -b/a = 9/5.",
+      "difficulty_target": "easy",
+      "params": {
+        "op": "sum_roots",
+        "a": 5,
+        "b": -9
+      },
+      "answer_value": "9/5",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-038",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.quadratic_equations.roots_nature",
+      "q_type": "mcq_single",
+      "text": "What is the sum of the roots of 4x^2 - 5x + 5 = 0?",
+      "options": [
+        "A) 1/4",
+        "B) 5/4",
+        "C) 9/4",
+        "D) -5/4"
+      ],
+      "answer": "B",
+      "solution": "Sum of roots = -b/a = 5/4.",
+      "difficulty_target": "easy",
+      "params": {
+        "op": "sum_roots",
+        "a": 4,
+        "b": -5
+      },
+      "answer_value": "5/4",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-039",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.quadratic_equations.roots_nature",
+      "q_type": "mcq_single",
+      "text": "What is the sum of the roots of 6x^2 + 4x + 5 = 0?",
+      "options": [
+        "A) -2/3",
+        "B) 5/6",
+        "C) 2/3",
+        "D) -5/6"
+      ],
+      "answer": "A",
+      "solution": "Sum of roots = -b/a = -2/3.",
+      "difficulty_target": "easy",
+      "params": {
+        "op": "sum_roots",
+        "a": 6,
+        "b": 4
+      },
+      "answer_value": "-2/3",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-040",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.quadratic_equations.roots_nature",
+      "q_type": "mcq_single",
+      "text": "What is the sum of the roots of 3x^2 + 5x + 5 = 0?",
+      "options": [
+        "A) 5/3",
+        "B) -2/3",
+        "C) -5/3",
+        "D) -8/3"
+      ],
+      "answer": "C",
+      "solution": "Sum of roots = -b/a = -5/3.",
+      "difficulty_target": "easy",
+      "params": {
+        "op": "sum_roots",
+        "a": 3,
+        "b": 5
+      },
+      "answer_value": "-5/3",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-041",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.quadratic_equations.equation_formation",
+      "q_type": "mcq_single",
+      "text": "A quadratic equation has roots -1 and -3. If it is written as x^2 + Bx + C = 0, find B.",
+      "options": [
+        "A) -3",
+        "B) -4",
+        "C) 3",
+        "D) 4"
+      ],
+      "answer": "D",
+      "solution": "x^2 - (sum)x + product, so B = -(sum) = 4.",
+      "difficulty_target": "easy",
+      "params": {
+        "op": "coef_x",
+        "al": -1,
+        "be": -3
+      },
+      "answer_value": "4",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-042",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.quadratic_equations.equation_formation",
+      "q_type": "mcq_single",
+      "text": "A quadratic equation has roots 1 and 3. If it is written as x^2 + Bx + C = 0, find B.",
+      "options": [
+        "A) -3",
+        "B) -4",
+        "C) 3",
+        "D) 4"
+      ],
+      "answer": "B",
+      "solution": "x^2 - (sum)x + product, so B = -(sum) = -4.",
+      "difficulty_target": "easy",
+      "params": {
+        "op": "coef_x",
+        "al": 1,
+        "be": 3
+      },
+      "answer_value": "-4",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-043",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.quadratic_equations.equation_formation",
+      "q_type": "mcq_single",
+      "text": "A quadratic equation has roots -2 and -2. If it is written as x^2 + Bx + C = 0, find B.",
+      "options": [
+        "A) 5",
+        "B) 4",
+        "C) -4",
+        "D) 3"
+      ],
+      "answer": "B",
+      "solution": "x^2 - (sum)x + product, so B = -(sum) = 4.",
+      "difficulty_target": "easy",
+      "params": {
+        "op": "coef_x",
+        "al": -2,
+        "be": -2
+      },
+      "answer_value": "4",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-044",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.quadratic_equations.equation_formation",
+      "q_type": "mcq_single",
+      "text": "A quadratic equation has roots 4 and -4. If it is written as x^2 + Bx + C = 0, find B.",
+      "options": [
+        "A) 0",
+        "B) 1",
+        "C) -16",
+        "D) 16"
+      ],
+      "answer": "A",
+      "solution": "x^2 - (sum)x + product, so B = -(sum) = 0.",
+      "difficulty_target": "easy",
+      "params": {
+        "op": "coef_x",
+        "al": 4,
+        "be": -4
+      },
+      "answer_value": "0",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-045",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.quadratic_equations.equation_formation",
+      "q_type": "mcq_single",
+      "text": "A quadratic equation has roots 3 and -5. If it is written as x^2 + Bx + C = 0, find B.",
+      "options": [
+        "A) 15",
+        "B) -15",
+        "C) 2",
+        "D) -2"
+      ],
+      "answer": "C",
+      "solution": "x^2 - (sum)x + product, so B = -(sum) = 2.",
+      "difficulty_target": "easy",
+      "params": {
+        "op": "coef_x",
+        "al": 3,
+        "be": -5
+      },
+      "answer_value": "2",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-046",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.quadratic_equations.equation_formation",
+      "q_type": "mcq_single",
+      "text": "A quadratic equation has roots 5 and 3. If it is written as x^2 + Bx + C = 0, find B.",
+      "options": [
+        "A) 8",
+        "B) -15",
+        "C) 15",
+        "D) -8"
+      ],
+      "answer": "D",
+      "solution": "x^2 - (sum)x + product, so B = -(sum) = -8.",
+      "difficulty_target": "easy",
+      "params": {
+        "op": "coef_x",
+        "al": 5,
+        "be": 3
+      },
+      "answer_value": "-8",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-047",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.quadratic_equations.equation_formation",
+      "q_type": "mcq_single",
+      "text": "A quadratic equation has roots -1 and 2. If it is written as x^2 + Bx + C = 0, find B.",
+      "options": [
+        "A) -2",
+        "B) -1",
+        "C) 2",
+        "D) 1"
+      ],
+      "answer": "B",
+      "solution": "x^2 - (sum)x + product, so B = -(sum) = -1.",
+      "difficulty_target": "easy",
+      "params": {
+        "op": "coef_x",
+        "al": -1,
+        "be": 2
+      },
+      "answer_value": "-1",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-048",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.quadratic_equations.equation_formation",
+      "q_type": "mcq_single",
+      "text": "A quadratic equation has roots 3 and -2. If it is written as x^2 + Bx + C = 0, find B.",
+      "options": [
+        "A) -1",
+        "B) 1",
+        "C) -6",
+        "D) 6"
+      ],
+      "answer": "A",
+      "solution": "x^2 - (sum)x + product, so B = -(sum) = -1.",
+      "difficulty_target": "easy",
+      "params": {
+        "op": "coef_x",
+        "al": 3,
+        "be": -2
+      },
+      "answer_value": "-1",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-049",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.quadratic_equations.equation_formation",
+      "q_type": "mcq_single",
+      "text": "A quadratic equation has roots 5 and -2. If it is written as x^2 + Bx + C = 0, find B.",
+      "options": [
+        "A) -10",
+        "B) -3",
+        "C) 10",
+        "D) 3"
+      ],
+      "answer": "B",
+      "solution": "x^2 - (sum)x + product, so B = -(sum) = -3.",
+      "difficulty_target": "easy",
+      "params": {
+        "op": "coef_x",
+        "al": 5,
+        "be": -2
+      },
+      "answer_value": "-3",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-050",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.quadratic_equations.equation_formation",
+      "q_type": "mcq_single",
+      "text": "A quadratic equation has roots -5 and 0. If it is written as x^2 + Bx + C = 0, find B.",
+      "options": [
+        "A) 0",
+        "B) 6",
+        "C) -5",
+        "D) 5"
+      ],
+      "answer": "D",
+      "solution": "x^2 - (sum)x + product, so B = -(sum) = 5.",
+      "difficulty_target": "easy",
+      "params": {
+        "op": "coef_x",
+        "al": -5,
+        "be": 0
+      },
+      "answer_value": "5",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-051",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.quadratic_equations.equation_formation",
+      "q_type": "mcq_single",
+      "text": "A quadratic equation has roots 0 and -5. If it is written as x^2 + Bx + C = 0, find C.",
+      "options": [
+        "A) 5",
+        "B) -5",
+        "C) 1",
+        "D) 0"
+      ],
+      "answer": "D",
+      "solution": "C = product of roots = 0 x -5 = 0.",
+      "difficulty_target": "easy",
+      "params": {
+        "op": "const",
+        "al": 0,
+        "be": -5
+      },
+      "answer_value": "0",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-052",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.quadratic_equations.equation_formation",
+      "q_type": "mcq_single",
+      "text": "A quadratic equation has roots -2 and 1. If it is written as x^2 + Bx + C = 0, find C.",
+      "options": [
+        "A) -2",
+        "B) -1",
+        "C) 2",
+        "D) 1"
+      ],
+      "answer": "A",
+      "solution": "C = product of roots = -2 x 1 = -2.",
+      "difficulty_target": "easy",
+      "params": {
+        "op": "const",
+        "al": -2,
+        "be": 1
+      },
+      "answer_value": "-2",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-053",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.quadratic_equations.equation_formation",
+      "q_type": "mcq_single",
+      "text": "A quadratic equation has roots 3 and 4. If it is written as x^2 + Bx + C = 0, find C.",
+      "options": [
+        "A) 12",
+        "B) 7",
+        "C) -7",
+        "D) -12"
+      ],
+      "answer": "A",
+      "solution": "C = product of roots = 3 x 4 = 12.",
+      "difficulty_target": "easy",
+      "params": {
+        "op": "const",
+        "al": 3,
+        "be": 4
+      },
+      "answer_value": "12",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-054",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.quadratic_equations.equation_formation",
+      "q_type": "mcq_single",
+      "text": "A quadratic equation has roots -3 and 3. If it is written as x^2 + Bx + C = 0, find C.",
+      "options": [
+        "A) 9",
+        "B) -8",
+        "C) 0",
+        "D) -9"
+      ],
+      "answer": "D",
+      "solution": "C = product of roots = -3 x 3 = -9.",
+      "difficulty_target": "easy",
+      "params": {
+        "op": "const",
+        "al": -3,
+        "be": 3
+      },
+      "answer_value": "-9",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-055",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.quadratic_equations.equation_formation",
+      "q_type": "mcq_single",
+      "text": "A quadratic equation has roots 4 and 0. If it is written as x^2 + Bx + C = 0, find C.",
+      "options": [
+        "A) -4",
+        "B) 1",
+        "C) 4",
+        "D) 0"
+      ],
+      "answer": "D",
+      "solution": "C = product of roots = 4 x 0 = 0.",
+      "difficulty_target": "easy",
+      "params": {
+        "op": "const",
+        "al": 4,
+        "be": 0
+      },
+      "answer_value": "0",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-056",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.quadratic_equations.equation_formation",
+      "q_type": "mcq_single",
+      "text": "A quadratic equation has roots -4 and -2. If it is written as x^2 + Bx + C = 0, find C.",
+      "options": [
+        "A) -8",
+        "B) 8",
+        "C) -6",
+        "D) 6"
+      ],
+      "answer": "B",
+      "solution": "C = product of roots = -4 x -2 = 8.",
+      "difficulty_target": "easy",
+      "params": {
+        "op": "const",
+        "al": -4,
+        "be": -2
+      },
+      "answer_value": "8",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-057",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.quadratic_equations.equation_formation",
+      "q_type": "mcq_single",
+      "text": "A quadratic equation has roots 4 and 3. If it is written as x^2 + Bx + C = 0, find C.",
+      "options": [
+        "A) -7",
+        "B) 7",
+        "C) 12",
+        "D) -12"
+      ],
+      "answer": "C",
+      "solution": "C = product of roots = 4 x 3 = 12.",
+      "difficulty_target": "easy",
+      "params": {
+        "op": "const",
+        "al": 4,
+        "be": 3
+      },
+      "answer_value": "12",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-058",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.quadratic_equations.equation_formation",
+      "q_type": "mcq_single",
+      "text": "A quadratic equation has roots 2 and 0. If it is written as x^2 + Bx + C = 0, find C.",
+      "options": [
+        "A) 2",
+        "B) 0",
+        "C) -2",
+        "D) 1"
+      ],
+      "answer": "B",
+      "solution": "C = product of roots = 2 x 0 = 0.",
+      "difficulty_target": "easy",
+      "params": {
+        "op": "const",
+        "al": 2,
+        "be": 0
+      },
+      "answer_value": "0",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-059",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.quadratic_equations.equation_formation",
+      "q_type": "mcq_single",
+      "text": "A quadratic equation has roots -5 and -2. If it is written as x^2 + Bx + C = 0, find C.",
+      "options": [
+        "A) -7",
+        "B) 10",
+        "C) 7",
+        "D) -10"
+      ],
+      "answer": "B",
+      "solution": "C = product of roots = -5 x -2 = 10.",
+      "difficulty_target": "easy",
+      "params": {
+        "op": "const",
+        "al": -5,
+        "be": -2
+      },
+      "answer_value": "10",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    },
+    {
+      "id": "demo-v0-060",
+      "subject": "Mathematics",
+      "class_level": "class_11",
+      "topic_id": "jee.math.quadratic_equations.equation_formation",
+      "q_type": "mcq_single",
+      "text": "A quadratic equation has roots -3 and -5. If it is written as x^2 + Bx + C = 0, find C.",
+      "options": [
+        "A) 15",
+        "B) -15",
+        "C) -8",
+        "D) 8"
+      ],
+      "answer": "A",
+      "solution": "C = product of roots = -3 x -5 = 15.",
+      "difficulty_target": "easy",
+      "params": {
+        "op": "const",
+        "al": -3,
+        "be": -5
+      },
+      "answer_value": "15",
+      "answer_verified": true,
+      "reviewers": [],
+      "review_status": "pending",
+      "provenance": {
+        "source_id": "original_reviewed",
+        "rights_record": "template generator demo-templates-v0, seed 20261105; original text, no third-party source"
+      }
+    }
+  ]
+}

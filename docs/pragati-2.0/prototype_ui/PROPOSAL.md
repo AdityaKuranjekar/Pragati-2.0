@@ -296,7 +296,7 @@ Data needed:
 ### 4.1 Mechanics
 
 - Tokens live in `app/(prototype)/prototype/prototype.css`, imported only by `prototype/layout.tsx`. No `var(--` is used anywhere else in `frontend/` today, so the unprefixed names from the brief do not collide with the console (checked by search).
-- Dark mode follows the design rules in `CLAUDE.md`: defaults on `:root`, overrides under `@media (prefers-color-scheme: dark)` guarded by `:root:not([data-theme="light"])`, and again under `:root[data-theme="dark"]`.
+- Dark mode follows the design rules in the project instructions file at the repo root: defaults on `:root`, overrides under `@media (prefers-color-scheme: dark)` guarded by `:root:not([data-theme="light"])`, and again under `:root[data-theme="dark"]`.
 - The prototype frame sets `body`-level colour and background from tokens on its own wrapper, because the root layout's `bg-bg` utility is a fixed console colour.
 - Tailwind is used for layout utilities only. Colours come from the variables through classes in `prototype.css`; `tailwind.config.ts` is not edited.
 
@@ -431,7 +431,7 @@ What this shows and what it does not:
 
 ## 5. Every place a number appears, and its origin tag
 
-Tags per `CLAUDE.md` and the brief: `[DEMO FIXTURE]`, `[SIM]`, `[PUB]`, `[EXP]`. The evaluation plan also defines `[PILOT]`; it does not appear in the prototype because no pilot has run. Assumption for numbers that change after a viewer submits an attempt: they keep `[DEMO FIXTURE]` and the card says "includes attempts made in this session".
+Tags per the project instructions file at the repo root and the brief: `[DEMO FIXTURE]`, `[SIM]`, `[PUB]`, `[EXP]`. The evaluation plan also defines `[PILOT]`; it does not appear in the prototype because no pilot has run. Assumption for numbers that change after a viewer submits an attempt: they keep `[DEMO FIXTURE]` and the card says "includes attempts made in this session".
 
 | Screen | Number | Tag |
 |---|---|---|

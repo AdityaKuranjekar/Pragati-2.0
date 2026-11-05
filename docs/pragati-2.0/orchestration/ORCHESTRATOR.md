@@ -82,6 +82,23 @@ Cloud sessions cannot reach `data/`. Any step that needs the public datasets or 
 | D3 | 2026-11-04 | Under-18 learners: correctness-only evidence; no response-time or hint features until counsel answers B1. Owner to confirm. | DPDP s.9(3) risk | Yes, once counsel answers |
 | D4 | 2026-11-04 | Collaborative filtering and graph algorithms added to Phase 2 (B7). | Named in the brief; missing from the plan | Yes |
 | D5 | 2026-11-04 | Evaluation bars are proposals until written in `PREREGISTRATION.md`. | Prevents post-hoc passes | Yes, before a run only |
+| D1 (status) | 2026-11-05 | **Decided**, per recommendation. The demo chain is the in-graph JEE chain. Both edges remain proposed until teacher review (B14). | Owner delegated the open decisions | Yes |
+| D2 (status) | 2026-11-05 | **Decided**, per recommendation. JEE Main and JEE Advanced first; CET after the loop passes E0 to E7; Olympiad deferred. | Owner delegated | Yes |
+| D3 (status) | 2026-11-05 | **Decided**, per recommendation. Under-18 learners: correctness-only evidence. Counsel's answer on B1 is still needed before any pilot with minors. | Owner delegated; DPDP risk | Yes, once counsel answers |
+| D6 | 2026-11-05 | **Decided.** Teachers read a cohort or learner only if assigned to that cohort. An institute-wide teacher scope was rejected. Implemented in S3 close (403 unassigned, 404 other institute). | Least privilege for minors' data (B1) | Yes |
+| D7 | 2026-11-05 | **Decided.** The public link carries fixture data only. The API is not reachable from the public link until real auth exists. Stub tokens are for local use. | Stub auth is not access control | Yes, after real auth |
+| D8 | 2026-11-05 | **Decided.** Revision uses an attempt-count clock for the prototype (server-side, per learner). Recorded in ADR-004, prototype only. | Client cannot choose the day | Yes, with a new ADR |
+| D9 | 2026-11-05 | **Decided, action pending.** API host is Vercel functions, one platform, as recommended. Owner creates the Neon database and connects it through the hosting environment, not the repo. | Avoids a second cold start and account | Yes |
+| D10 | 2026-11-05 | **Decided.** The demo flag is server configuration only, never a request parameter. | Keeps unapproved items out of learner responses | Yes |
+| D11 | 2026-11-05 | **Decided.** ADR-003 (learner event model) accepted on owner delegation. The migration may run on the prototype database only, never on institute or real data. | Recommendation was accept or change; accepted | Yes |
+| D12 | 2026-11-05 | **Deferred.** Real auth, token expiry and rate limits wait for the Phase 6 gate. | Not needed for fixture-only demo | Yes |
+| D13 | 2026-11-05 | **Deferred.** Teacher override form and teacher-to-cohort revoke route move after S5. | Not on the demo's critical path | Yes |
+| D14 | 2026-11-05 | **Open, human.** Approval of the 60 demo items is by Aditya and Ashray only. The orchestrator does not decide it. | Review requires people | No |
+| D15 | 2026-11-05 | **Open, before any real data.** Retention for the event and served-item tables. Recommended: keep events for the life of a pilot, delete on request. | Not needed for fixture-only demo | Yes |
+| D16 | 2026-11-05 | **Deferred to S6.** Connection pool and two-attempt concurrency test, before any load or public use. | Works at prototype scale; required before load | Yes |
+| D17 | 2026-11-05 | **Deferred to S6.** Colour-blindness simulation and screen-reader pass for the prototype screens. | Recorded as not run in S4 | Yes |
+| D18 | 2026-11-05 | **Decided.** The evaluation page keeps `[PUB]` and `[EXP]` rows marked "not computed" until S5 runs them. No placeholder numbers. | Evidence over claims | Yes |
+| D19 | 2026-11-05 | **Verified.** The two S2 misses on the evaluation page are reached-goal (−0.12) and items-to-goal (+0.40, lower is better). | Read against S2_FULL_LOG.md | n/a |
 
 ## 6. Phase updates made in this pass
 

@@ -25,3 +25,12 @@ Notes
 - `/api/health` returned HTTP 200 `{"status": "ok", "version": "e98dfc13c2ff6ccd15ff6eb686a915acacce80c1"}`.
 - `/prototype/evaluation` returned HTTP 200 with the prototype frame (no console sidebar) and page content in the server HTML; no dataset names appear in it. Fetched with the Vercel MCP fetch tool, not an anonymous browser.
 - Still not checked on the hosted URL: Playwright flow, anonymous private-window access.
+
+## Update: final deploy (2026-11-05)
+
+- Production: https://pragati-2-prototype.vercel.app, deployment `dpl_cFvkdmivnRdfwgmUDQrV2YSADeV2`, commit c2ff71e (console look, light only, plain-language labels), READY.
+- `/api/health` returned HTTP 200 `{"status": "ok", "version": "c2ff71e5b8ccf015ada9c4e460482d773dfe5e1a"}`, matching the deployed commit.
+- Preview: the earlier preview deployment (`dpl_9WJjFGwQ8aZYs5X6wt8RGZkdnzqg`, commit 11c2172) is still the only preview and shows the first hello page, not the current UI.
+- Method: checks used the Vercel MCP fetch tool (the sandbox proxy blocks `*.vercel.app`). Vercel Auth is off on the project.
+- Not confirmed: an anonymous private-window check of both URLs, and a browser run of the practice flow on the hosted URL (it was run locally in Chromium).
+- Branch: `claude/serene-sagan-8za1vh` on GitHub. No pull request was opened.

@@ -1,6 +1,6 @@
 # ADR-003: Learner attempt event model
 
-**Status:** Proposed, implemented in engine v0 (`backend/app/intelligence/events.py`). Owner to accept.
+**Status:** Accepted 2026-11-05 on the owner's delegation (recommendation: accept). Implemented in the engine and the S3 API. The migration may run on the prototype database only, never on institute or real data (decision D11).
 **Date:** 2026-11-05. **Gate:** G1 (Phase 0 / PROTOTYPE_PLAN S2).
 
 ## Context

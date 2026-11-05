@@ -28,9 +28,22 @@
 - No Hindi versions. Hindi needs a reviewer (B12).
 - These are not the authentic exam items. Authentic items wait for permission (B15).
 
-## To close S1
-1. Two reviewers, distinct from each other, read each item and set `reviewers` and `review_status` (`approved`) in the JSON, with their identifiers.
-2. Fix any wording or key the reviewers reject, and regenerate only through the generator so the manifest stays accurate.
-3. Re-run `validate_item` on all 60; it should then return no problems.
+## Review (named reviewers: Aditya, Ashray)
+- Review sheet: `ml/dataset_pipeline/review/demo_chain_v0_review.csv` (60 rows). Each reviewer fills their own verdict column (`approve`, `edit`, `reject`) and notes.
+- Apply: `python3 -m ml.dataset_pipeline.reviews apply <returned.csv>`. An item becomes `approved` only when BOTH reviewers write `approve`. Any `edit` or `reject` blocks approval. Blank verdicts change nothing. The script never records an approval on a reviewer's behalf.
+- Edits: reviewers may change the JSON directly, or send suggested wording back. Wording changes made to the generator are re-run from the generator so the manifest stays accurate.
+- Current status: **0 of 60 reviewed.** Gate closes when all 60 show `approved` and `validate_item` returns no problems.
 
-Owner decision needed: who the two reviewers are.
+## Changes made before review (so reviewers check content, not formatting)
+- Polynomials print as `5x^2 - 3x + 4 = 0` (no `(-6)x`; no `1x^2`).
+- Formation items ask "find B" and "find C" for x^2 + Bx + C = 0 (replacing "coefficient of x").
+- Complex items print `(a+bi)^2`.
+- Question texts are unique (tests).
+
+## Recommendations for reviewers
+- Several distractors are obviously wrong (for example a negative count of roots or a negative modulus-squared). Replace with plausible mistakes where a student would slip (a sign error, a forgotten cross term, or b instead of -b).
+- The nature-of-roots items use 0, 1 or 2 as answers. Check the distractors are plausible counts.
+- Decide whether the easy/medium labels fit; they are targets only.
+
+## Status
+- Gate status: **NOT MET** (0 of 60 reviewed). 266 tests pass.

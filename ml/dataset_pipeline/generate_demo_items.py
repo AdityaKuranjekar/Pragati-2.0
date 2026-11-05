@@ -81,6 +81,20 @@ def item(idx, topic, text, correct: Fraction, distractors, params, solution, dif
     }
 
 
+def poly(a: int, b: int, c: int) -> str:
+    """Readable quadratic a x^2 + b x + c with signs, e.g. '3x^2 - 6x + 0'."""
+    def term(coef, rest):
+        sign = "-" if coef < 0 else "+"
+        mag = abs(coef)
+        body = rest if mag == 1 and rest else f"{mag}{rest}"
+        return sign, body
+    s = ("" if a == 1 else f"{a}") + "x^2"
+    sg, body = term(b, "x")
+    s += f" {sg} {body}"
+    s += f" {'-' if c < 0 else '+'} {abs(c)}"
+    return s
+
+
 def _fresh_pair(rng: random.Random, seen: set) -> tuple[int, int]:
     """Draw a root pair not used before, so no two items share a question text."""
     while True:
@@ -137,7 +151,7 @@ def build() -> list[dict]:
     def re_sq(idx):
         a, b = rng.randint(1, 8), rng.randint(1, 8) * rng.choice([1, -1])
         val = a * a - b * b
-        return item(idx, A, f"Find the real part of (({complex_text(a, b)}))^2.", Fraction(val),
+        return item(idx, A, f"Find the real part of ({complex_text(a, b)})^2.", Fraction(val),
                     [Fraction(a * a + b * b), Fraction(2 * a * b), Fraction(-val)],
                     {"op": "re_sq", "a": a, "b": b},
                     f"(a+bi)^2 = (a^2-b^2) + 2abi, so Re = {a*a} - {b*b} = {val}.", "easy", rng)
@@ -148,7 +162,7 @@ def build() -> list[dict]:
     def disc(idx):
         a, b, c = rng.randint(1, 5), rng.randint(-6, 6), rng.randint(-6, 6)
         val = b * b - 4 * a * c
-        return item(idx, R, f"Find the discriminant of {a}x^2 + ({b})x + ({c}) = 0.", Fraction(val),
+        return item(idx, R, f"Find the discriminant of {poly(a, b, c)} = 0.", Fraction(val),
                     [Fraction(b * b + 4 * a * c), Fraction(-b * b), Fraction(b * b - 2 * a * c)],
                     {"op": "disc", "a": a, "b": b, "c": c},
                     f"D = b^2 - 4ac = {b*b} - 4({a})({c}) = {val}.", "easy", rng)
@@ -157,7 +171,7 @@ def build() -> list[dict]:
         a, b, c = rng.randint(1, 4), rng.randint(-6, 6), rng.randint(-6, 6)
         d_ = b * b - 4 * a * c
         code = 2 if d_ > 0 else (1 if d_ == 0 else 0)
-        return item(idx, R, f"For {a}x^2 + ({b})x + ({c}) = 0, how many distinct real roots exist? "
+        return item(idx, R, f"For {poly(a, b, c)} = 0, how many distinct real roots exist? "
                             f"(Answer as a number.)", Fraction(code),
                     [Fraction(3), Fraction(0 if code != 0 else 2), Fraction(code + 1 if code < 2 else 1)],
                     {"op": "nature", "a": a, "b": b, "c": c},
@@ -176,7 +190,7 @@ def build() -> list[dict]:
     def sum_roots(idx):
         a, b = rng.randint(2, 7), rng.randint(-9, 9)
         val = Fraction(-b, a)
-        return item(idx, R, f"What is the sum of the roots of {a}x^2 + ({b})x + 5 = 0?", val,
+        return item(idx, R, f"What is the sum of the roots of {poly(a, b, 5)} = 0?", val,
                     [Fraction(b, a), Fraction(-5, a), Fraction(5, a)],
                     {"op": "sum_roots", "a": a, "b": b},
                     f"Sum of roots = -b/a = {fmt(val)}.", "easy", rng)
@@ -190,16 +204,16 @@ def build() -> list[dict]:
         al, be = _fresh_pair(rng, seen_pairs)
         val = Fraction(-(al + be))
         return item(idx, F, f"A quadratic equation has roots {al} and {be}. "
-                            f"Find the coefficient of x when it is written as x^2 + Bx + C = 0.", val,
+                            f"If it is written as x^2 + Bx + C = 0, find B.", val,
                     [Fraction(al + be), Fraction(al * be), Fraction(-al * be)],
                     {"op": "coef_x", "al": al, "be": be},
-                    f"x^2 - (sum)x + product: B = -(sum) = {fmt(val)}.", "easy", rng)
+                    f"x^2 - (sum)x + product, so B = -(sum) = {fmt(val)}.", "easy", rng)
 
     def const(idx):
         al, be = _fresh_pair(rng, seen_pairs)
         val = Fraction(al * be)
         return item(idx, F, f"A quadratic equation has roots {al} and {be}. "
-                            f"Find the constant term when it is written as x^2 + Bx + C = 0.", val,
+                            f"If it is written as x^2 + Bx + C = 0, find C.", val,
                     [Fraction(-al * be), Fraction(al + be), Fraction(-(al + be))],
                     {"op": "const", "al": al, "be": be},
                     f"C = product of roots = {al} x {be} = {fmt(val)}.", "easy", rng)

@@ -477,7 +477,7 @@
       "class_level": "class_11",
       "topic_id": "jee.math.complex_numbers.algebra_complex_argand",
       "q_type": "mcq_single",
-      "text": "Find the real part of ((5 - 5i))^2.",
+      "text": "Find the real part of (5 - 5i)^2.",
       "options": [
         "A) 0",
         "B) 1",
@@ -507,7 +507,7 @@
       "class_level": "class_11",
       "topic_id": "jee.math.complex_numbers.algebra_complex_argand",
       "q_type": "mcq_single",
-      "text": "Find the real part of ((7 + 7i))^2.",
+      "text": "Find the real part of (7 + 7i)^2.",
       "options": [
         "A) 0",
         "B) 98",
@@ -537,7 +537,7 @@
       "class_level": "class_11",
       "topic_id": "jee.math.complex_numbers.algebra_complex_argand",
       "q_type": "mcq_single",
-      "text": "Find the real part of ((2 + 1i))^2.",
+      "text": "Find the real part of (2 + 1i)^2.",
       "options": [
         "A) 3",
         "B) 4",
@@ -567,7 +567,7 @@
       "class_level": "class_11",
       "topic_id": "jee.math.complex_numbers.algebra_complex_argand",
       "q_type": "mcq_single",
-      "text": "Find the real part of ((8 - 8i))^2.",
+      "text": "Find the real part of (8 - 8i)^2.",
       "options": [
         "A) 128",
         "B) 1",
@@ -597,7 +597,7 @@
       "class_level": "class_11",
       "topic_id": "jee.math.complex_numbers.algebra_complex_argand",
       "q_type": "mcq_single",
-      "text": "Find the real part of ((6 - 5i))^2.",
+      "text": "Find the real part of (6 - 5i)^2.",
       "options": [
         "A) -60",
         "B) -11",
@@ -627,7 +627,7 @@
       "class_level": "class_11",
       "topic_id": "jee.math.quadratic_equations.roots_nature",
       "q_type": "mcq_single",
-      "text": "Find the discriminant of 5x^2 + (-3)x + (4) = 0.",
+      "text": "Find the discriminant of 5x^2 - 3x + 4 = 0.",
       "options": [
         "A) 89",
         "B) -71",
@@ -658,7 +658,7 @@
       "class_level": "class_11",
       "topic_id": "jee.math.quadratic_equations.roots_nature",
       "q_type": "mcq_single",
-      "text": "Find the discriminant of 1x^2 + (-5)x + (3) = 0.",
+      "text": "Find the discriminant of x^2 - 5x + 3 = 0.",
       "options": [
         "A) 37",
         "B) -25",
@@ -689,7 +689,7 @@
       "class_level": "class_11",
       "topic_id": "jee.math.quadratic_equations.roots_nature",
       "q_type": "mcq_single",
-      "text": "Find the discriminant of 3x^2 + (-6)x + (0) = 0.",
+      "text": "Find the discriminant of 3x^2 - 6x + 0 = 0.",
       "options": [
         "A) 35",
         "B) -36",
@@ -720,7 +720,7 @@
       "class_level": "class_11",
       "topic_id": "jee.math.quadratic_equations.roots_nature",
       "q_type": "mcq_single",
-      "text": "Find the discriminant of 2x^2 + (-4)x + (-1) = 0.",
+      "text": "Find the discriminant of 2x^2 - 4x - 1 = 0.",
       "options": [
         "A) 24",
         "B) 20",
@@ -751,7 +751,7 @@
       "class_level": "class_11",
       "topic_id": "jee.math.quadratic_equations.roots_nature",
       "q_type": "mcq_single",
-      "text": "Find the discriminant of 3x^2 + (1)x + (-2) = 0.",
+      "text": "Find the discriminant of 3x^2 + x - 2 = 0.",
       "options": [
         "A) 25",
         "B) 13",
@@ -782,7 +782,7 @@
       "class_level": "class_11",
       "topic_id": "jee.math.quadratic_equations.roots_nature",
       "q_type": "mcq_single",
-      "text": "For 1x^2 + (3)x + (-2) = 0, how many distinct real roots exist? (Answer as a number.)",
+      "text": "For x^2 + 3x - 2 = 0, how many distinct real roots exist? (Answer as a number.)",
       "options": [
         "A) 2",
         "B) 0",
@@ -813,7 +813,7 @@
       "class_level": "class_11",
       "topic_id": "jee.math.quadratic_equations.roots_nature",
       "q_type": "mcq_single",
-      "text": "For 4x^2 + (-4)x + (0) = 0, how many distinct real roots exist? (Answer as a number.)",
+      "text": "For 4x^2 - 4x + 0 = 0, how many distinct real roots exist? (Answer as a number.)",
       "options": [
         "A) 1",
         "B) 3",
@@ -844,7 +844,7 @@
       "class_level": "class_11",
       "topic_id": "jee.math.quadratic_equations.roots_nature",
       "q_type": "mcq_single",
-      "text": "For 2x^2 + (-1)x + (-4) = 0, how many distinct real roots exist? (Answer as a number.)",
+      "text": "For 2x^2 - x - 4 = 0, how many distinct real roots exist? (Answer as a number.)",
       "options": [
         "A) 2",
         "B) 1",
@@ -875,7 +875,7 @@
       "class_level": "class_11",
       "topic_id": "jee.math.quadratic_equations.roots_nature",
       "q_type": "mcq_single",
-      "text": "For 4x^2 + (-2)x + (0) = 0, how many distinct real roots exist? (Answer as a number.)",
+      "text": "For 4x^2 - 2x + 0 = 0, how many distinct real roots exist? (Answer as a number.)",
       "options": [
         "A) 0",
         "B) 3",
@@ -906,7 +906,7 @@
       "class_level": "class_11",
       "topic_id": "jee.math.quadratic_equations.roots_nature",
       "q_type": "mcq_single",
-      "text": "For 3x^2 + (-2)x + (-3) = 0, how many distinct real roots exist? (Answer as a number.)",
+      "text": "For 3x^2 - 2x - 3 = 0, how many distinct real roots exist? (Answer as a number.)",
       "options": [
         "A) 3",
         "B) 1",
@@ -1082,7 +1082,7 @@
       "class_level": "class_11",
       "topic_id": "jee.math.quadratic_equations.roots_nature",
       "q_type": "mcq_single",
-      "text": "What is the sum of the roots of 2x^2 + (-8)x + 5 = 0?",
+      "text": "What is the sum of the roots of 2x^2 - 8x + 5 = 0?",
       "options": [
         "A) -5/2",
         "B) 5/2",
@@ -1112,7 +1112,7 @@
       "class_level": "class_11",
       "topic_id": "jee.math.quadratic_equations.roots_nature",
       "q_type": "mcq_single",
-      "text": "What is the sum of the roots of 5x^2 + (-9)x + 5 = 0?",
+      "text": "What is the sum of the roots of 5x^2 - 9x + 5 = 0?",
       "options": [
         "A) -1",
         "B) -9/5",
@@ -1142,7 +1142,7 @@
       "class_level": "class_11",
       "topic_id": "jee.math.quadratic_equations.roots_nature",
       "q_type": "mcq_single",
-      "text": "What is the sum of the roots of 4x^2 + (-5)x + 5 = 0?",
+      "text": "What is the sum of the roots of 4x^2 - 5x + 5 = 0?",
       "options": [
         "A) 1/4",
         "B) 5/4",
@@ -1172,7 +1172,7 @@
       "class_level": "class_11",
       "topic_id": "jee.math.quadratic_equations.roots_nature",
       "q_type": "mcq_single",
-      "text": "What is the sum of the roots of 6x^2 + (4)x + 5 = 0?",
+      "text": "What is the sum of the roots of 6x^2 + 4x + 5 = 0?",
       "options": [
         "A) -2/3",
         "B) 5/6",
@@ -1202,7 +1202,7 @@
       "class_level": "class_11",
       "topic_id": "jee.math.quadratic_equations.roots_nature",
       "q_type": "mcq_single",
-      "text": "What is the sum of the roots of 3x^2 + (5)x + 5 = 0?",
+      "text": "What is the sum of the roots of 3x^2 + 5x + 5 = 0?",
       "options": [
         "A) 5/3",
         "B) -2/3",
@@ -1232,7 +1232,7 @@
       "class_level": "class_11",
       "topic_id": "jee.math.quadratic_equations.equation_formation",
       "q_type": "mcq_single",
-      "text": "A quadratic equation has roots -1 and -3. Find the coefficient of x when it is written as x^2 + Bx + C = 0.",
+      "text": "A quadratic equation has roots -1 and -3. If it is written as x^2 + Bx + C = 0, find B.",
       "options": [
         "A) -3",
         "B) -4",
@@ -1240,7 +1240,7 @@
         "D) 4"
       ],
       "answer": "D",
-      "solution": "x^2 - (sum)x + product: B = -(sum) = 4.",
+      "solution": "x^2 - (sum)x + product, so B = -(sum) = 4.",
       "difficulty_target": "easy",
       "params": {
         "op": "coef_x",
@@ -1262,7 +1262,7 @@
       "class_level": "class_11",
       "topic_id": "jee.math.quadratic_equations.equation_formation",
       "q_type": "mcq_single",
-      "text": "A quadratic equation has roots 1 and 3. Find the coefficient of x when it is written as x^2 + Bx + C = 0.",
+      "text": "A quadratic equation has roots 1 and 3. If it is written as x^2 + Bx + C = 0, find B.",
       "options": [
         "A) -3",
         "B) -4",
@@ -1270,7 +1270,7 @@
         "D) 4"
       ],
       "answer": "B",
-      "solution": "x^2 - (sum)x + product: B = -(sum) = -4.",
+      "solution": "x^2 - (sum)x + product, so B = -(sum) = -4.",
       "difficulty_target": "easy",
       "params": {
         "op": "coef_x",
@@ -1292,7 +1292,7 @@
       "class_level": "class_11",
       "topic_id": "jee.math.quadratic_equations.equation_formation",
       "q_type": "mcq_single",
-      "text": "A quadratic equation has roots -2 and -2. Find the coefficient of x when it is written as x^2 + Bx + C = 0.",
+      "text": "A quadratic equation has roots -2 and -2. If it is written as x^2 + Bx + C = 0, find B.",
       "options": [
         "A) 5",
         "B) 4",
@@ -1300,7 +1300,7 @@
         "D) 3"
       ],
       "answer": "B",
-      "solution": "x^2 - (sum)x + product: B = -(sum) = 4.",
+      "solution": "x^2 - (sum)x + product, so B = -(sum) = 4.",
       "difficulty_target": "easy",
       "params": {
         "op": "coef_x",
@@ -1322,7 +1322,7 @@
       "class_level": "class_11",
       "topic_id": "jee.math.quadratic_equations.equation_formation",
       "q_type": "mcq_single",
-      "text": "A quadratic equation has roots 4 and -4. Find the coefficient of x when it is written as x^2 + Bx + C = 0.",
+      "text": "A quadratic equation has roots 4 and -4. If it is written as x^2 + Bx + C = 0, find B.",
       "options": [
         "A) 0",
         "B) 1",
@@ -1330,7 +1330,7 @@
         "D) 16"
       ],
       "answer": "A",
-      "solution": "x^2 - (sum)x + product: B = -(sum) = 0.",
+      "solution": "x^2 - (sum)x + product, so B = -(sum) = 0.",
       "difficulty_target": "easy",
       "params": {
         "op": "coef_x",
@@ -1352,7 +1352,7 @@
       "class_level": "class_11",
       "topic_id": "jee.math.quadratic_equations.equation_formation",
       "q_type": "mcq_single",
-      "text": "A quadratic equation has roots 3 and -5. Find the coefficient of x when it is written as x^2 + Bx + C = 0.",
+      "text": "A quadratic equation has roots 3 and -5. If it is written as x^2 + Bx + C = 0, find B.",
       "options": [
         "A) 15",
         "B) -15",
@@ -1360,7 +1360,7 @@
         "D) -2"
       ],
       "answer": "C",
-      "solution": "x^2 - (sum)x + product: B = -(sum) = 2.",
+      "solution": "x^2 - (sum)x + product, so B = -(sum) = 2.",
       "difficulty_target": "easy",
       "params": {
         "op": "coef_x",
@@ -1382,7 +1382,7 @@
       "class_level": "class_11",
       "topic_id": "jee.math.quadratic_equations.equation_formation",
       "q_type": "mcq_single",
-      "text": "A quadratic equation has roots 5 and 3. Find the coefficient of x when it is written as x^2 + Bx + C = 0.",
+      "text": "A quadratic equation has roots 5 and 3. If it is written as x^2 + Bx + C = 0, find B.",
       "options": [
         "A) 8",
         "B) -15",
@@ -1390,7 +1390,7 @@
         "D) -8"
       ],
       "answer": "D",
-      "solution": "x^2 - (sum)x + product: B = -(sum) = -8.",
+      "solution": "x^2 - (sum)x + product, so B = -(sum) = -8.",
       "difficulty_target": "easy",
       "params": {
         "op": "coef_x",
@@ -1412,7 +1412,7 @@
       "class_level": "class_11",
       "topic_id": "jee.math.quadratic_equations.equation_formation",
       "q_type": "mcq_single",
-      "text": "A quadratic equation has roots -1 and 2. Find the coefficient of x when it is written as x^2 + Bx + C = 0.",
+      "text": "A quadratic equation has roots -1 and 2. If it is written as x^2 + Bx + C = 0, find B.",
       "options": [
         "A) -2",
         "B) -1",
@@ -1420,7 +1420,7 @@
         "D) 1"
       ],
       "answer": "B",
-      "solution": "x^2 - (sum)x + product: B = -(sum) = -1.",
+      "solution": "x^2 - (sum)x + product, so B = -(sum) = -1.",
       "difficulty_target": "easy",
       "params": {
         "op": "coef_x",
@@ -1442,7 +1442,7 @@
       "class_level": "class_11",
       "topic_id": "jee.math.quadratic_equations.equation_formation",
       "q_type": "mcq_single",
-      "text": "A quadratic equation has roots 3 and -2. Find the coefficient of x when it is written as x^2 + Bx + C = 0.",
+      "text": "A quadratic equation has roots 3 and -2. If it is written as x^2 + Bx + C = 0, find B.",
       "options": [
         "A) -1",
         "B) 1",
@@ -1450,7 +1450,7 @@
         "D) 6"
       ],
       "answer": "A",
-      "solution": "x^2 - (sum)x + product: B = -(sum) = -1.",
+      "solution": "x^2 - (sum)x + product, so B = -(sum) = -1.",
       "difficulty_target": "easy",
       "params": {
         "op": "coef_x",
@@ -1472,7 +1472,7 @@
       "class_level": "class_11",
       "topic_id": "jee.math.quadratic_equations.equation_formation",
       "q_type": "mcq_single",
-      "text": "A quadratic equation has roots 5 and -2. Find the coefficient of x when it is written as x^2 + Bx + C = 0.",
+      "text": "A quadratic equation has roots 5 and -2. If it is written as x^2 + Bx + C = 0, find B.",
       "options": [
         "A) -10",
         "B) -3",
@@ -1480,7 +1480,7 @@
         "D) 3"
       ],
       "answer": "B",
-      "solution": "x^2 - (sum)x + product: B = -(sum) = -3.",
+      "solution": "x^2 - (sum)x + product, so B = -(sum) = -3.",
       "difficulty_target": "easy",
       "params": {
         "op": "coef_x",
@@ -1502,7 +1502,7 @@
       "class_level": "class_11",
       "topic_id": "jee.math.quadratic_equations.equation_formation",
       "q_type": "mcq_single",
-      "text": "A quadratic equation has roots -5 and 0. Find the coefficient of x when it is written as x^2 + Bx + C = 0.",
+      "text": "A quadratic equation has roots -5 and 0. If it is written as x^2 + Bx + C = 0, find B.",
       "options": [
         "A) 0",
         "B) 6",
@@ -1510,7 +1510,7 @@
         "D) 5"
       ],
       "answer": "D",
-      "solution": "x^2 - (sum)x + product: B = -(sum) = 5.",
+      "solution": "x^2 - (sum)x + product, so B = -(sum) = 5.",
       "difficulty_target": "easy",
       "params": {
         "op": "coef_x",
@@ -1532,7 +1532,7 @@
       "class_level": "class_11",
       "topic_id": "jee.math.quadratic_equations.equation_formation",
       "q_type": "mcq_single",
-      "text": "A quadratic equation has roots 0 and -5. Find the constant term when it is written as x^2 + Bx + C = 0.",
+      "text": "A quadratic equation has roots 0 and -5. If it is written as x^2 + Bx + C = 0, find C.",
       "options": [
         "A) 5",
         "B) -5",
@@ -1562,7 +1562,7 @@
       "class_level": "class_11",
       "topic_id": "jee.math.quadratic_equations.equation_formation",
       "q_type": "mcq_single",
-      "text": "A quadratic equation has roots -2 and 1. Find the constant term when it is written as x^2 + Bx + C = 0.",
+      "text": "A quadratic equation has roots -2 and 1. If it is written as x^2 + Bx + C = 0, find C.",
       "options": [
         "A) -2",
         "B) -1",
@@ -1592,7 +1592,7 @@
       "class_level": "class_11",
       "topic_id": "jee.math.quadratic_equations.equation_formation",
       "q_type": "mcq_single",
-      "text": "A quadratic equation has roots 3 and 4. Find the constant term when it is written as x^2 + Bx + C = 0.",
+      "text": "A quadratic equation has roots 3 and 4. If it is written as x^2 + Bx + C = 0, find C.",
       "options": [
         "A) 12",
         "B) 7",
@@ -1622,7 +1622,7 @@
       "class_level": "class_11",
       "topic_id": "jee.math.quadratic_equations.equation_formation",
       "q_type": "mcq_single",
-      "text": "A quadratic equation has roots -3 and 3. Find the constant term when it is written as x^2 + Bx + C = 0.",
+      "text": "A quadratic equation has roots -3 and 3. If it is written as x^2 + Bx + C = 0, find C.",
       "options": [
         "A) 9",
         "B) -8",
@@ -1652,7 +1652,7 @@
       "class_level": "class_11",
       "topic_id": "jee.math.quadratic_equations.equation_formation",
       "q_type": "mcq_single",
-      "text": "A quadratic equation has roots 4 and 0. Find the constant term when it is written as x^2 + Bx + C = 0.",
+      "text": "A quadratic equation has roots 4 and 0. If it is written as x^2 + Bx + C = 0, find C.",
       "options": [
         "A) -4",
         "B) 1",
@@ -1682,7 +1682,7 @@
       "class_level": "class_11",
       "topic_id": "jee.math.quadratic_equations.equation_formation",
       "q_type": "mcq_single",
-      "text": "A quadratic equation has roots -4 and -2. Find the constant term when it is written as x^2 + Bx + C = 0.",
+      "text": "A quadratic equation has roots -4 and -2. If it is written as x^2 + Bx + C = 0, find C.",
       "options": [
         "A) -8",
         "B) 8",
@@ -1712,7 +1712,7 @@
       "class_level": "class_11",
       "topic_id": "jee.math.quadratic_equations.equation_formation",
       "q_type": "mcq_single",
-      "text": "A quadratic equation has roots 4 and 3. Find the constant term when it is written as x^2 + Bx + C = 0.",
+      "text": "A quadratic equation has roots 4 and 3. If it is written as x^2 + Bx + C = 0, find C.",
       "options": [
         "A) -7",
         "B) 7",
@@ -1742,7 +1742,7 @@
       "class_level": "class_11",
       "topic_id": "jee.math.quadratic_equations.equation_formation",
       "q_type": "mcq_single",
-      "text": "A quadratic equation has roots 2 and 0. Find the constant term when it is written as x^2 + Bx + C = 0.",
+      "text": "A quadratic equation has roots 2 and 0. If it is written as x^2 + Bx + C = 0, find C.",
       "options": [
         "A) 2",
         "B) 0",
@@ -1772,7 +1772,7 @@
       "class_level": "class_11",
       "topic_id": "jee.math.quadratic_equations.equation_formation",
       "q_type": "mcq_single",
-      "text": "A quadratic equation has roots -5 and -2. Find the constant term when it is written as x^2 + Bx + C = 0.",
+      "text": "A quadratic equation has roots -5 and -2. If it is written as x^2 + Bx + C = 0, find C.",
       "options": [
         "A) -7",
         "B) 10",
@@ -1802,7 +1802,7 @@
       "class_level": "class_11",
       "topic_id": "jee.math.quadratic_equations.equation_formation",
       "q_type": "mcq_single",
-      "text": "A quadratic equation has roots -3 and -5. Find the constant term when it is written as x^2 + Bx + C = 0.",
+      "text": "A quadratic equation has roots -3 and -5. If it is written as x^2 + Bx + C = 0, find C.",
       "options": [
         "A) 15",
         "B) -15",

@@ -1,4 +1,5 @@
-import { redirect } from "next/navigation";
+"use client";
+import { LearnerIndex } from "@/components/prototype/learner";
 export default function Page() {
-  redirect("/prototype/learner/a");
+  return <LearnerIndex />;
 }

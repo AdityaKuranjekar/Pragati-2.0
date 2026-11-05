@@ -18,3 +18,10 @@ Status: deployed; anonymous access and in-browser page check still open. Updated
 Notes
 - The page is inside the existing root layout, so it renders within the institute console shell. Changing that would need edits outside the new route group.
 - The institute console remains at `/` on the same deployment (plan section 6 warns about this).
+
+## Update: prototype UI deployed
+
+- Production redeployed as `dpl_2Rka81M5zzA5BmK5VVLnH9QzL7oD` (commit e98dfc1), READY.
+- `/api/health` returned HTTP 200 `{"status": "ok", "version": "e98dfc13c2ff6ccd15ff6eb686a915acacce80c1"}`.
+- `/prototype/evaluation` returned HTTP 200 with the prototype frame (no console sidebar) and page content in the server HTML; no dataset names appear in it. Fetched with the Vercel MCP fetch tool, not an anonymous browser.
+- Still not checked on the hosted URL: Playwright flow, anonymous private-window access.

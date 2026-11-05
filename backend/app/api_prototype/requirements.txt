@@ -1,0 +1,6 @@
+# Pinned for backend/app/api_prototype (versions installed and tested on 2026-11-05).
+fastapi==0.162.0
+starlette==1.7.0
+pydantic==2.13.5
+httpx==0.28.1
+pytest==9.2.0

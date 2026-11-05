@@ -1,6 +1,6 @@
 # Prototype UI proposal
 
-**Status:** proposal, 2026-11-05, updated with the owner's three decisions (section 6). Nothing in this file is implemented. Source of truth for direction, tokens, screens and tone: [`DESIGN_BRIEF.md`](DESIGN_BRIEF.md). Scope: the `/prototype` route in `frontend/`. The institute console does not change.
+**Status:** proposal, 2026-11-05, updated with the owner's three decisions (section 6). The four screens are now implemented; see section 8 for how the build differs from this proposal. Source of truth for direction, tokens, screens and tone: [`DESIGN_BRIEF.md`](DESIGN_BRIEF.md). Scope: the `/prototype` route in `frontend/`. The institute console does not change.
 
 Sections follow the task: 1 inventory, 2 route structure, 3 screens, 4 tokens and contrast, 5 numbers and origin tags, 6 questions for the owner.
 
@@ -491,3 +491,20 @@ Questions raised in the first version of this proposal, and the owner's answers:
 - Whether a saved override changes the engine's graph in the prototype depends on the stage S3 API.
 - A browser colour-vision simulator pass and a keyboard pass are still to do on the built pages.
 - The `AppProvider` institute fetches that still run on prototype pages can be skipped later if they cost time on a cold start.
+
+## 8. As built (2026-11-05)
+
+Implemented on `claude/serene-sagan-8za1vh`. Differences from sections 1 to 5:
+
+| Proposal | As built | Reason |
+|---|---|---|
+| Separate component files per widget (`frame/`, `common/`, `teacher/`, ...) | Four files: `components/prototype/frame.tsx`, `teacher.tsx`, `learner.tsx`, `evaluation.tsx` | Small prototype; one file per area is easier to read |
+| `lib/prototype/client.ts` and `schemas.ts` | Not created. Data comes from `lib/prototype/data.ts` (fixtures, seeded simulator, demo items), `engine.ts` (stand-in estimate and next-step rule), `store.ts` (session-only attempts and decisions), `results.ts` | The S3 API does not exist yet. Swap these for fetches when it does |
+| `learner/` index | Added `learner/page.tsx` that redirects to `/prototype/learner/a` | Tab link needs a target |
+| Engine output | A stand-in: Beta(1,1) share-correct estimate, 80% range, first unmet concept in chain order, mastered at 0.60, no estimate below 5 attempts, early estimate below 15. Policy version `ui-standin-0.1` | The real engine is stage S2. These numbers are interface data, not evidence, and the footer says so |
+| Practice items | Nine demo items written for this interface, labelled as not reviewed content | The item bank is not built; content rules forbid presenting unreviewed items as real |
+| Evaluation rows | Four figures recorded in the repository from 1.0 (two `[PUB]` shown as "public dataset", two `[SIM]`), plus five "not run yet" rows | No new results were produced. Nothing was typed in as a result |
+| "Next step updates after the backend confirms" | Updates immediately, because there is no backend call | No API yet |
+| Shell passthrough | Added to `components/shell.tsx` (2 lines); console pages unchanged | Owner decision 1 |
+
+Checked in a browser (Chromium, light and dark, 1280px and 390px): no horizontal page scroll at phone width; a full practice run on Learner A moves the next step from the Argand diagram to nature of roots after seven correct answers; the review form stays disabled without a reason and records a decision. Not done: Playwright spec against the hosted URL, a colour-vision simulator pass in a browser, a screen-reader pass.

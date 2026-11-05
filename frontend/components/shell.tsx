@@ -75,6 +75,9 @@ export function Shell({ children }: { children: ReactNode }) {
   const tint = TINT[path] ?? TINT["/" + (path.split("/")[1] ?? "")] ?? "#edf2ff";
   const inst = INSTITUTES.find((i) => i.id === institute)?.label ?? institute;
 
+  // The prototype routes have their own frame; render them without the console chrome.
+  if (path.startsWith("/prototype")) return <>{children}</>;
+
   const brand = (
     <Link href="/" className="flex items-center gap-2.5 px-5 py-5">
       <Logo size={38} />

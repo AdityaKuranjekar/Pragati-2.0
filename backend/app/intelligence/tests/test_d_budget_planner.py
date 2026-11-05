@@ -143,3 +143,17 @@ def test_ablation_flags_change_behaviour_in_the_expected_direction():
         st = s.next_step(0, 60)
         assert st.selection.served_level_name == "easy"
         s.record(st, True, 0)
+
+
+def test_a_short_budget_never_defers_the_recheck_of_a_lapsed_concept():
+    """Regression (found in the first E9 run): a lapse clears only by a correct recheck."""
+    s = _mastered_session()
+    s.next_step(0, 60)
+    first = s.next_step(2, 60)
+    assert first.kind == "recheck"
+    s.record(first, False, 2)                      # lapse; interval 2 -> 1, due day 3
+    assert s.schedules[A].lapsed and s.schedules[A].due_day == 3
+    short = s.next_step(3, 4)                      # budget is short on the day the recheck is due
+    assert short.trace.get("due_day") == 3 and short.kind == "recheck" and short.concept_id == A
+    s.record(short, True, 3)
+    assert not s.schedules[A].lapsed

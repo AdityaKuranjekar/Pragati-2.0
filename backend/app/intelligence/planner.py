@@ -89,8 +89,11 @@ class AdaptiveSession:
             concept = min(open_, key=lambda c: (states[c].p_known, c)) if open_ else None
             short = False
 
-        if cfg.use_revision and not short:
-            ready = due(self.schedules, day)
+        if cfg.use_revision:
+            # A short budget defers optional rechecks, but never the recheck of a lapsed concept: a
+            # lapse clears only through a correct recheck, so deferring it would leave the concept
+            # treated as unmastered and practised for nothing (found in the first E9 run).
+            ready = [s for s in due(self.schedules, day) if not short or s.lapsed]
             if ready:
                 s = ready[0]
                 sel = self._select(s.concept_id, states[s.concept_id])

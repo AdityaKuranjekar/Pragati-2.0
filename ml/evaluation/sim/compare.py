@@ -186,11 +186,13 @@ def main(argv=None) -> int:
     ap.add_argument("--n", type=int, default=500)
     ap.add_argument("--seed", type=int, default=2026110501)
     ap.add_argument("--out", default=str(ROOT / "ml/evaluation/results/e9_sim_v1.json"))
+    ap.add_argument("--note", default="", help="free text stored in provenance, e.g. post_hoc")
     a = ap.parse_args(argv)
     res = run_suite(a.n, a.seed)
     res["_provenance"] = {"label": LABEL, "code_commit": _git("rev-parse", "HEAD"),
                           "prereg_commit": _git("log", "-1", "--format=%H", "--", "ml/evaluation/PREREGISTRATION.md"),
-                          "command": f"python3 -m ml.evaluation.sim.compare --suite {a.suite} --n {a.n} --seed {a.seed}"}
+                          "command": f"python3 -m ml.evaluation.sim.compare --suite {a.suite} --n {a.n} --seed {a.seed}",
+                          "note": a.note}
     Path(a.out).parent.mkdir(parents=True, exist_ok=True)
     Path(a.out).write_text(json.dumps(res, indent=2, sort_keys=True) + "\n")
     Path(a.out).with_suffix(".md").write_text(markdown(res) + "\n")

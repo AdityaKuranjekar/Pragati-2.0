@@ -1,0 +1,2036 @@
+{
+  "P_primary_neutral": {
+    "boot_seed": 7,
+    "config": {
+      "bank_per_level": 14,
+      "base_logit": -0.5,
+      "budget": 60,
+      "forget_per_day": 0.01,
+      "items_per_day": 4,
+      "learning_model": "neutral",
+      "n_learners": 500,
+      "p_learn": 0.15,
+      "p_learn_unready": 0.02,
+      "readiness_probs": [
+        0.4,
+        0.4,
+        0.2
+      ],
+      "seed": 2026110501
+    },
+    "label": "[SIM]",
+    "n_boot": 2000,
+    "paired_differences": {
+      "adaptive_minus_fixed": {
+        "final_mastered": {
+          "hi": 0.8440499999999997,
+          "lo": 0.418,
+          "mean": 0.632
+        },
+        "items_to_goal": {
+          "hi": 0.7280499999999998,
+          "lo": 0.2979,
+          "mean": 0.522
+        },
+        "items_used": {
+          "hi": -1.108,
+          "lo": -1.696,
+          "mean": -1.392
+        },
+        "reached_goal": {
+          "hi": -0.128,
+          "lo": -0.218,
+          "mean": -0.174
+        },
+        "rechecks": {
+          "hi": 4.55,
+          "lo": 3.924,
+          "mean": 4.242
+        },
+        "violations": {
+          "hi": -14.91795,
+          "lo": -17.73,
+          "mean": -16.336
+        }
+      },
+      "no_budget_minus_adaptive": {
+        "final_mastered": {
+          "hi": 0.7700499999999998,
+          "lo": 0.452,
+          "mean": 0.614
+        },
+        "items_to_goal": {
+          "hi": 0.242,
+          "lo": 0.05,
+          "mean": 0.142
+        },
+        "items_used": {
+          "hi": 1.6040499999999998,
+          "lo": 1.012,
+          "mean": 1.302
+        },
+        "reached_goal": {
+          "hi": -0.01,
+          "lo": -0.068,
+          "mean": -0.038
+        },
+        "rechecks": {
+          "hi": 6.468,
+          "lo": 5.908,
+          "mean": 6.182
+        },
+        "violations": {
+          "hi": -2.4379500000000003,
+          "lo": -4.12805,
+          "mean": -3.268
+        }
+      },
+      "no_budget_minus_fixed": {
+        "final_mastered": {
+          "hi": 1.43,
+          "lo": 1.062,
+          "mean": 1.246
+        },
+        "items_to_goal": {
+          "hi": 0.8700499999999998,
+          "lo": 0.45790000000000003,
+          "mean": 0.664
+        },
+        "items_used": {
+          "hi": -0.04,
+          "lo": -0.152,
+          "mean": -0.09
+        },
+        "reached_goal": {
+          "hi": -0.166,
+          "lo": -0.254,
+          "mean": -0.212
+        },
+        "rechecks": {
+          "hi": 10.64,
+          "lo": 10.202,
+          "mean": 10.424
+        },
+        "violations": {
+          "hi": -18.2238,
+          "lo": -20.952150000000003,
+          "mean": -19.604
+        }
+      },
+      "no_challenge_minus_adaptive": {
+        "final_mastered": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "items_to_goal": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "items_used": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "reached_goal": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "rechecks": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "violations": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        }
+      },
+      "no_challenge_minus_fixed": {
+        "final_mastered": {
+          "hi": 0.8440499999999997,
+          "lo": 0.418,
+          "mean": 0.632
+        },
+        "items_to_goal": {
+          "hi": 0.7280499999999998,
+          "lo": 0.2979,
+          "mean": 0.522
+        },
+        "items_used": {
+          "hi": -1.108,
+          "lo": -1.696,
+          "mean": -1.392
+        },
+        "reached_goal": {
+          "hi": -0.128,
+          "lo": -0.218,
+          "mean": -0.174
+        },
+        "rechecks": {
+          "hi": 4.55,
+          "lo": 3.924,
+          "mean": 4.242
+        },
+        "violations": {
+          "hi": -14.91795,
+          "lo": -17.73,
+          "mean": -16.336
+        }
+      },
+      "no_graph_minus_adaptive": {
+        "final_mastered": {
+          "hi": -0.704,
+          "lo": -1.136,
+          "mean": -0.918
+        },
+        "items_to_goal": {
+          "hi": -4.9119,
+          "lo": -7.3184499999999995,
+          "mean": -6.128
+        },
+        "items_used": {
+          "hi": 1.584,
+          "lo": 0.9779,
+          "mean": 1.268
+        },
+        "reached_goal": {
+          "hi": 0.214,
+          "lo": 0.122,
+          "mean": 0.17
+        },
+        "rechecks": {
+          "hi": -1.6179000000000006,
+          "lo": -2.258,
+          "mean": -1.932
+        },
+        "violations": {
+          "hi": 33.288,
+          "lo": 30.4918,
+          "mean": 31.95
+        }
+      },
+      "no_graph_minus_fixed": {
+        "final_mastered": {
+          "hi": -0.07,
+          "lo": -0.49605,
+          "mean": -0.286
+        },
+        "items_to_goal": {
+          "hi": -4.44995,
+          "lo": -6.788250000000001,
+          "mean": -5.606
+        },
+        "items_used": {
+          "hi": -0.062,
+          "lo": -0.198,
+          "mean": -0.124
+        },
+        "reached_goal": {
+          "hi": 0.046,
+          "lo": -0.056,
+          "mean": -0.004
+        },
+        "rechecks": {
+          "hi": 2.578,
+          "lo": 2.048,
+          "mean": 2.31
+        },
+        "violations": {
+          "hi": 16.9662,
+          "lo": 14.2078,
+          "mean": 15.614
+        }
+      },
+      "no_revision_minus_adaptive": {
+        "final_mastered": {
+          "hi": 0.872,
+          "lo": 0.472,
+          "mean": 0.668
+        },
+        "items_to_goal": {
+          "hi": -1.9819500000000003,
+          "lo": -2.98005,
+          "mean": -2.46
+        },
+        "items_used": {
+          "hi": -0.748,
+          "lo": -1.88605,
+          "mean": -1.31
+        },
+        "reached_goal": {
+          "hi": 0.254,
+          "lo": 0.162,
+          "mean": 0.206
+        },
+        "rechecks": {
+          "hi": -3.924,
+          "lo": -4.55,
+          "mean": -4.242
+        },
+        "violations": {
+          "hi": 8.114499999999998,
+          "lo": 5.4,
+          "mean": 6.776
+        }
+      },
+      "no_revision_minus_fixed": {
+        "final_mastered": {
+          "hi": 1.522,
+          "lo": 1.09,
+          "mean": 1.3
+        },
+        "items_to_goal": {
+          "hi": -1.4659500000000003,
+          "lo": -2.45205,
+          "mean": -1.938
+        },
+        "items_used": {
+          "hi": -2.2319500000000003,
+          "lo": -3.15605,
+          "mean": -2.702
+        },
+        "reached_goal": {
+          "hi": 0.084,
+          "lo": -0.02,
+          "mean": 0.032
+        },
+        "rechecks": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "violations": {
+          "hi": -7.8879,
+          "lo": -11.20405,
+          "mean": -9.56
+        }
+      }
+    },
+    "paths": {
+      "adaptive": {
+        "final_mastered": {
+          "hi": 4.59005,
+          "lo": 4.2299500000000005,
+          "mean": 4.41
+        },
+        "items_to_goal": {
+          "hi": 59.258,
+          "lo": 57.902,
+          "mean": 58.616
+        },
+        "items_used": {
+          "hi": 58.892,
+          "lo": 58.304,
+          "mean": 58.608
+        },
+        "reached_goal": {
+          "hi": 0.15,
+          "lo": 0.092,
+          "mean": 0.12
+        },
+        "rechecks": {
+          "hi": 4.55,
+          "lo": 3.924,
+          "mean": 4.242
+        },
+        "violations": {
+          "hi": 8.27615,
+          "lo": 6.216,
+          "mean": 7.23
+        }
+      },
+      "fixed": {
+        "final_mastered": {
+          "hi": 3.958,
+          "lo": 3.598,
+          "mean": 3.778
+        },
+        "items_to_goal": {
+          "hi": 58.72,
+          "lo": 57.41195,
+          "mean": 58.094
+        },
+        "items_used": {
+          "hi": 60.0,
+          "lo": 60.0,
+          "mean": 60.0
+        },
+        "reached_goal": {
+          "hi": 0.334,
+          "lo": 0.254,
+          "mean": 0.294
+        },
+        "rechecks": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "violations": {
+          "hi": 24.878,
+          "lo": 22.2379,
+          "mean": 23.566
+        }
+      },
+      "no_budget": {
+        "final_mastered": {
+          "hi": 5.1640999999999995,
+          "lo": 4.89,
+          "mean": 5.024
+        },
+        "items_to_goal": {
+          "hi": 59.40605,
+          "lo": 58.06595,
+          "mean": 58.758
+        },
+        "items_used": {
+          "hi": 59.96,
+          "lo": 59.848,
+          "mean": 59.91
+        },
+        "reached_goal": {
+          "hi": 0.106,
+          "lo": 0.058,
+          "mean": 0.082
+        },
+        "rechecks": {
+          "hi": 10.64,
+          "lo": 10.202,
+          "mean": 10.424
+        },
+        "violations": {
+          "hi": 4.56605,
+          "lo": 3.35195,
+          "mean": 3.962
+        }
+      },
+      "no_challenge": {
+        "final_mastered": {
+          "hi": 4.59005,
+          "lo": 4.2299500000000005,
+          "mean": 4.41
+        },
+        "items_to_goal": {
+          "hi": 59.258,
+          "lo": 57.902,
+          "mean": 58.616
+        },
+        "items_used": {
+          "hi": 58.892,
+          "lo": 58.304,
+          "mean": 58.608
+        },
+        "reached_goal": {
+          "hi": 0.15,
+          "lo": 0.092,
+          "mean": 0.12
+        },
+        "rechecks": {
+          "hi": 4.55,
+          "lo": 3.924,
+          "mean": 4.242
+        },
+        "violations": {
+          "hi": 8.27615,
+          "lo": 6.216,
+          "mean": 7.23
+        }
+      },
+      "no_graph": {
+        "final_mastered": {
+          "hi": 3.67405,
+          "lo": 3.304,
+          "mean": 3.492
+        },
+        "items_to_goal": {
+          "hi": 53.786,
+          "lo": 51.131949999999996,
+          "mean": 52.488
+        },
+        "items_used": {
+          "hi": 59.938,
+          "lo": 59.802,
+          "mean": 59.876
+        },
+        "reached_goal": {
+          "hi": 0.328,
+          "lo": 0.24995,
+          "mean": 0.29
+        },
+        "rechecks": {
+          "hi": 2.578,
+          "lo": 2.048,
+          "mean": 2.31
+        },
+        "violations": {
+          "hi": 40.258050000000004,
+          "lo": 38.02985,
+          "mean": 39.18
+        }
+      },
+      "no_revision": {
+        "final_mastered": {
+          "hi": 5.268,
+          "lo": 4.886,
+          "mean": 5.078
+        },
+        "items_to_goal": {
+          "hi": 56.94805,
+          "lo": 55.301899999999996,
+          "mean": 56.156
+        },
+        "items_used": {
+          "hi": 57.76805,
+          "lo": 56.84395,
+          "mean": 57.298
+        },
+        "reached_goal": {
+          "hi": 0.368,
+          "lo": 0.284,
+          "mean": 0.326
+        },
+        "rechecks": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "violations": {
+          "hi": 15.39815,
+          "lo": 12.613800000000001,
+          "mean": 14.006
+        }
+      }
+    },
+    "task": "simulated mastery under equal item budget"
+  },
+  "S1_zone_learning": {
+    "boot_seed": 7,
+    "config": {
+      "bank_per_level": 14,
+      "base_logit": -0.5,
+      "budget": 60,
+      "forget_per_day": 0.01,
+      "items_per_day": 4,
+      "learning_model": "zone",
+      "n_learners": 500,
+      "p_learn": 0.15,
+      "p_learn_unready": 0.02,
+      "readiness_probs": [
+        0.4,
+        0.4,
+        0.2
+      ],
+      "seed": 2026110501
+    },
+    "label": "[SIM]",
+    "n_boot": 2000,
+    "paired_differences": {
+      "adaptive_minus_fixed": {
+        "final_mastered": {
+          "hi": 0.562,
+          "lo": 0.18395,
+          "mean": 0.37
+        },
+        "items_to_goal": {
+          "hi": 0.67,
+          "lo": 0.38,
+          "mean": 0.526
+        },
+        "items_used": {
+          "hi": -1.45,
+          "lo": -2.15805,
+          "mean": -1.786
+        },
+        "reached_goal": {
+          "hi": -0.14,
+          "lo": -0.21,
+          "mean": -0.174
+        },
+        "rechecks": {
+          "hi": 2.8480499999999997,
+          "lo": 2.322,
+          "mean": 2.588
+        },
+        "violations": {
+          "hi": -16.2877,
+          "lo": -19.344050000000003,
+          "mean": -17.878
+        }
+      },
+      "no_budget_minus_adaptive": {
+        "final_mastered": {
+          "hi": 0.658,
+          "lo": 0.388,
+          "mean": 0.526
+        },
+        "items_to_goal": {
+          "hi": 0.048,
+          "lo": -0.014049999999999998,
+          "mean": 0.01
+        },
+        "items_used": {
+          "hi": 1.984,
+          "lo": 1.28995,
+          "mean": 1.628
+        },
+        "reached_goal": {
+          "hi": 0.006,
+          "lo": -0.012,
+          "mean": -0.002
+        },
+        "rechecks": {
+          "hi": 7.09805,
+          "lo": 6.556,
+          "mean": 6.824
+        },
+        "violations": {
+          "hi": -5.281800000000001,
+          "lo": -7.49015,
+          "mean": -6.358
+        }
+      },
+      "no_budget_minus_fixed": {
+        "final_mastered": {
+          "hi": 1.072,
+          "lo": 0.72195,
+          "mean": 0.896
+        },
+        "items_to_goal": {
+          "hi": 0.684,
+          "lo": 0.38995,
+          "mean": 0.536
+        },
+        "items_used": {
+          "hi": -0.059950000000000274,
+          "lo": -0.27805,
+          "mean": -0.158
+        },
+        "reached_goal": {
+          "hi": -0.142,
+          "lo": -0.212,
+          "mean": -0.176
+        },
+        "rechecks": {
+          "hi": 9.682,
+          "lo": 9.14195,
+          "mean": 9.412
+        },
+        "violations": {
+          "hi": -22.7878,
+          "lo": -25.692,
+          "mean": -24.236
+        }
+      },
+      "no_challenge_minus_adaptive": {
+        "final_mastered": {
+          "hi": 0.068,
+          "lo": 0.0,
+          "mean": 0.03
+        },
+        "items_to_goal": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "items_used": {
+          "hi": 0.0,
+          "lo": -0.042,
+          "mean": -0.014
+        },
+        "reached_goal": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "rechecks": {
+          "hi": 0.038,
+          "lo": -0.004,
+          "mean": 0.014
+        },
+        "violations": {
+          "hi": -0.011950000000000273,
+          "lo": -0.46,
+          "mean": -0.216
+        }
+      },
+      "no_challenge_minus_fixed": {
+        "final_mastered": {
+          "hi": 0.592,
+          "lo": 0.20995,
+          "mean": 0.4
+        },
+        "items_to_goal": {
+          "hi": 0.67,
+          "lo": 0.38,
+          "mean": 0.526
+        },
+        "items_used": {
+          "hi": -1.4579500000000003,
+          "lo": -2.17405,
+          "mean": -1.8
+        },
+        "reached_goal": {
+          "hi": -0.14,
+          "lo": -0.21,
+          "mean": -0.174
+        },
+        "rechecks": {
+          "hi": 2.868,
+          "lo": 2.334,
+          "mean": 2.602
+        },
+        "violations": {
+          "hi": -16.505750000000003,
+          "lo": -19.56615,
+          "mean": -18.094
+        }
+      },
+      "no_graph_minus_adaptive": {
+        "final_mastered": {
+          "hi": -0.5539500000000003,
+          "lo": -0.92005,
+          "mean": -0.74
+        },
+        "items_to_goal": {
+          "hi": -2.992,
+          "lo": -4.75605,
+          "mean": -3.874
+        },
+        "items_used": {
+          "hi": 2.0740499999999997,
+          "lo": 1.354,
+          "mean": 1.696
+        },
+        "reached_goal": {
+          "hi": 0.176,
+          "lo": 0.112,
+          "mean": 0.144
+        },
+        "rechecks": {
+          "hi": -0.498,
+          "lo": -1.0280500000000001,
+          "mean": -0.764
+        },
+        "violations": {
+          "hi": 31.6501,
+          "lo": 28.7359,
+          "mean": 30.182
+        }
+      },
+      "no_graph_minus_fixed": {
+        "final_mastered": {
+          "hi": -0.17790000000000053,
+          "lo": -0.554,
+          "mean": -0.37
+        },
+        "items_to_goal": {
+          "hi": -2.452,
+          "lo": -4.2364999999999995,
+          "mean": -3.348
+        },
+        "items_used": {
+          "hi": -0.036,
+          "lo": -0.156,
+          "mean": -0.09
+        },
+        "reached_goal": {
+          "hi": 0.016,
+          "lo": -0.078,
+          "mean": -0.03
+        },
+        "rechecks": {
+          "hi": 2.0780499999999997,
+          "lo": 1.58595,
+          "mean": 1.824
+        },
+        "violations": {
+          "hi": 13.544,
+          "lo": 10.98975,
+          "mean": 12.304
+        }
+      },
+      "no_revision_minus_adaptive": {
+        "final_mastered": {
+          "hi": 0.4180499999999997,
+          "lo": 0.138,
+          "mean": 0.274
+        },
+        "items_to_goal": {
+          "hi": -0.36,
+          "lo": -0.808,
+          "mean": -0.576
+        },
+        "items_used": {
+          "hi": 1.2560499999999997,
+          "lo": 0.33590000000000003,
+          "mean": 0.788
+        },
+        "reached_goal": {
+          "hi": 0.09,
+          "lo": 0.044,
+          "mean": 0.066
+        },
+        "rechecks": {
+          "hi": -2.322,
+          "lo": -2.8480499999999997,
+          "mean": -2.588
+        },
+        "violations": {
+          "hi": 9.726349999999998,
+          "lo": 6.767799999999999,
+          "mean": 8.298
+        }
+      },
+      "no_revision_minus_fixed": {
+        "final_mastered": {
+          "hi": 0.8480499999999997,
+          "lo": 0.444,
+          "mean": 0.644
+        },
+        "items_to_goal": {
+          "hi": 0.198,
+          "lo": -0.31,
+          "mean": -0.05
+        },
+        "items_used": {
+          "hi": -0.704,
+          "lo": -1.3081,
+          "mean": -0.998
+        },
+        "reached_goal": {
+          "hi": -0.072,
+          "lo": -0.146,
+          "mean": -0.108
+        },
+        "rechecks": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "violations": {
+          "hi": -7.847350000000003,
+          "lo": -11.46865,
+          "mean": -9.58
+        }
+      }
+    },
+    "paths": {
+      "adaptive": {
+        "final_mastered": {
+          "hi": 3.338,
+          "lo": 3.00595,
+          "mean": 3.176
+        },
+        "items_to_goal": {
+          "hi": 59.59605,
+          "lo": 58.27395,
+          "mean": 58.98
+        },
+        "items_used": {
+          "hi": 58.55,
+          "lo": 57.84195,
+          "mean": 58.214
+        },
+        "reached_goal": {
+          "hi": 0.040049999999999725,
+          "lo": 0.012,
+          "mean": 0.026
+        },
+        "rechecks": {
+          "hi": 2.8480499999999997,
+          "lo": 2.322,
+          "mean": 2.588
+        },
+        "violations": {
+          "hi": 13.00225,
+          "lo": 10.4735,
+          "mean": 11.714
+        }
+      },
+      "fixed": {
+        "final_mastered": {
+          "hi": 2.98805,
+          "lo": 2.63,
+          "mean": 2.806
+        },
+        "items_to_goal": {
+          "hi": 59.10205,
+          "lo": 57.7699,
+          "mean": 58.454
+        },
+        "items_used": {
+          "hi": 60.0,
+          "lo": 60.0,
+          "mean": 60.0
+        },
+        "reached_goal": {
+          "hi": 0.236,
+          "lo": 0.16595000000000001,
+          "mean": 0.2
+        },
+        "rechecks": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "violations": {
+          "hi": 30.860349999999997,
+          "lo": 28.198,
+          "mean": 29.592
+        }
+      },
+      "no_budget": {
+        "final_mastered": {
+          "hi": 3.83405,
+          "lo": 3.558,
+          "mean": 3.702
+        },
+        "items_to_goal": {
+          "hi": 59.6061,
+          "lo": 58.284,
+          "mean": 58.99
+        },
+        "items_used": {
+          "hi": 59.94005,
+          "lo": 59.72195,
+          "mean": 59.842
+        },
+        "reached_goal": {
+          "hi": 0.038,
+          "lo": 0.012,
+          "mean": 0.024
+        },
+        "rechecks": {
+          "hi": 9.682,
+          "lo": 9.14195,
+          "mean": 9.412
+        },
+        "violations": {
+          "hi": 6.1121,
+          "lo": 4.63795,
+          "mean": 5.356
+        }
+      },
+      "no_challenge": {
+        "final_mastered": {
+          "hi": 3.366,
+          "lo": 3.03,
+          "mean": 3.206
+        },
+        "items_to_goal": {
+          "hi": 59.59605,
+          "lo": 58.27395,
+          "mean": 58.98
+        },
+        "items_used": {
+          "hi": 58.54205,
+          "lo": 57.82595,
+          "mean": 58.2
+        },
+        "reached_goal": {
+          "hi": 0.040049999999999725,
+          "lo": 0.012,
+          "mean": 0.026
+        },
+        "rechecks": {
+          "hi": 2.868,
+          "lo": 2.334,
+          "mean": 2.602
+        },
+        "violations": {
+          "hi": 12.7861,
+          "lo": 10.2597,
+          "mean": 11.498
+        }
+      },
+      "no_graph": {
+        "final_mastered": {
+          "hi": 2.6100499999999998,
+          "lo": 2.26995,
+          "mean": 2.436
+        },
+        "items_to_goal": {
+          "hi": 56.17205,
+          "lo": 53.973699999999994,
+          "mean": 55.106
+        },
+        "items_used": {
+          "hi": 59.964,
+          "lo": 59.844,
+          "mean": 59.91
+        },
+        "reached_goal": {
+          "hi": 0.202,
+          "lo": 0.136,
+          "mean": 0.17
+        },
+        "rechecks": {
+          "hi": 2.0780499999999997,
+          "lo": 1.58595,
+          "mean": 1.824
+        },
+        "violations": {
+          "hi": 42.942499999999995,
+          "lo": 40.8238,
+          "mean": 41.896
+        }
+      },
+      "no_revision": {
+        "final_mastered": {
+          "hi": 3.63405,
+          "lo": 3.27,
+          "mean": 3.45
+        },
+        "items_to_goal": {
+          "hi": 59.06,
+          "lo": 57.679899999999996,
+          "mean": 58.404
+        },
+        "items_used": {
+          "hi": 59.296,
+          "lo": 58.6919,
+          "mean": 59.002
+        },
+        "reached_goal": {
+          "hi": 0.118,
+          "lo": 0.068,
+          "mean": 0.092
+        },
+        "rechecks": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "violations": {
+          "hi": 21.5061,
+          "lo": 18.4958,
+          "mean": 20.012
+        }
+      }
+    },
+    "task": "simulated mastery under equal item budget"
+  },
+  "S2_no_forgetting": {
+    "boot_seed": 7,
+    "config": {
+      "bank_per_level": 14,
+      "base_logit": -0.5,
+      "budget": 60,
+      "forget_per_day": 0.0,
+      "items_per_day": 4,
+      "learning_model": "neutral",
+      "n_learners": 500,
+      "p_learn": 0.15,
+      "p_learn_unready": 0.02,
+      "readiness_probs": [
+        0.4,
+        0.4,
+        0.2
+      ],
+      "seed": 2026110501
+    },
+    "label": "[SIM]",
+    "n_boot": 2000,
+    "paired_differences": {
+      "adaptive_minus_fixed": {
+        "final_mastered": {
+          "hi": 0.908,
+          "lo": 0.492,
+          "mean": 0.698
+        },
+        "items_to_goal": {
+          "hi": 0.764,
+          "lo": 0.32195,
+          "mean": 0.538
+        },
+        "items_used": {
+          "hi": -0.9919500000000002,
+          "lo": -1.55,
+          "mean": -1.266
+        },
+        "reached_goal": {
+          "hi": -0.136,
+          "lo": -0.23,
+          "mean": -0.184
+        },
+        "rechecks": {
+          "hi": 4.89205,
+          "lo": 4.24195,
+          "mean": 4.574
+        },
+        "violations": {
+          "hi": -15.33995,
+          "lo": -18.030050000000003,
+          "mean": -16.716
+        }
+      },
+      "no_budget_minus_adaptive": {
+        "final_mastered": {
+          "hi": 0.748,
+          "lo": 0.44,
+          "mean": 0.594
+        },
+        "items_to_goal": {
+          "hi": 0.232,
+          "lo": 0.05,
+          "mean": 0.138
+        },
+        "items_used": {
+          "hi": 1.43,
+          "lo": 0.878,
+          "mean": 1.144
+        },
+        "reached_goal": {
+          "hi": -0.016,
+          "lo": -0.07,
+          "mean": -0.042
+        },
+        "rechecks": {
+          "hi": 6.098,
+          "lo": 5.526,
+          "mean": 5.808
+        },
+        "violations": {
+          "hi": -2.2575500000000024,
+          "lo": -3.84205,
+          "mean": -3.04
+        }
+      },
+      "no_budget_minus_fixed": {
+        "final_mastered": {
+          "hi": 1.464,
+          "lo": 1.11395,
+          "mean": 1.292
+        },
+        "items_to_goal": {
+          "hi": 0.878,
+          "lo": 0.464,
+          "mean": 0.676
+        },
+        "items_used": {
+          "hi": -0.06,
+          "lo": -0.19205,
+          "mean": -0.122
+        },
+        "reached_goal": {
+          "hi": -0.178,
+          "lo": -0.26605,
+          "mean": -0.226
+        },
+        "rechecks": {
+          "hi": 10.57605,
+          "lo": 10.16795,
+          "mean": 10.382
+        },
+        "violations": {
+          "hi": -18.4537,
+          "lo": -21.05805,
+          "mean": -19.756
+        }
+      },
+      "no_challenge_minus_adaptive": {
+        "final_mastered": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "items_to_goal": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "items_used": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "reached_goal": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "rechecks": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "violations": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        }
+      },
+      "no_challenge_minus_fixed": {
+        "final_mastered": {
+          "hi": 0.908,
+          "lo": 0.492,
+          "mean": 0.698
+        },
+        "items_to_goal": {
+          "hi": 0.764,
+          "lo": 0.32195,
+          "mean": 0.538
+        },
+        "items_used": {
+          "hi": -0.9919500000000002,
+          "lo": -1.55,
+          "mean": -1.266
+        },
+        "reached_goal": {
+          "hi": -0.136,
+          "lo": -0.23,
+          "mean": -0.184
+        },
+        "rechecks": {
+          "hi": 4.89205,
+          "lo": 4.24195,
+          "mean": 4.574
+        },
+        "violations": {
+          "hi": -15.33995,
+          "lo": -18.030050000000003,
+          "mean": -16.716
+        }
+      },
+      "no_graph_minus_adaptive": {
+        "final_mastered": {
+          "hi": -0.86,
+          "lo": -1.304,
+          "mean": -1.078
+        },
+        "items_to_goal": {
+          "hi": -4.93395,
+          "lo": -7.2964,
+          "mean": -6.114
+        },
+        "items_used": {
+          "hi": 1.382,
+          "lo": 0.79995,
+          "mean": 1.078
+        },
+        "reached_goal": {
+          "hi": 0.214,
+          "lo": 0.116,
+          "mean": 0.166
+        },
+        "rechecks": {
+          "hi": -1.8379500000000004,
+          "lo": -2.512,
+          "mean": -2.17
+        },
+        "violations": {
+          "hi": 34.026050000000005,
+          "lo": 31.327949999999998,
+          "mean": 32.712
+        }
+      },
+      "no_graph_minus_fixed": {
+        "final_mastered": {
+          "hi": -0.166,
+          "lo": -0.58205,
+          "mean": -0.38
+        },
+        "items_to_goal": {
+          "hi": -4.4199,
+          "lo": -6.7520999999999995,
+          "mean": -5.576
+        },
+        "items_used": {
+          "hi": -0.106,
+          "lo": -0.28204999999999997,
+          "mean": -0.188
+        },
+        "reached_goal": {
+          "hi": 0.036,
+          "lo": -0.072,
+          "mean": -0.018
+        },
+        "rechecks": {
+          "hi": 2.68005,
+          "lo": 2.13,
+          "mean": 2.404
+        },
+        "violations": {
+          "hi": 17.3382,
+          "lo": 14.61195,
+          "mean": 15.996
+        }
+      },
+      "no_revision_minus_adaptive": {
+        "final_mastered": {
+          "hi": 0.97,
+          "lo": 0.59,
+          "mean": 0.778
+        },
+        "items_to_goal": {
+          "hi": -2.054,
+          "lo": -3.0341,
+          "mean": -2.524
+        },
+        "items_used": {
+          "hi": -1.1415500000000023,
+          "lo": -2.24005,
+          "mean": -1.684
+        },
+        "reached_goal": {
+          "hi": 0.264,
+          "lo": 0.16995000000000002,
+          "mean": 0.216
+        },
+        "rechecks": {
+          "hi": -4.24195,
+          "lo": -4.89205,
+          "mean": -4.574
+        },
+        "violations": {
+          "hi": 7.30005,
+          "lo": 4.786,
+          "mean": 6.024
+        }
+      },
+      "no_revision_minus_fixed": {
+        "final_mastered": {
+          "hi": 1.692,
+          "lo": 1.272,
+          "mean": 1.476
+        },
+        "items_to_goal": {
+          "hi": -1.4879500000000003,
+          "lo": -2.49,
+          "mean": -1.986
+        },
+        "items_used": {
+          "hi": -2.5019000000000005,
+          "lo": -3.42405,
+          "mean": -2.95
+        },
+        "reached_goal": {
+          "hi": 0.084,
+          "lo": -0.02,
+          "mean": 0.032
+        },
+        "rechecks": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "violations": {
+          "hi": -9.13385,
+          "lo": -12.30215,
+          "mean": -10.692
+        }
+      }
+    },
+    "paths": {
+      "adaptive": {
+        "final_mastered": {
+          "hi": 5.05605,
+          "lo": 4.70195,
+          "mean": 4.882
+        },
+        "items_to_goal": {
+          "hi": 59.23005,
+          "lo": 57.894,
+          "mean": 58.602
+        },
+        "items_used": {
+          "hi": 59.008050000000004,
+          "lo": 58.45,
+          "mean": 58.734
+        },
+        "reached_goal": {
+          "hi": 0.15804999999999972,
+          "lo": 0.098,
+          "mean": 0.128
+        },
+        "rechecks": {
+          "hi": 4.89205,
+          "lo": 4.24195,
+          "mean": 4.574
+        },
+        "violations": {
+          "hi": 6.638149999999999,
+          "lo": 4.816,
+          "mean": 5.7
+        }
+      },
+      "fixed": {
+        "final_mastered": {
+          "hi": 4.37,
+          "lo": 3.996,
+          "mean": 4.184
+        },
+        "items_to_goal": {
+          "hi": 58.7082,
+          "lo": 57.375949999999996,
+          "mean": 58.064
+        },
+        "items_used": {
+          "hi": 60.0,
+          "lo": 60.0,
+          "mean": 60.0
+        },
+        "reached_goal": {
+          "hi": 0.352,
+          "lo": 0.27,
+          "mean": 0.312
+        },
+        "rechecks": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "violations": {
+          "hi": 23.74225,
+          "lo": 21.079949999999997,
+          "mean": 22.416
+        }
+      },
+      "no_budget": {
+        "final_mastered": {
+          "hi": 5.604,
+          "lo": 5.35,
+          "mean": 5.476
+        },
+        "items_to_goal": {
+          "hi": 59.37805,
+          "lo": 58.05775,
+          "mean": 58.74
+        },
+        "items_used": {
+          "hi": 59.94,
+          "lo": 59.80795,
+          "mean": 59.878
+        },
+        "reached_goal": {
+          "hi": 0.11,
+          "lo": 0.062,
+          "mean": 0.086
+        },
+        "rechecks": {
+          "hi": 10.57605,
+          "lo": 10.16795,
+          "mean": 10.382
+        },
+        "violations": {
+          "hi": 3.1420999999999992,
+          "lo": 2.194,
+          "mean": 2.66
+        }
+      },
+      "no_challenge": {
+        "final_mastered": {
+          "hi": 5.05605,
+          "lo": 4.70195,
+          "mean": 4.882
+        },
+        "items_to_goal": {
+          "hi": 59.23005,
+          "lo": 57.894,
+          "mean": 58.602
+        },
+        "items_used": {
+          "hi": 59.008050000000004,
+          "lo": 58.45,
+          "mean": 58.734
+        },
+        "reached_goal": {
+          "hi": 0.15804999999999972,
+          "lo": 0.098,
+          "mean": 0.128
+        },
+        "rechecks": {
+          "hi": 4.89205,
+          "lo": 4.24195,
+          "mean": 4.574
+        },
+        "violations": {
+          "hi": 6.638149999999999,
+          "lo": 4.816,
+          "mean": 5.7
+        }
+      },
+      "no_graph": {
+        "final_mastered": {
+          "hi": 3.996,
+          "lo": 3.61,
+          "mean": 3.804
+        },
+        "items_to_goal": {
+          "hi": 53.80205,
+          "lo": 51.177949999999996,
+          "mean": 52.488
+        },
+        "items_used": {
+          "hi": 59.894,
+          "lo": 59.71795,
+          "mean": 59.812
+        },
+        "reached_goal": {
+          "hi": 0.332,
+          "lo": 0.252,
+          "mean": 0.294
+        },
+        "rechecks": {
+          "hi": 2.68005,
+          "lo": 2.13,
+          "mean": 2.404
+        },
+        "violations": {
+          "hi": 39.532,
+          "lo": 37.2038,
+          "mean": 38.412
+        }
+      },
+      "no_revision": {
+        "final_mastered": {
+          "hi": 5.83805,
+          "lo": 5.47395,
+          "mean": 5.66
+        },
+        "items_to_goal": {
+          "hi": 56.858,
+          "lo": 55.2179,
+          "mean": 56.078
+        },
+        "items_used": {
+          "hi": 57.498099999999994,
+          "lo": 56.57595,
+          "mean": 57.05
+        },
+        "reached_goal": {
+          "hi": 0.386,
+          "lo": 0.304,
+          "mean": 0.344
+        },
+        "rechecks": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "violations": {
+          "hi": 13.088199999999999,
+          "lo": 10.3999,
+          "mean": 11.724
+        }
+      }
+    },
+    "task": "simulated mastery under equal item budget"
+  },
+  "S3_short_budget": {
+    "boot_seed": 7,
+    "config": {
+      "bank_per_level": 14,
+      "base_logit": -0.5,
+      "budget": 36,
+      "forget_per_day": 0.01,
+      "items_per_day": 4,
+      "learning_model": "neutral",
+      "n_learners": 500,
+      "p_learn": 0.15,
+      "p_learn_unready": 0.02,
+      "readiness_probs": [
+        0.4,
+        0.4,
+        0.2
+      ],
+      "seed": 2026110501
+    },
+    "label": "[SIM]",
+    "n_boot": 2000,
+    "paired_differences": {
+      "adaptive_minus_fixed": {
+        "final_mastered": {
+          "hi": 1.274,
+          "lo": 0.97,
+          "mean": 1.122
+        },
+        "items_to_goal": {
+          "hi": 0.2880499999999997,
+          "lo": 0.166,
+          "mean": 0.226
+        },
+        "items_used": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "reached_goal": {
+          "hi": -0.104,
+          "lo": -0.164,
+          "mean": -0.134
+        },
+        "rechecks": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "violations": {
+          "hi": -12.04795,
+          "lo": -13.7641,
+          "mean": -12.866
+        }
+      },
+      "no_budget_minus_adaptive": {
+        "final_mastered": {
+          "hi": -0.116,
+          "lo": -0.37405,
+          "mean": -0.244
+        },
+        "items_to_goal": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "items_used": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "reached_goal": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "rechecks": {
+          "hi": 4.974,
+          "lo": 4.676,
+          "mean": 4.824
+        },
+        "violations": {
+          "hi": -2.64195,
+          "lo": -3.82,
+          "mean": -3.228
+        }
+      },
+      "no_budget_minus_fixed": {
+        "final_mastered": {
+          "hi": 1.034,
+          "lo": 0.72,
+          "mean": 0.878
+        },
+        "items_to_goal": {
+          "hi": 0.2880499999999997,
+          "lo": 0.166,
+          "mean": 0.226
+        },
+        "items_used": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "reached_goal": {
+          "hi": -0.104,
+          "lo": -0.164,
+          "mean": -0.134
+        },
+        "rechecks": {
+          "hi": 4.974,
+          "lo": 4.676,
+          "mean": 4.824
+        },
+        "violations": {
+          "hi": -15.33595,
+          "lo": -16.9021,
+          "mean": -16.094
+        }
+      },
+      "no_challenge_minus_adaptive": {
+        "final_mastered": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "items_to_goal": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "items_used": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "reached_goal": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "rechecks": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "violations": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        }
+      },
+      "no_challenge_minus_fixed": {
+        "final_mastered": {
+          "hi": 1.274,
+          "lo": 0.97,
+          "mean": 1.122
+        },
+        "items_to_goal": {
+          "hi": 0.2880499999999997,
+          "lo": 0.166,
+          "mean": 0.226
+        },
+        "items_used": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "reached_goal": {
+          "hi": -0.104,
+          "lo": -0.164,
+          "mean": -0.134
+        },
+        "rechecks": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "violations": {
+          "hi": -12.04795,
+          "lo": -13.7641,
+          "mean": -12.866
+        }
+      },
+      "no_graph_minus_adaptive": {
+        "final_mastered": {
+          "hi": -1.146,
+          "lo": -1.494,
+          "mean": -1.32
+        },
+        "items_to_goal": {
+          "hi": -1.2399500000000003,
+          "lo": -2.244,
+          "mean": -1.724
+        },
+        "items_used": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "reached_goal": {
+          "hi": 0.162,
+          "lo": 0.102,
+          "mean": 0.132
+        },
+        "rechecks": {
+          "hi": 0.032,
+          "lo": 0.006,
+          "mean": 0.018
+        },
+        "violations": {
+          "hi": 20.326,
+          "lo": 18.5339,
+          "mean": 19.436
+        }
+      },
+      "no_graph_minus_fixed": {
+        "final_mastered": {
+          "hi": -0.046,
+          "lo": -0.358,
+          "mean": -0.198
+        },
+        "items_to_goal": {
+          "hi": -1.0139500000000004,
+          "lo": -2.01,
+          "mean": -1.498
+        },
+        "items_used": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "reached_goal": {
+          "hi": 0.04,
+          "lo": -0.044,
+          "mean": -0.002
+        },
+        "rechecks": {
+          "hi": 0.032,
+          "lo": 0.006,
+          "mean": 0.018
+        },
+        "violations": {
+          "hi": 7.28005,
+          "lo": 5.894,
+          "mean": 6.57
+        }
+      },
+      "no_revision_minus_adaptive": {
+        "final_mastered": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "items_to_goal": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "items_used": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "reached_goal": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "rechecks": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "violations": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        }
+      },
+      "no_revision_minus_fixed": {
+        "final_mastered": {
+          "hi": 1.274,
+          "lo": 0.97,
+          "mean": 1.122
+        },
+        "items_to_goal": {
+          "hi": 0.2880499999999997,
+          "lo": 0.166,
+          "mean": 0.226
+        },
+        "items_used": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "reached_goal": {
+          "hi": -0.104,
+          "lo": -0.164,
+          "mean": -0.134
+        },
+        "rechecks": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "violations": {
+          "hi": -12.04795,
+          "lo": -13.7641,
+          "mean": -12.866
+        }
+      }
+    },
+    "paths": {
+      "adaptive": {
+        "final_mastered": {
+          "hi": 4.006,
+          "lo": 3.694,
+          "mean": 3.852
+        },
+        "items_to_goal": {
+          "hi": 35.784,
+          "lo": 34.992,
+          "mean": 35.424
+        },
+        "items_used": {
+          "hi": 36.0,
+          "lo": 36.0,
+          "mean": 36.0
+        },
+        "reached_goal": {
+          "hi": 0.028,
+          "lo": 0.006,
+          "mean": 0.016
+        },
+        "rechecks": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "violations": {
+          "hi": 5.580149999999999,
+          "lo": 4.12395,
+          "mean": 4.848
+        }
+      },
+      "fixed": {
+        "final_mastered": {
+          "hi": 2.902,
+          "lo": 2.554,
+          "mean": 2.73
+        },
+        "items_to_goal": {
+          "hi": 35.574,
+          "lo": 34.787949999999995,
+          "mean": 35.198
+        },
+        "items_used": {
+          "hi": 36.0,
+          "lo": 36.0,
+          "mean": 36.0
+        },
+        "reached_goal": {
+          "hi": 0.182,
+          "lo": 0.118,
+          "mean": 0.15
+        },
+        "rechecks": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "violations": {
+          "hi": 18.528049999999997,
+          "lo": 16.9299,
+          "mean": 17.714
+        }
+      },
+      "no_budget": {
+        "final_mastered": {
+          "hi": 3.726,
+          "lo": 3.492,
+          "mean": 3.608
+        },
+        "items_to_goal": {
+          "hi": 35.784,
+          "lo": 34.992,
+          "mean": 35.424
+        },
+        "items_used": {
+          "hi": 36.0,
+          "lo": 36.0,
+          "mean": 36.0
+        },
+        "reached_goal": {
+          "hi": 0.028,
+          "lo": 0.006,
+          "mean": 0.016
+        },
+        "rechecks": {
+          "hi": 4.974,
+          "lo": 4.676,
+          "mean": 4.824
+        },
+        "violations": {
+          "hi": 1.99,
+          "lo": 1.27,
+          "mean": 1.62
+        }
+      },
+      "no_challenge": {
+        "final_mastered": {
+          "hi": 4.006,
+          "lo": 3.694,
+          "mean": 3.852
+        },
+        "items_to_goal": {
+          "hi": 35.784,
+          "lo": 34.992,
+          "mean": 35.424
+        },
+        "items_used": {
+          "hi": 36.0,
+          "lo": 36.0,
+          "mean": 36.0
+        },
+        "reached_goal": {
+          "hi": 0.028,
+          "lo": 0.006,
+          "mean": 0.016
+        },
+        "rechecks": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "violations": {
+          "hi": 5.580149999999999,
+          "lo": 4.12395,
+          "mean": 4.848
+        }
+      },
+      "no_graph": {
+        "final_mastered": {
+          "hi": 2.704,
+          "lo": 2.358,
+          "mean": 2.532
+        },
+        "items_to_goal": {
+          "hi": 34.29225,
+          "lo": 33.06395,
+          "mean": 33.7
+        },
+        "items_used": {
+          "hi": 36.0,
+          "lo": 36.0,
+          "mean": 36.0
+        },
+        "reached_goal": {
+          "hi": 0.18,
+          "lo": 0.116,
+          "mean": 0.148
+        },
+        "rechecks": {
+          "hi": 0.032,
+          "lo": 0.006,
+          "mean": 0.018
+        },
+        "violations": {
+          "hi": 24.91005,
+          "lo": 23.6178,
+          "mean": 24.284
+        }
+      },
+      "no_revision": {
+        "final_mastered": {
+          "hi": 4.006,
+          "lo": 3.694,
+          "mean": 3.852
+        },
+        "items_to_goal": {
+          "hi": 35.784,
+          "lo": 34.992,
+          "mean": 35.424
+        },
+        "items_used": {
+          "hi": 36.0,
+          "lo": 36.0,
+          "mean": 36.0
+        },
+        "reached_goal": {
+          "hi": 0.028,
+          "lo": 0.006,
+          "mean": 0.016
+        },
+        "rechecks": {
+          "hi": 0.0,
+          "lo": 0.0,
+          "mean": 0.0
+        },
+        "violations": {
+          "hi": 5.580149999999999,
+          "lo": 4.12395,
+          "mean": 4.848
+        }
+      }
+    },
+    "task": "simulated mastery under equal item budget"
+  },
+  "_provenance": {
+    "code_commit": "5407be21ce82331533b73651b20671903570828b",
+    "command": "python3 -m ml.evaluation.sim.compare --suite prereg --n 500 --seed 2026110501",
+    "label": "[SIM]",
+    "prereg_commit": "5407be21ce82331533b73651b20671903570828b"
+  }
+}

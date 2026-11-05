@@ -1,69 +1,69 @@
-import { NOT_RUN, RESULTS } from "@/lib/prototype/results";
-import { Card, OriginTag } from "./frame";
+"use client";
+import { getEvaluation } from "@/lib/prototype/client";
+import type { EvalRow, Evaluation } from "@/lib/prototype/schemas";
+import { useResource } from "@/lib/prototype/useResource";
+import { Card, Empty, ErrorState, Loading, OriginTag, PageHead } from "./common";
 
-export function ResultsTable() {
+const SETTING_LABEL: Record<string, string> = {
+  P_primary_neutral: "Primary setting",
+  S1_zone_learning: "Zone-learning assumption",
+  S2_no_forgetting: "No forgetting",
+  S3_short_budget: "Short budget (36 items)",
+};
+
+/** Pass and miss use the same row style; the verdict is printed as text. */
+export function ResultsTable({ rows }: { rows: EvalRow[] }) {
   return (
-    <div className="p-stack">
-      <Card title="Results so far">
-        <div className="p-scroll" tabIndex={0} aria-label="Results table, scrolls sideways">
-          <table className="p-rtable">
-            <thead>
-              <tr>
-                <th scope="col">What was tested</th>
-                <th scope="col">Data</th>
-                <th scope="col">Compared with</th>
-                <th scope="col">Result</th>
-                <th scope="col">Uncertainty</th>
-                <th scope="col">Target</th>
-                <th scope="col">Verdict</th>
-              </tr>
-            </thead>
-            <tbody>
-              {RESULTS.map((r) => (
-                <tr key={r.id}>
-                  <td>
-                    {r.test}
-                    <span className="note">{r.how}</span>
-                    <span className="note">{r.note}</span>
-                  </td>
-                  <td><OriginTag origin={r.origin} /></td>
-                  <td className="num">{r.comparedWith}</td>
-                  <td className="num"><strong>{r.result}</strong></td>
-                  <td className="num">{r.uncertainty}</td>
-                  <td>{r.target}</td>
-                  <td>{r.verdict}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </Card>
-
-      <Card title="Not tested yet">
-        <table className="p-gtable stack">
-          <thead>
-            <tr>
-              <th scope="col">Question</th>
-              <th scope="col">Data</th>
-              <th scope="col">Why not yet</th>
+    <div className="p-scroll" tabIndex={0} role="region" aria-label="Evaluation results">
+      <table className="p-table" data-testid="eval-table">
+        <thead>
+          <tr>
+            <th scope="col">Metric</th><th scope="col">Task</th><th scope="col">Origin</th><th scope="col">Baseline</th>
+            <th scope="col">Result</th><th scope="col">Interval</th><th scope="col">Pass or miss</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((r) => (
+            <tr key={r.id} data-testid="eval-row" data-verdict={r.verdict}>
+              <th scope="row">
+                {r.metric}
+                <div className="label">{SETTING_LABEL[r.setting] ?? r.setting}; {r.better} is better{r.primary ? "; primary claim" : ""}</div>
+              </th>
+              <td>{r.task}</td>
+              <td><OriginTag origin={r.origin} /></td>
+              <td className="num">{r.baseline}</td>
+              <td className="num">{r.result}</td>
+              <td className="num">{r.interval}</td>
+              <td>
+                <b data-testid="verdict">{r.verdict === "pass" ? "Pass" : "Miss"}</b>
+                <div className="label">{r.verdict_detail}</div>
+                {r.named_miss ? <div className="label" data-testid="named-miss">Named as a miss in the S2 log.</div> : null}
+              </td>
             </tr>
-          </thead>
-          <tbody>
-            {NOT_RUN.map((n) => (
-              <tr key={n.id}>
-                <th scope="row" style={{ minWidth: 0, fontWeight: 400 }}>{n.question}</th>
-                <td data-label="Data"><OriginTag origin={n.origin} /></td>
-                <td data-label="Why not yet">{n.reason}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </Card>
-
-      <p className="small muted" style={{ maxWidth: "75ch" }}>
-        These are the results recorded in the repository from earlier work, shown as recorded. Each row tests something different, so the scores are not combined or compared with each other.
-        None of them shows that learners learn more, and none comes from JEE learners.
-      </p>
+          ))}
+        </tbody>
+      </table>
     </div>
+  );
+}
+
+export function EvaluationView() {
+  const r = useResource(getEvaluation, "evaluation");
+  const head = <PageHead title="Evaluation" sub="Every row is a simulation result [SIM] compared with the fixed-path baseline, read against the pre-registered decision rule. Misses are shown the same way as passes." />;
+  if (r.status === "loading") return <>{head}<Loading what="the results" /></>;
+  if (r.status === "error") return <>{head}<ErrorState error={r.error} onRetry={r.reload} /></>;
+  const ev: Evaluation = r.data;
+  if (ev.rows.length === 0) return <>{head}<Empty title="No results">The result files contain no rows.</Empty></>;
+  return (
+    <>
+      {head}
+      <p className="label">None of this is evidence that the adaptive path improves learning for real students. No public-dataset [PUB] or expert-label [EXP] result is shown here because none is computed by this build.</p>
+      {ev.runs.map((run) => (
+        <Card key={run.id} title={run.title} origins={["SIM"]}>
+          <p className="muted">{run.note}</p>
+          <ResultsTable rows={ev.rows.filter((x) => x.run === run.id)} />
+        </Card>
+      ))}
+    </>
   );
 }
